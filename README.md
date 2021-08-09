@@ -14,8 +14,6 @@ The package contains server side Blazor forms extensions used by other CodeGator
 #### Commonly used types:
 * Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
 * CG.Blazor.Forms.Components.DynamicForm
-* CG.Blazor.Forms.FormGenerationException
-* CG.Blazor.Forms.Services.IFormGenerator
 * MudBlazor.RenderMudAlertAttribute
 * MudBlazor.RenderMudAutocompleteAttribute
 * MudBlazor.RenderMudCheckBoxAttribute
@@ -46,5 +44,45 @@ There is developer documentation [HERE](https://codegator.github.io/CG.Blazor.Fo
 We also blog about projects like this one on our website, [HERE](http://www.codegator.com)
 
 ---
+
+#### How do I get started?
+
+There is a working quick start sample [HERE](https://github.com/CodeGator/CG.Blazor.Forms/tree/main/samples/CG.Blazor.Forms.QuickStart) 
+
+Steps to get started:
+
+1. Create a Blazor project to get started.
+
+2. Add MudBlazor to the project, since MudBlazor is (so far) the only supported UI package. [HERE](https://mudblazor.com/getting-started/installation#manual-install) is a good link to get started with MudBlazor.
+
+2. Add the CG.Blazor.Forms NUGET package to the project.
+
+3. Add `@using CG.Blazor.Forms` to the _Imports.razor file.
+
+4. Add `<DynamicForm Model="@Model" OnValidSubmit="OnValidSubmit"/>` to the razor component where you want your dynamic form generated. Note that `Model` is a reference to your POCO object, and `OnValidSubmit` is a reference to your form's submit handler.
+
+5. Add `services.AddMudBlazorFormGeneration();` to the `ConfigureServices` method of the `Startup` class.
+
+6. Create your model type. Use attributes from the NUGET package to decorate any properties you want to be rendered on the form. Here is an example:
+
+```
+public class MyForm
+{
+	[RenderMudTextField]
+	[Required]
+	public string FirstName { get; set; }
+
+	[RenderMudTextField]
+	[Required]
+	public string LastName { get; set; }
+
+	[RenderMudDatePicker]
+	public DateTime? DateOfBirth { get; set; }
+}
+```
+
+That's pretty much it! You can, of course, get fancier, but that's up to you.
+
+
 
 
