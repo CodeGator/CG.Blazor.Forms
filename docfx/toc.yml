@@ -1,0 +1,7 @@
+- name: Home
+  href: index.md
+- name: Api Reference
+  href: api/
+- name: GitHub
+  href: http://github.com/codegator/CG.Blazor.Forms
+
