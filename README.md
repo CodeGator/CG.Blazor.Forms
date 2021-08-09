@@ -1,10 +1,10 @@
 # CG.Blazor.Forms: 
 
 ---
-[![Build Status](https://dev.azure.com/codegator/CG.Blazor.Forms/_apis/build/status/CodeGator.CG.Blazor.Forms?branchName=main)](https://dev.azure.com/codegator/CG.Blazor.Forms/_build/latest?definitionId=67&branchName=main)
+[![Build Status](https://dev.azure.com/codegator/CG.Blazor.Forms/_apis/build/status/CodeGator.CG.Blazor.Forms?branchName=main)](https://dev.azure.com/codegator/CG.Blazor.Forms/_build/latest?definitionId=72&branchName=main)
 [![Github docs](https://img.shields.io/static/v1?label=Documentation&message=online&color=blue)](https://codegator.github.io/CG.Blazor.Forms/index.html)
 [![NuGet downloads](https://img.shields.io/nuget/dt/CG.Blazor.Forms.svg?style=flat)](https://nuget.org/packages/CG.Blazor.Forms)
-![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/codegator/CG.Blazor.Forms/67)
+![Azure DevOps coverage](https://img.shields.io/azure-devops/coverage/codegator/CG.Blazor.Forms/72)
 [![Github discussion](https://img.shields.io/badge/Discussion-online-blue)](https://github.com/CodeGator/CG.Blazor.Forms/discussions)
 [![CG.Blazor.Forms on fuget.org](https://www.fuget.org/packages/CG.Blazor.Forms/badge.svg)](https://www.fuget.org/packages/CG.Blazor.Forms)
 
