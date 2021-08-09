@@ -1,9 +1,0 @@
-<Project>
-  <PropertyGroup>
-    <!-- Use Windows PDBs so OpenCover works -->
-    <DebugType Condition=" '$(Configuration)' == 'Debug' ">Full</DebugType>
-    <DebugType Condition=" '$(Configuration)' == 'Release' ">pdbonly</DebugType>
-    <!-- Use latest C# version. -->
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
-</Project>
