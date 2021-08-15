@@ -30,7 +30,19 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html",
-          "hash": "+u1fq7OoP6vG8b3DK5yRq13FeLA2glSuU6uxfaD02Do="
+          "hash": "+MP4o5y/kPOHXOkt0lsFbKm2ijZe+7vRmhD+5L9neEs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderObjectAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderObjectAttribute.html",
+          "hash": "K4nFejbLZwbu0+Q7oesZds8w7ZzgHKO9PWavDIgsRIo="
         }
       },
       "is_incremental": false,
@@ -42,7 +54,31 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Blazor.Forms.Attributes.html",
-          "hash": "m5WTpIyni9MQBiE04wlCJPZ67ql45+5w7acMcbs4xn0="
+          "hash": "BtAU66IqxhuaLogpwq7TRo4Y0Pmjz+yvIRernNIe++E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Components.MuddyGroupBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Components.MuddyGroupBox.html",
+          "hash": "SH/FXxVwBN0V+BBtvg0adas18i8ydRHV4IOdZSRIeNs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Components.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Components.html",
+          "hash": "zOTIImnC2Th+I10iy4KhMmCBvLKZzdzTRo3UqUKB+/Y="
         }
       },
       "is_incremental": false,
@@ -54,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Blazor.Forms.DynamicForm-1.html",
-          "hash": "v3mfBBGpI8ntdvfJxkD/m9/LFcYoHlSAlfG1D+2eL9s="
+          "hash": "tqeyjwhEIvyAT9B8dUcc/036RlZnBng9ya5iqs6AaI0="
         }
       },
       "is_incremental": false,
@@ -194,6 +230,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MudBlazor.RenderMudFieldAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MudBlazor.RenderMudFieldAttribute.html",
+          "hash": "0bGGUMj+Z+mdT2CU4R86u2KEw/8GeqjJC26NAfyi6Jk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MudBlazor.RenderMudNumericFieldAttribute.yml",
       "output": {
         ".html": {
@@ -206,11 +254,47 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MudBlazor.RenderMudPaperAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MudBlazor.RenderMudPaperAttribute.html",
+          "hash": "h+nQvBG7cFNUDUHQ26D0wE2WwZb6w0Z7rABvG8elJI4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MudBlazor.RenderMudRadioGroupAttribute.yml",
       "output": {
         ".html": {
           "relative_path": "api/MudBlazor.RenderMudRadioGroupAttribute.html",
           "hash": "2DFQijI5INjc7mdL+i4st+IQqKI6aqG7WRJGBdnm/QE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MudBlazor.RenderMudSelectAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MudBlazor.RenderMudSelectAttribute.html",
+          "hash": "HJQfHj/tm6oGvq9bV7fqAnGkJUj33dBfOTbRJEAX3wY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MudBlazor.RenderMudSliderAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MudBlazor.RenderMudSliderAttribute.html",
+          "hash": "hIv9t69gcnElTGycCFEZP7uCRtnsloHV8zo0OlQt/mQ="
         }
       },
       "is_incremental": false,
@@ -254,11 +338,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/MudBlazor.RenderMuddyGroupBoxAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MudBlazor.RenderMuddyGroupBoxAttribute.html",
+          "hash": "3zrtIb/U6lIu4jwBg04F/pox1MrNb0G5h6RcfS0MU+Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/MudBlazor.yml",
       "output": {
         ".html": {
           "relative_path": "api/MudBlazor.html",
-          "hash": "4Sgy05RehRFVRJ+A26WPx8bYgTXEzfXcV7Ek1ux5Sp8="
+          "hash": "fnaqpjlwd5TCydPlxcqMh/oca+fD2AkGuYuo1HRvDck="
         }
       },
       "is_incremental": false,
@@ -270,7 +366,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "tIVm0BlHrJa4HZRr3jHThT1yjjjeIyqlKIa8hTUz37g="
+          "hash": "2JSsgVqouX8cpwFftFXd5SlXvKAejVVcKi6JsNJLaBU="
         }
       },
       "is_incremental": false,
@@ -389,7 +485,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 21,
+          "total_file_count": 29,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
