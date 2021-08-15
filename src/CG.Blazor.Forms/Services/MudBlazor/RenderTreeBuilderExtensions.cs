@@ -1,4 +1,5 @@
 ﻿using CG.Blazor.Forms.Services;
+using CG.Blazor.Forms.Components;
 using CG.Validations;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.CompilerServices;
@@ -124,31 +125,34 @@ namespace MudBlazor
         /// <summary>
         /// This method renders a <see cref="MudAlert"/> object into the 
         /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
-        /// specified model property.
+        /// specified viewModel property.
         /// </summary>
         /// <param name="builder">The builder to use for the operation.</param>
         /// <param name="index">The index to use for the operation.</param>
-        /// <param name="attribute">The attribute to use for the operation.</param>
-        /// <param name="model">The model to use for the operation.</param>
-        /// <param name="prop">The property to use for the operation.</param>
         /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
         /// <returns>The index after rendering is complete.</returns>
         public static int RenderMudAlert(
             this RenderTreeBuilder builder,
             int index,
+            IHandleEvent eventTarget,
             RenderMudAlertAttribute attribute,
-            object model,
+            object propValue,
             PropertyInfo prop,
-            IHandleEvent eventTarget
+            object viewModel
             )
         {
             // Validate the parameters before attempting to use them.
             Guard.Instance().ThrowIfNull(builder, nameof(builder))
                 .ThrowIfLessThanZero(index, nameof(index))
                 .ThrowIfNull(attribute, nameof(attribute))
-                .ThrowIfNull(model, nameof(model))
+                .ThrowIfNull(propValue, nameof(propValue))
                 .ThrowIfNull(prop, nameof(prop))
-                .ThrowIfNull(eventTarget, nameof(eventTarget));
+                .ThrowIfNull(eventTarget, nameof(eventTarget))
+                .ThrowIfNull(viewModel, nameof(viewModel));
 
             // Get any non-default attribute values (overrides).
             var attributes = attribute.ToAttributes();
@@ -160,7 +164,10 @@ namespace MudBlazor
                 contentDelegate: childBuilder =>
                 {
                     // Add the child content.
-                    childBuilder.AddContent(index++, (string)prop.GetValue(model));
+                    childBuilder.AddContent(
+                        index++, 
+                        (string)prop.GetValue(propValue)
+                        );
                 });
 
             // Return the index.
@@ -170,33 +177,36 @@ namespace MudBlazor
         // *******************************************************************
 
         /// <summary>
-        /// This method renders a <see cref="MudAutocomplete{T}"/> object into the 
-        /// specified <see cref="RenderTreeBuilder"/>.
+        /// This method renders a <see cref="MudAutocomplete{T}"/> object into 
+        /// the specified <see cref="RenderTreeBuilder"/>.
         /// </summary>
         /// <typeparam name="T">The type to associate with the control.</typeparam>
         /// <param name="builder">The builder to use for the operation.</param>
         /// <param name="index">The index to use for the operation.</param>
-        /// <param name="attribute">The attribute to use for the operation.</param>
-        /// <param name="model">The model to use for the operation.</param>
-        /// <param name="prop">The property to use for the operation.</param>
         /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
         /// <returns>The index after rendering is complete.</returns>
         public static int RenderMudAutocomplete<T>(
             this RenderTreeBuilder builder,
             int index,
+            IHandleEvent eventTarget,
             RenderMudAutocompleteAttribute attribute,
-            object model,
+            object propValue,
             PropertyInfo prop,
-            IHandleEvent eventTarget
+            object viewModel
             )
         {
             // Validate the parameters before attempting to use them.
             Guard.Instance().ThrowIfNull(builder, nameof(builder))
                 .ThrowIfLessThanZero(index, nameof(index))
                 .ThrowIfNull(attribute, nameof(attribute))
-                .ThrowIfNull(model, nameof(model))
+                .ThrowIfNull(propValue, nameof(propValue))
                 .ThrowIfNull(prop, nameof(prop))
-                .ThrowIfNull(eventTarget, nameof(eventTarget));
+                .ThrowIfNull(eventTarget, nameof(eventTarget))
+                .ThrowIfNull(viewModel, nameof(viewModel));
 
             // Get any non-default attribute values (overrides).
             var attributes = attribute.ToAttributes();
@@ -214,66 +224,104 @@ namespace MudBlazor
                 // Should we convert from the string?
                 if (attributes["SearchFunc"] is string methodName)
                 {
-                    // Get the model type.
-                    var modelType = model?.GetType();
+                    // If we get here then we need to go find a search method,
+                    //   on either the property, or the view-model, that corresponds
+                    //   with the method named in the attribute.
 
-                    // Get the method information.
-                    var methodInfo = modelType?.GetMethod(
-                        methodName,
-                        BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance
-                        );
+                    // Create possible targets for the search.
+                    var targets = (viewModel == propValue)
+                        ? new[] { viewModel }
+                        : new[] { viewModel, propValue }; 
 
-                    // Did we fail?
-                    if (null == methodInfo)
+                    // Loop and look for the search function.
+                    foreach (var target in targets)
                     {
-                        // Panic!!
-                        throw new FormGenerationException(
-                            message: $"Unable to locate an autocomplete search method named: " +
-                                $"'{methodName}' on the model type: '{modelType?.Name}'. Please " +
-                                $"check the spelling for the 'SearchFunc' property, on the " +
-                                $"MudAutocompleteAttribute that is currently decorating the " +
-                                $"'{prop.Name}' property. Remember, the search method should be " +
-                                $"part of the model. If the method is located anywhere else we won't " +
-                                $"be able to find it."
+                        // Get the target type.
+                        var targetType = target.GetType();
+
+                        // Look for the named search method.
+                        var methodInfo = targetType.GetMethod(
+                            methodName,
+                            BindingFlags.Public | 
+                            BindingFlags.NonPublic | 
+                            BindingFlags.Instance
                             );
+
+                        // Did we succeed?
+                        if (null != methodInfo)
+                        {
+                            // Create a viewModel reference expression.
+                            var viewModelExp = Expression.Constant(
+                                target
+                                );
+
+                            // Create a parameter expression.
+                            var p1 = Expression.Parameter(
+                                typeof(T),
+                                "p1"
+                                );
+
+                            // Create the method call expression.
+                            var callExp = Expression.Call(
+                                viewModelExp,
+                                methodInfo,
+                                p1
+                                );
+
+                            // Create a lambda expression.
+                            var lambdaExp = Expression.Lambda<Func<T, Task<IEnumerable<T>>>>(
+                                callExp,
+                                callExp.Arguments.OfType<ParameterExpression>()
+                                );
+
+                            // Compile the expression to a func.
+                            var func = lambdaExp.Compile();
+
+                            // Replace the method name with the func.
+                            attributes["SearchFunc"] = new Func<T, Task<IEnumerable<T>>>(
+                                func
+                                );
+
+                            // We found the search function so stop looking for it.
+                            break;
+                        }
                     }
 
-                    // Create a model reference expression.
-                    var modelExp = Expression.Constant(
-                        model
-                        );
+                    // If the search attribute is still a string, after the loop above, then
+                    //    we failed to locate the named search function.
+                    if (attributes["SearchFunc"] is string)
+                    {
+                        // If we get here then we failed to find the specified search function,
+                        //   so, nothing left to do but drop back and punt.
 
-                    // Create a parameter expression.
-                    var p1 = Expression.Parameter(
-                        typeof(T),
-                        "p1"
-                        );
-
-                    // Create the method call expression.
-                    var callExp = Expression.Call(
-                        modelExp,
-                        methodInfo,
-                        p1
-                        );
-
-                    // Create a lambda expression.
-                    var lambdaExp = Expression.Lambda<Func<T, Task<IEnumerable<T>>>>(
-                        callExp,
-                        callExp.Arguments.OfType<ParameterExpression>()
-                        );
-
-                    // Compile the expression to a func.
-                    var func = lambdaExp.Compile();
-
-                    // Replace the method name with the func.
-                    attributes["SearchFunc"] = new Func<T, Task<IEnumerable<T>>>(
-                        func
-                        );
+                        // How many places did we look?
+                        if (targets.Length == 1)
+                        {
+                            // Panic!!
+                            throw new FormGenerationException(
+                                message: $"Unable to locate an autocomplete search method " +
+                                    $"named: '{methodName}' on the view-model type: " +
+                                    $"'{viewModel.GetType().Name}' for the property named: " +
+                                    $"'{prop.Name}'."
+                                );
+                        }
+                        else
+                        {
+                            // Panic!!
+                            throw new FormGenerationException(
+                                message: $"Unable to locate an autocomplete search method " +
+                                    $"named: '{methodName}' on either the view-model type: " +
+                                    $"'{viewModel.GetType().Name}' OR the propery type: " +
+                                    $"'{propValue.GetType().Name}' for the property named: " +
+                                    $"'{prop.Name}'."
+                                );
+                        }
+                    }
                 }
             }
 
             // Ensure the Value property value is set.
-            attributes["Value"] = (T)prop.GetValue(model);
+            attributes["Value"] = (T)prop.GetValue(propValue);
 
             // Ensure the ValueChanged property is bound, both ways.
             attributes["ValueChanged"] = RuntimeHelpers.TypeCheck<EventCallback<T>>(
@@ -281,21 +329,21 @@ namespace MudBlazor
                     eventTarget,
                     EventCallback.Factory.CreateInferred<T>(
                         eventTarget,
-                        x => prop.SetValue(model, x),
-                        (T)prop.GetValue(model)
+                        x => prop.SetValue(propValue, x),
+                        (T)prop.GetValue(propValue)
                         )
                     )
                 );
 
             // Make the compiler happy.
-            if (null != model)
+            if (null != propValue)
             {
                 // Ensure the For property value is set.
                 attributes["For"] = Expression.Lambda<Func<T>>(
                     MemberExpression.Property(
                         Expression.Constant(
-                            model,
-                            model.GetType()),
+                            propValue,
+                            propValue.GetType()),
                         prop.Name
                         )
                     );
@@ -316,31 +364,34 @@ namespace MudBlazor
         /// <summary>
         /// This method renders a <see cref="MudCheckBox{T}"/> object into the 
         /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
-        /// specified model property.
+        /// specified viewModel property.
         /// </summary>
         /// <typeparam name="T">The type to associate with the control.</typeparam>
         /// <param name="builder">The builder to use for the operation.</param>
         /// <param name="index">The index to use for the operation.</param>
-        /// <param name="attribute">The attribute to use for the operation.</param>
-        /// <param name="model">The model to use for the operation.</param>
-        /// <param name="prop">The property to use for the operation.</param>
         /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
         /// <returns>The index after rendering is complete.</returns>
         public static int RenderMudCheckBox<T>(
             this RenderTreeBuilder builder,
             int index,
+            IHandleEvent eventTarget,
             RenderMudCheckBoxAttribute attribute,
-            object model,
+            object propValue,
             PropertyInfo prop,
-            IHandleEvent eventTarget
+            object viewModel
             )
         {
             // Validate the parameters before attempting to use them.
             Guard.Instance().ThrowIfNull(builder, nameof(builder))
                 .ThrowIfLessThanZero(index, nameof(index))
                 .ThrowIfNull(attribute, nameof(attribute))
-                .ThrowIfNull(model, nameof(model))
+                .ThrowIfNull(propValue, nameof(propValue))
                 .ThrowIfNull(prop, nameof(prop))
+                .ThrowIfNull(viewModel, nameof(viewModel))
                 .ThrowIfNull(eventTarget, nameof(eventTarget));
 
             // Get any non-default attribute values (overrides).
@@ -354,7 +405,7 @@ namespace MudBlazor
             }
 
             // Ensure the Checked property value is set.
-            attributes["Checked"] = (T)prop.GetValue(model);
+            attributes["Checked"] = (T)prop.GetValue(propValue);
 
             // Ensure the CheckedChanged property is bound, both ways.
             attributes["CheckedChanged"] = RuntimeHelpers.TypeCheck<EventCallback<T>>(
@@ -362,8 +413,8 @@ namespace MudBlazor
                     eventTarget,
                     EventCallback.Factory.CreateInferred<T>(
                         eventTarget,
-                        x => prop.SetValue(model, x),
-                        (T)prop.GetValue(model)
+                        x => prop.SetValue(propValue, x),
+                        (T)prop.GetValue(propValue)
                         )
                     )
                 );
@@ -381,33 +432,222 @@ namespace MudBlazor
         // *******************************************************************
 
         /// <summary>
-        /// This method renders a <see cref="MudNumericField{T}"/> object into the 
+        /// This method renders a <see cref="MudSlider{T}"/> object into the 
         /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
-        /// specified model property.
+        /// specified viewModel property.
         /// </summary>
         /// <typeparam name="T">The type to associate with the control.</typeparam>
         /// <param name="builder">The builder to use for the operation.</param>
         /// <param name="index">The index to use for the operation.</param>
-        /// <param name="attribute">The attribute to use for the operation.</param>
-        /// <param name="model">The model to use for the operation.</param>
-        /// <param name="prop">The property to use for the operation.</param>
         /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
         /// <returns>The index after rendering is complete.</returns>
-        public static int RenderMudNumericField<T>(
+        public static int RenderMudSlider<T>(
             this RenderTreeBuilder builder,
             int index,
-            RenderMudNumericFieldAttribute attribute,
-            object model,
+            IHandleEvent eventTarget,
+            RenderMudSliderAttribute attribute,
+            object propValue,
             PropertyInfo prop,
-            IHandleEvent eventTarget
+            object viewModel
             )
         {
             // Validate the parameters before attempting to use them.
             Guard.Instance().ThrowIfNull(builder, nameof(builder))
                 .ThrowIfLessThanZero(index, nameof(index))
                 .ThrowIfNull(attribute, nameof(attribute))
-                .ThrowIfNull(model, nameof(model))
+                .ThrowIfNull(propValue, nameof(propValue))
                 .ThrowIfNull(prop, nameof(prop))
+                .ThrowIfNull(viewModel, nameof(viewModel))
+                .ThrowIfNull(eventTarget, nameof(eventTarget));
+
+            // Get any non-default attribute values (overrides).
+            var attributes = attribute.ToAttributes();
+
+            // Ensure the Label property is set.
+            if (false == attributes.ContainsKey("Label"))
+            {
+                // Ensure we have a label.
+                attributes["Label"] = prop.Name;
+            }
+
+            // Ensure the Value property value is set.
+            attributes["Value"] = (T)prop.GetValue(propValue);
+
+            // Ensure the ValueChanged property is bound, both ways.
+            attributes["ValueChanged"] = RuntimeHelpers.TypeCheck<EventCallback<T>>(
+                EventCallback.Factory.Create<T>(
+                    eventTarget,
+                    EventCallback.Factory.CreateInferred<T>(
+                        eventTarget,
+                        x => prop.SetValue(propValue, x),
+                        (T)prop.GetValue(propValue)
+                        )
+                    )
+                );
+
+            // Render the property as a MudSlider control.
+            index = builder.RenderUIComponent<MudSlider<T>>(
+                index++,
+                attributes: attributes,
+                contentDelegate: childBuilder =>
+                {
+                    var index2 = index; // Reset the index.
+
+                    // Render the label.
+                    childBuilder.AddContent(index2++, attributes["Label"]);
+                });
+
+            // Return the index.
+            return index;
+        }
+
+        // *******************************************************************
+
+        /// <summary>
+        /// This method renders a <see cref="MudSelect{T}"/> object into the 
+        /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
+        /// specified viewModel property.
+        /// </summary>
+        /// <typeparam name="T">The type to associate with the control.</typeparam>
+        /// <param name="builder">The builder to use for the operation.</param>
+        /// <param name="index">The index to use for the operation.</param>
+        /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
+        /// <returns>The index after rendering is complete.</returns>
+        public static int RenderMudSelect<T>(
+            this RenderTreeBuilder builder,
+            int index,
+            IHandleEvent eventTarget,
+            RenderMudSelectAttribute attribute,
+            object propValue,
+            PropertyInfo prop,
+            object viewModel
+            )
+        {
+            // Validate the parameters before attempting to use them.
+            Guard.Instance().ThrowIfNull(builder, nameof(builder))
+                .ThrowIfLessThanZero(index, nameof(index))
+                .ThrowIfNull(attribute, nameof(attribute))
+                .ThrowIfNull(propValue, nameof(propValue))
+                .ThrowIfNull(prop, nameof(prop))
+                .ThrowIfNull(viewModel, nameof(viewModel))
+                .ThrowIfNull(eventTarget, nameof(eventTarget));
+
+            // Get any non-default attribute values (overrides).
+            var attributes = attribute.ToAttributes();
+
+            // Ensure the Label property is set.
+            if (false == attributes.ContainsKey("Label"))
+            {
+                // Ensure we have a label.
+                attributes["Label"] = prop.Name;
+            }
+
+            // Ensure the T attribute is set.
+            attributes["T"] = typeof(T).Name;
+
+            // Ensure the property value is set.
+            attributes["Value"] = (T)prop.GetValue(propValue);
+
+            // Ensure the property is bound, both ways.
+            attributes["ValueChanged"] = RuntimeHelpers.TypeCheck<EventCallback<T>>(
+                EventCallback.Factory.Create<T>(
+                    eventTarget,
+                    EventCallback.Factory.CreateInferred<T>(
+                        eventTarget,
+                        x => prop.SetValue(propValue, x),
+                        (T)prop.GetValue(propValue)
+                        )
+                    )
+                );
+
+            // Make the compiler happy.
+            if (null != propValue)
+            {
+                // Ensure the For property value is set.
+                attributes["For"] = Expression.Lambda<Func<T>>(
+                    MemberExpression.Property(
+                        Expression.Constant(
+                            propValue,
+                            propValue.GetType()),
+                        prop.Name
+                        )
+                    );
+            }
+
+            // Render the property as a MudSelect control.
+            index = builder.RenderUIComponent<MudSelect<T>>(
+                index++,
+                attributes: attributes,
+                contentDelegate: childBuilder =>
+                {
+                    // Split the options.
+                    var options = attribute.Options.Split(',');
+
+                    // Loop through the options
+                    foreach (var option in options)
+                    {
+                        var index2 = index; // Reset the index.
+
+                        // Create attributes for the item.
+                        var selectItemAttributes = new Dictionary<string, object>()
+                        {
+                            { "Value", option },
+                            { "T", attributes["T"] }
+                        };
+
+                        // Render the MudSelectItem control.
+                        index2 = childBuilder.RenderUIComponent<MudSelectItem<T>>(
+                            index2++,
+                            attributes: selectItemAttributes
+                            );
+                    }
+                });
+
+            // Return the index.
+            return index;
+        }
+
+        // *******************************************************************
+
+        /// <summary>
+        /// This method renders a <see cref="MudNumericField{T}"/> object into the 
+        /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
+        /// specified viewModel property.
+        /// </summary>
+        /// <typeparam name="T">The type to associate with the control.</typeparam>
+        /// <param name="builder">The builder to use for the operation.</param>
+        /// <param name="index">The index to use for the operation.</param>
+        /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
+        /// <returns>The index after rendering is complete.</returns>
+        public static int RenderMudNumericField<T>(
+            this RenderTreeBuilder builder,
+            int index,
+            IHandleEvent eventTarget,
+            RenderMudNumericFieldAttribute attribute,
+            object propValue,
+            PropertyInfo prop,
+            object viewModel
+            )
+        {
+            // Validate the parameters before attempting to use them.
+            Guard.Instance().ThrowIfNull(builder, nameof(builder))
+                .ThrowIfLessThanZero(index, nameof(index))
+                .ThrowIfNull(attribute, nameof(attribute))
+                .ThrowIfNull(propValue, nameof(propValue))
+                .ThrowIfNull(prop, nameof(prop))
+                .ThrowIfNull(viewModel, nameof(viewModel))
                 .ThrowIfNull(eventTarget, nameof(eventTarget));
 
             // Get any non-default attribute values (overrides).
@@ -421,7 +661,7 @@ namespace MudBlazor
             }
 
             // Ensure the Value property value is set.
-            attributes["Value"] = (T)prop.GetValue(model);
+            attributes["Value"] = (T)prop.GetValue(propValue);
 
             // Ensure the Value property is bound, both ways.
             attributes["ValueChanged"] = RuntimeHelpers.TypeCheck<EventCallback<T>>(
@@ -429,21 +669,21 @@ namespace MudBlazor
                     eventTarget,
                     EventCallback.Factory.CreateInferred<T>(
                         eventTarget,
-                        x => prop.SetValue(model, x),
-                        (T)prop.GetValue(model)
+                        x => prop.SetValue(propValue, x),
+                        (T)prop.GetValue(propValue)
                         )
                     )
                 );
 
             // Make the compiler happy.
-            if (null != model)
+            if (null != propValue)
             {
                 // Ensure the For property value is set.
                 attributes["For"] = Expression.Lambda<Func<T>>(
                     MemberExpression.Property(
                         Expression.Constant(
-                            model,
-                            model.GetType()),
+                            propValue,
+                            propValue.GetType()),
                         prop.Name
                         )
                     );
@@ -462,40 +702,152 @@ namespace MudBlazor
         // *******************************************************************
 
         /// <summary>
-        /// This method renders a <see cref="MudRadioGroup{T}"/> object into the 
+        /// This method renders a <see cref="MudPaper"/> object into the 
         /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
-        /// specified model property.
+        /// specified viewModel property.
         /// </summary>
-        /// <typeparam name="T">The type to associate with the control.</typeparam>
         /// <param name="builder">The builder to use for the operation.</param>
         /// <param name="index">The index to use for the operation.</param>
-        /// <param name="attribute">The attribute to use for the operation.</param>
-        /// <param name="model">The model to use for the operation.</param>
-        /// <param name="prop">The property to use for the operation.</param>
         /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
+        /// <param name="contentDelegate">The delegate for rendering child content.</param>
         /// <returns>The index after rendering is complete.</returns>
-        public static int RenderMudRadioGroup<T>(
+        public static int RenderMudPaper(
             this RenderTreeBuilder builder,
             int index,
-            RenderMudRadioGroupAttribute attribute,
-            object model,
+            IHandleEvent eventTarget,
+            RenderMudPaperAttribute attribute,
+            object propValue,
             PropertyInfo prop,
-            IHandleEvent eventTarget
+            object viewModel,
+            Action<RenderTreeBuilder> contentDelegate
             )
         {
             // Validate the parameters before attempting to use them.
             Guard.Instance().ThrowIfNull(builder, nameof(builder))
                 .ThrowIfLessThanZero(index, nameof(index))
                 .ThrowIfNull(attribute, nameof(attribute))
-                .ThrowIfNull(model, nameof(model))
+                .ThrowIfNull(propValue, nameof(propValue))
                 .ThrowIfNull(prop, nameof(prop))
+                .ThrowIfNull(viewModel, nameof(viewModel))
+                .ThrowIfNull(eventTarget, nameof(eventTarget));
+
+            // Get any non-default attribute values (overrides).
+            var attributes = attribute.ToAttributes();
+
+            // Render the property as a MudPaper control.
+            index = builder.RenderUIComponent<MudPaper>(
+                index++,
+                attributes: attributes,
+                contentDelegate: childBuilder =>
+                    contentDelegate(childBuilder)
+                    );
+
+            // Return the index.
+            return index;
+        }
+
+        // *******************************************************************
+
+        /// <summary>
+        /// This method renders a <see cref="MuddyGroupBox"/> object into the 
+        /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
+        /// specified viewModel property.
+        /// </summary>
+        /// <param name="builder">The builder to use for the operation.</param>
+        /// <param name="index">The index to use for the operation.</param>
+        /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
+        /// <param name="contentDelegate">The delegate for rendering child content.</param>
+        /// <returns>The index after rendering is complete.</returns>
+        public static int RenderMuddyGroupBox(
+            this RenderTreeBuilder builder,
+            int index,
+            IHandleEvent eventTarget,
+            RenderMuddyGroupBoxAttribute attribute,
+            object propValue,
+            PropertyInfo prop,
+            object viewModel,
+            Action<RenderTreeBuilder> contentDelegate
+            )
+        {
+            // Validate the parameters before attempting to use them.
+            Guard.Instance().ThrowIfNull(builder, nameof(builder))
+                .ThrowIfLessThanZero(index, nameof(index))
+                .ThrowIfNull(attribute, nameof(attribute))
+                .ThrowIfNull(propValue, nameof(propValue))
+                .ThrowIfNull(prop, nameof(prop))
+                .ThrowIfNull(viewModel, nameof(viewModel))
+                .ThrowIfNull(eventTarget, nameof(eventTarget));
+
+            // Get any non-default attribute values (overrides).
+            var attributes = attribute.ToAttributes();
+
+            // Did we not override the label?
+            if (false == attributes.ContainsKey("Label"))
+            {
+                // Ensure we have a label.
+                attributes["Label"] = prop.Name;
+            }
+
+            // Render the property as a MuddyGroupBox control.
+            index = builder.RenderUIComponent<MuddyGroupBox>(
+                index++,
+                attributes: attributes,
+                contentDelegate: childBuilder =>
+                    contentDelegate(childBuilder)
+                    );
+
+            // Return the index.
+            return index;
+        }
+
+        // *******************************************************************
+
+        /// <summary>
+        /// This method renders a <see cref="MudRadioGroup{T}"/> object into the 
+        /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
+        /// specified viewModel property.
+        /// </summary>
+        /// <typeparam name="T">The type to associate with the control.</typeparam>
+        /// <param name="builder">The builder to use for the operation.</param>
+        /// <param name="index">The index to use for the operation.</param>
+        /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
+        /// <returns>The index after rendering is complete.</returns>
+        public static int RenderMudRadioGroup<T>(
+            this RenderTreeBuilder builder,
+            int index,
+            IHandleEvent eventTarget,
+            RenderMudRadioGroupAttribute attribute,
+            object propValue,
+            PropertyInfo prop,
+            object viewModel
+            )
+        {
+            // Validate the parameters before attempting to use them.
+            Guard.Instance().ThrowIfNull(builder, nameof(builder))
+                .ThrowIfLessThanZero(index, nameof(index))
+                .ThrowIfNull(attribute, nameof(attribute))
+                .ThrowIfNull(propValue, nameof(propValue))
+                .ThrowIfNull(prop, nameof(prop))
+                .ThrowIfNull(viewModel, nameof(viewModel))
                 .ThrowIfNull(eventTarget, nameof(eventTarget));
 
             // Get any non-default attribute values (overrides).
             var attributes = attribute.ToAttributes();
 
             // Ensure the value is set.
-            attributes["SelectedOption"] = (T)prop.GetValue(model);
+            attributes["SelectedOption"] = (T)prop.GetValue(propValue);
 
             // Ensure the property is bound, both ways.
             attributes["SelectedOptionChanged"] = RuntimeHelpers.TypeCheck<EventCallback<T>>(
@@ -503,8 +855,8 @@ namespace MudBlazor
                     eventTarget,
                     EventCallback.Factory.CreateInferred<T>(
                         eventTarget,
-                        x => prop.SetValue(model, x),
-                        (T)prop.GetValue(model)
+                        x => prop.SetValue(propValue, x),
+                        (T)prop.GetValue(propValue)
                         )
                     )
                 );
@@ -621,31 +973,34 @@ namespace MudBlazor
         /// <summary>
         /// This method renders a <see cref="MudSwitch{T}"/> object into the 
         /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
-        /// specified model property.
+        /// specified viewModel property.
         /// </summary>
         /// <typeparam name="T">The type to associate with the control.</typeparam>
         /// <param name="builder">The builder to use for the operation.</param>
         /// <param name="index">The index to use for the operation.</param>
-        /// <param name="attribute">The attribute to use for the operation.</param>
-        /// <param name="model">The model to use for the operation.</param>
-        /// <param name="prop">The property to use for the operation.</param>
         /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
         /// <returns>The index after rendering is complete.</returns>
         public static int RenderMudSwitch<T>(
             this RenderTreeBuilder builder,
             int index,
+            IHandleEvent eventTarget,
             RenderMudSwitchAttribute attribute,
-            object model,
+            object propValue,
             PropertyInfo prop,
-            IHandleEvent eventTarget
+            object viewModel
             )
         {
             // Validate the parameters before attempting to use them.
             Guard.Instance().ThrowIfNull(builder, nameof(builder))
                 .ThrowIfLessThanZero(index, nameof(index))
                 .ThrowIfNull(attribute, nameof(attribute))
-                .ThrowIfNull(model, nameof(model))
+                .ThrowIfNull(propValue, nameof(propValue))
                 .ThrowIfNull(prop, nameof(prop))
+                .ThrowIfNull(viewModel, nameof(viewModel))
                 .ThrowIfNull(eventTarget, nameof(eventTarget));
 
             // Get any non-default attribute values (overrides).
@@ -659,7 +1014,7 @@ namespace MudBlazor
             }
 
             // Ensure the property value is set.
-            attributes["Checked"] = (T)prop.GetValue(model);
+            attributes["Checked"] = (T)prop.GetValue(propValue);
 
             // Ensure the property is bound, both ways.
             attributes["CheckedChanged"] = RuntimeHelpers.TypeCheck<EventCallback<T>>(
@@ -667,8 +1022,8 @@ namespace MudBlazor
                     eventTarget,
                     EventCallback.Factory.CreateInferred<T>(
                         eventTarget,
-                        x => prop.SetValue(model, x),
-                        (T)prop.GetValue(model)
+                        x => prop.SetValue(propValue, x),
+                        (T)prop.GetValue(propValue)
                         )
                     )
                 );
@@ -688,31 +1043,34 @@ namespace MudBlazor
         /// <summary>
         /// This method renders a <see cref="MudTextField{T}"/> object into the 
         /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
-        /// specified model property.
+        /// specified viewModel property.
         /// </summary>
         /// <typeparam name="T">The type to associate with the control.</typeparam>
         /// <param name="builder">The builder to use for the operation.</param>
         /// <param name="index">The index to use for the operation.</param>
-        /// <param name="attribute">The attribute to use for the operation.</param>
-        /// <param name="model">The model to use for the operation.</param>
-        /// <param name="prop">The property to use for the operation.</param>
         /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
         /// <returns>The index after rendering is complete.</returns>
         public static int RenderMudTextField<T>(
             this RenderTreeBuilder builder,
             int index,
+            IHandleEvent eventTarget,
             RenderMudTextFieldAttribute attribute,
-            object model,
+            object propValue,
             PropertyInfo prop,
-            IHandleEvent eventTarget
+            object viewModel
             )
         {
             // Validate the parameters before attempting to use them.
             Guard.Instance().ThrowIfNull(builder, nameof(builder))
                 .ThrowIfLessThanZero(index, nameof(index))
                 .ThrowIfNull(attribute, nameof(attribute))
-                .ThrowIfNull(model, nameof(model))
+                .ThrowIfNull(propValue, nameof(propValue))
                 .ThrowIfNull(prop, nameof(prop))
+                .ThrowIfNull(viewModel, nameof(viewModel))
                 .ThrowIfNull(eventTarget, nameof(eventTarget));
 
             // Get any non-default attribute values (overrides).
@@ -726,7 +1084,7 @@ namespace MudBlazor
             }
 
             // Ensure the property value is set.
-            attributes["Value"] = (T)prop.GetValue(model);
+            attributes["Value"] = (T)prop.GetValue(propValue);
 
             // Ensure the property is bound, both ways.
             attributes["ValueChanged"] = RuntimeHelpers.TypeCheck<EventCallback<T>>(
@@ -734,21 +1092,21 @@ namespace MudBlazor
                     eventTarget,
                     EventCallback.Factory.CreateInferred<T>(
                         eventTarget,
-                        x => prop.SetValue(model, x),
-                        (T)prop.GetValue(model)
+                        x => prop.SetValue(propValue, x),
+                        (T)prop.GetValue(propValue)
                         )
                     )
                 );
 
             // Make the compiler happy.
-            if (null != model)
+            if (null != propValue)
             {
                 // Ensure the For property value is set.
                 attributes["For"] = Expression.Lambda<Func<T>>(
                     MemberExpression.Property(
                         Expression.Constant(
-                            model,
-                            model.GetType()),
+                            propValue,
+                            propValue.GetType()),
                         prop.Name
                         )
                     );
@@ -767,32 +1125,85 @@ namespace MudBlazor
         // *******************************************************************
 
         /// <summary>
-        /// This method renders a <see cref="MudDatePicker"/> object into the 
+        /// This method renders a <see cref="MudField"/> object into the 
         /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
-        /// specified model property.
+        /// specified viewModel property.
         /// </summary>
         /// <param name="builder">The builder to use for the operation.</param>
         /// <param name="index">The index to use for the operation.</param>
-        /// <param name="attribute">The attribute to use for the operation.</param>
-        /// <param name="model">The model to use for the operation.</param>
-        /// <param name="prop">The property to use for the operation.</param>
         /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
+        /// <returns>The index after rendering is complete.</returns>
+        public static int RenderMudField(
+            this RenderTreeBuilder builder,
+            int index,
+            IHandleEvent eventTarget,
+            RenderMudFieldAttribute attribute,
+            object propValue,
+            PropertyInfo prop,
+            object viewModel
+            )
+        {
+            // Validate the parameters before attempting to use them.
+            Guard.Instance().ThrowIfNull(builder, nameof(builder))
+                .ThrowIfLessThanZero(index, nameof(index))
+                .ThrowIfNull(attribute, nameof(attribute))
+                .ThrowIfNull(propValue, nameof(propValue))
+                .ThrowIfNull(prop, nameof(prop))
+                .ThrowIfNull(viewModel, nameof(viewModel))
+                .ThrowIfNull(eventTarget, nameof(eventTarget));
+
+            // Get any non-default attribute values (overrides).
+            var attributes = attribute.ToAttributes();
+
+            // Ensure the property label is set.
+            attributes["Label"] = (string)prop.GetValue(propValue);
+
+            // Render the property as a MudField control.
+            index = builder.RenderUIComponent<MudField>(
+                index++,
+                attributes: attributes
+                );
+
+            // Return the index.
+            return index;
+        }
+
+        // *******************************************************************
+
+        /// <summary>
+        /// This method renders a <see cref="MudDatePicker"/> object into the 
+        /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
+        /// specified viewModel property.
+        /// </summary>
+        /// <param name="builder">The builder to use for the operation.</param>
+        /// <param name="index">The index to use for the operation.</param>
+        /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
         /// <returns>The index after rendering is complete.</returns>
         public static int RenderMudDatePicker(
             this RenderTreeBuilder builder,
             int index,
+            IHandleEvent eventTarget,
             RenderMudDatePickerAttribute attribute,
-            object model,
+            object propValue,
             PropertyInfo prop,
-            IHandleEvent eventTarget
+            object viewModel
             ) 
         {
             // Validate the parameters before attempting to use them.
             Guard.Instance().ThrowIfNull(builder, nameof(builder))
                 .ThrowIfLessThanZero(index, nameof(index))
                 .ThrowIfNull(attribute, nameof(attribute))
-                .ThrowIfNull(model, nameof(model))
+                .ThrowIfNull(propValue, nameof(propValue))
                 .ThrowIfNull(prop, nameof(prop))
+                .ThrowIfNull(viewModel, nameof(viewModel))
                 .ThrowIfNull(eventTarget, nameof(eventTarget));
 
             // Get any non-default attribute values (overrides).
@@ -810,7 +1221,7 @@ namespace MudBlazor
                 prop.PropertyType == typeof(Nullable<DateTime>))
             {
                 // Ensure the property value is set.
-                attributes["Date"] = (DateTime?)prop.GetValue(model);
+                attributes["Date"] = (DateTime?)prop.GetValue(propValue);
 
                 // Ensure the property is bound, both ways.
                 attributes["DateChanged"] = RuntimeHelpers.TypeCheck<EventCallback<DateTime?>>(
@@ -818,8 +1229,8 @@ namespace MudBlazor
                         eventTarget,
                         EventCallback.Factory.CreateInferred<DateTime?>(
                             eventTarget,
-                            x => prop.SetValue(model, x),
-                            (DateTime?)prop.GetValue(model)
+                            x => prop.SetValue(propValue, x),
+                            (DateTime?)prop.GetValue(propValue)
                             )
                         )
                     );
@@ -850,30 +1261,33 @@ namespace MudBlazor
         /// <summary>
         /// This method renders a <see cref="MudTimePicker"/> object into the 
         /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
-        /// specified model property.
+        /// specified viewModel property.
         /// </summary>
         /// <param name="builder">The builder to use for the operation.</param>
         /// <param name="index">The index to use for the operation.</param>
-        /// <param name="attribute">The attribute to use for the operation.</param>
-        /// <param name="model">The model to use for the operation.</param>
-        /// <param name="prop">The property to use for the operation.</param>
         /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
         /// <returns>The index after rendering is complete.</returns>
         public static int RenderMudTimePicker(
             this RenderTreeBuilder builder,
             int index,
+            IHandleEvent eventTarget,
             RenderMudTimePickerAttribute attribute,
-            object model,
+            object propValue,
             PropertyInfo prop,
-            IHandleEvent eventTarget
+            object viewModel
             )
         {
             // Validate the parameters before attempting to use them.
             Guard.Instance().ThrowIfNull(builder, nameof(builder))
                 .ThrowIfLessThanZero(index, nameof(index))
                 .ThrowIfNull(attribute, nameof(attribute))
-                .ThrowIfNull(model, nameof(model))
+                .ThrowIfNull(propValue, nameof(propValue))
                 .ThrowIfNull(prop, nameof(prop))
+                .ThrowIfNull(viewModel, nameof(viewModel))
                 .ThrowIfNull(eventTarget, nameof(eventTarget));
 
             // Get any non-default attribute values (overrides).
@@ -891,7 +1305,7 @@ namespace MudBlazor
                 prop.PropertyType == typeof(Nullable<TimeSpan>))
             {
                 // Ensure the property value is set.
-                attributes["Time"] = (TimeSpan?)prop.GetValue(model);
+                attributes["Time"] = (TimeSpan?)prop.GetValue(propValue);
 
                 // Ensure the property is bound, both ways.
                 attributes["TimeChanged"] = RuntimeHelpers.TypeCheck<EventCallback<TimeSpan?>>(
@@ -899,8 +1313,8 @@ namespace MudBlazor
                         eventTarget,
                         EventCallback.Factory.CreateInferred<TimeSpan?>(
                             eventTarget,
-                            x => prop.SetValue(model, x),
-                            (TimeSpan?)prop.GetValue(model)
+                            x => prop.SetValue(propValue, x),
+                            (TimeSpan?)prop.GetValue(propValue)
                             )
                         )
                     );
@@ -931,30 +1345,33 @@ namespace MudBlazor
         /// <summary>
         /// This method renders a <see cref="MudColorPicker"/> object into the 
         /// specified <see cref="RenderTreeBuilder"/> with bindings to the 
-        /// specified model property.
+        /// specified viewModel property.
         /// </summary>
         /// <param name="builder">The builder to use for the operation.</param>
         /// <param name="index">The index to use for the operation.</param>
-        /// <param name="attribute">The attribute to use for the operation.</param>
-        /// <param name="model">The model to use for the operation.</param>
-        /// <param name="prop">The property to use for the operation.</param>
         /// <param name="eventTarget">The target for any events.</param>
+        /// <param name="attribute">The attribute to use for the operation.</param>
+        /// <param name="propValue">The property value to use for the operation.</param>
+        /// <param name="prop">The property to use for the operation.</param>
+        /// <param name="viewModel">The view model to use for the operation.</param>
         /// <returns>The index after rendering is complete.</returns>
         public static int RenderMudColorPicker(
             this RenderTreeBuilder builder,
             int index,
+            IHandleEvent eventTarget,
             RenderMudColorPickerAttribute attribute,
-            object model,
+            object propValue,
             PropertyInfo prop,
-            IHandleEvent eventTarget
+            object viewModel
             )
         {
             // Validate the parameters before attempting to use them.
             Guard.Instance().ThrowIfNull(builder, nameof(builder))
                 .ThrowIfLessThanZero(index, nameof(index))
                 .ThrowIfNull(attribute, nameof(attribute))
-                .ThrowIfNull(model, nameof(model))
+                .ThrowIfNull(propValue, nameof(propValue))
                 .ThrowIfNull(prop, nameof(prop))
+                .ThrowIfNull(viewModel, nameof(viewModel))
                 .ThrowIfNull(eventTarget, nameof(eventTarget));
 
             // Get any non-default attribute values (overrides).
@@ -971,7 +1388,7 @@ namespace MudBlazor
             if (prop.PropertyType == typeof(MudColor))
             {
                 // Ensure the property value is set.
-                attributes["Value"] = (MudColor)prop.GetValue(model);
+                attributes["Value"] = (MudColor)prop.GetValue(propValue);
 
                 // Ensure the property is bound, both ways.
                 attributes["ValueChanged"] = RuntimeHelpers.TypeCheck<EventCallback<MudColor>>(
@@ -979,8 +1396,8 @@ namespace MudBlazor
                         eventTarget,
                         EventCallback.Factory.CreateInferred<MudColor>(
                             eventTarget,
-                            x => prop.SetValue(model, x),
-                            (MudColor)prop.GetValue(model)
+                            x => prop.SetValue(propValue, x),
+                            (MudColor)prop.GetValue(propValue)
                             )
                         )
                     );

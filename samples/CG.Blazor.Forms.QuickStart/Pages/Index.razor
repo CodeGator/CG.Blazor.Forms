@@ -3,14 +3,16 @@
 
 <h1>Dynamic Forms Demo</h1>
 
-<MudTabs>
-    <MudTabPanel Text="Simple">
-        <DynamicForm Model="@SimpleModel" OnValidSubmit="OnValidSubmit1"/>
-    </MudTabPanel>
-    <MudTabPanel Text="Complex">
-        <DynamicForm Model="@ComplexModel" OnValidSubmit="OnValidSubmit2"/>
-    </MudTabPanel>
-</MudTabs>
+<MudContainer MaxWidth="MaxWidth.Small">
+    <MudTabs>
+        <MudTabPanel Text="Simple">
+            <DynamicForm Model="@SimpleModel" OnValidSubmit="OnValidSubmit1"/>
+        </MudTabPanel>
+        <MudTabPanel Text="Complex">
+            <DynamicForm Model="@ComplexModel" OnValidSubmit="OnValidSubmit2"/>
+        </MudTabPanel>
+    </MudTabs>
+</MudContainer>
 
 @code {
 

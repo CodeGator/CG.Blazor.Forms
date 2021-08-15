@@ -1,15 +1,16 @@
 ﻿using CG.Blazor.Forms.Attributes;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 
 namespace MudBlazor
 {
     /// <summary>
-    /// This class is an attribute that indicates a decorated class should be
-    /// rendered using a <see cref="MudDatePicker"/> control.
+    /// This class is an attribute that indicates a decorated property should be 
+    /// rendered with a <see cref="MudSelect{T}"/> control.
     /// </summary>
     [AttributeUsage(AttributeTargets.Property)]
-    public class RenderMudDatePickerAttribute : FormGeneratorAttribute
+    public class RenderMudSelectAttribute : FormGeneratorAttribute
     {
         // *******************************************************************
         // Properties.
@@ -18,195 +19,185 @@ namespace MudBlazor
         #region Properties
 
         /// <summary>
-        /// This property indicates the position for the control.
+        /// This property contains the Start or End Adornment if not set to None.
         /// </summary>
         public Adornment Adornment { get; set; }
 
         /// <summary>
-        /// This property indicates the color for the control.
+        /// This property contains the color of the adornment if used. It 
+        /// supports the theme colors.
         /// </summary>
         public Color AdornmentColor { get; set; }
 
         /// <summary>
-        /// This property indicates the icon for the control.
+        /// This property contains the Icon that will be used if Adornment 
+        /// is set to Start or End.
         /// </summary>
         public string AdornmentIcon { get; set; }
 
         /// <summary>
-        /// This property indicates whether the control accepts keyboard 
-        /// input, or not.
+        /// This property contains text that will be used if Adornment is set 
+        /// to Start or End, the Text overrides Icon.
         /// </summary>
-        public bool AllowKeyboardInput { get; set; }
+        public string AdornmentText { get; set; }
 
         /// <summary>
-        /// This property indicates whether the control should close 
-        /// automatically, or not.
+        /// This property indicates the input will focus automatically, when true.
         /// </summary>
-        public bool AutoClose { get; set; }
+        public bool AutoFocus { get; set; }
 
         /// <summary>
-        /// This property contains any CSS classes to use for the control.
+        /// This property contains user class names, separated by space.
         /// </summary>
         public string Class { get; set; }
 
         /// <summary>
-        /// This property contains any CSS classes to use for the action buttons.
+        /// This property indicates whether to show the clear button, or not.
         /// </summary>
-        public string ClassActions { get; set; }
+        public bool Clearable { get; set; }
 
         /// <summary>
-        /// This property indicates the closing delay for the control.
+        /// This property contains the close select icon.
         /// </summary>
-        public int ClosingDelay { get; set; }
+        public string CloseIcon { get; set; }
 
         /// <summary>
-        /// This property contains the color to use for the control.
+        /// This property, if true, causes compact vertical padding to be 
+        /// applied to all Select items.
         /// </summary>
-        public Color Color { get; set; }
+        public bool Dense { get; set; }
 
         /// <summary>
-        /// This property indicates the date format for the control.
+        /// This property sets the direction the Select menu should open.
         /// </summary>
-        public string DateFormat { get; set; }
+        public Direction Direction { get; set; }
 
         /// <summary>
-        /// This property indicates whether the control is disabled, or not.
+        /// This property, if true, the input will be disabled.
         /// </summary>
         public bool Disabled { get; set; }
 
         /// <summary>
-        /// This property indicates whether the toolbar is disabled, or not.
+        /// This property, if true, disables the under line for the input.
         /// </summary>
-        public bool DisableToolbar { get; set; }
+        public bool DisableUnderLine { get; set; }
 
         /// <summary>
-        /// This property indicates how many months to display in the control.
+        /// This property contains the conversion format parameter for ToString(), 
+        /// which can be used for formatting primitive types, DateTimes and TimeSpans
         /// </summary>
-        public int DisplayMonths { get; set; }
+        public string Format { get; set; }
 
         /// <summary>
-        /// This property indicates whether the control is editable, or not.
+        /// This property indicates whether the input will take up the full width 
+        /// of its container, or not.
         /// </summary>
-        public bool Editable { get; set; }
+        public bool FullWidth { get; set; }
 
         /// <summary>
-        /// This property contains the elevation to use for the control.
-        /// </summary>
-        public int Elevation { get; set; }
-
-        /// <summary>
-        /// This property contains an optional day on which to start the week.
-        /// </summary>
-        public DayOfWeek? FirstDayOfWeek { get; set; }
-
-        /// <summary>
-        /// This property indicates the icon size to use with the control.
+        /// This property indicates the icon size.
         /// </summary>
         public Size IconSize { get; set; }
 
         /// <summary>
-        /// This property contains a label for the control.
+        /// This property indicates whether the the input will update the Value 
+        /// immediately on typing. If false, the Value is updated only on Enter.
+        /// </summary>
+        public bool Immediate { get; set; }
+
+        /// <summary>
+        /// This property hints at the type of data that might be entered by the 
+        /// user while editing the input
+        /// </summary>
+        public InputMode InputMode { get; set; }
+
+        /// <summary>
+        /// This property contains an optional label for the text field.
         /// </summary>
         public string Label { get; set; }
 
         /// <summary>
-        /// This property contains the margin for the control.
+        /// This property contains the number of lines that the input will display.
+        /// </summary>
+        public int Lines { get; set; }
+
+        /// <summary>
+        /// This property indicates how much to change the vertical spacing. 
         /// </summary>
         public Margin Margin { get; set; }
 
         /// <summary>
-        /// This property contains an optional maximum date for the control.
+        /// This property indicates the maximum height the select can have when open.
         /// </summary>
-        public DateTime? MaxDate { get; set; }
+        public int MaxHeight { get; set; }
 
         /// <summary>
-        /// This property contains an optional maximum number of months to show
-        /// in a singlee row, on the control.
+        /// This property, if true, multiple values can be selected via checkboxes which 
+        /// are automatically shown in the dropdown
         /// </summary>
-        public int? MaxMonthColumns { get; set; }
+        public bool MultiSelection { get; set; }
 
         /// <summary>
-        /// This property contains an optional minimum date for the control.
+        /// This property, if true, the Select menu will open either before or after the 
+        /// input (left/right).
         /// </summary>
-        public DateTime? MinDate { get; set; }
+        public bool OffsetX { get; set; }
 
         /// <summary>
-        /// This property contains the first view to show in the control.
+        /// This property, if true, the Select menu will open either before or after the 
+        /// input (top/bottom).
         /// </summary>
-        public OpenTo OpenTo { get; set; }
+        public bool OffsetY { get; set; }
 
         /// <summary>
-        /// This property contains the orientiation for the control.
+        /// This property contains the open select icon.
         /// </summary>
-        public Orientation Orientation { get; set; }
+        public string OpenIcon { get; set; }
 
         /// <summary>
-        /// This property contains the control container variant.
+        /// This property contains a comma separated list of options, for the dropdown.
         /// </summary>
-        public PickerVariant PickerVariant { get; set; }
+        public string Options { get; set; }
 
         /// <summary>
-        /// This property indicates whether the control is read only, or not.
+        /// This property contains the pattern attribute, when specified, is a regular 
+        /// expression which the input's value must match in order for the value to 
+        /// pass constraint validation. It must be a valid JavaScript regular expression.
+        /// Not Supported in multline input
+        /// </summary>
+        public string Pattern { get; set; }
+
+        /// <summary>
+        /// This property, if true, the input will be read-only.
         /// </summary>
         public bool ReadOnly { get; set; }
 
         /// <summary>
-        /// This property indicates whether the control is required, or not.
+        /// This propert, ff true, the Select's input will not show any values that 
+        /// are not defined in the dropdown. This can be useful if Value is bound 
+        /// to a variable which is initialized to a value which is not in the list
+        /// and you want the Select to show the label / placeholder instead.
         /// </summary>
-        public bool Required { get; set; }
+        public bool Strict { get; set; }
 
         /// <summary>
-        /// This property indicates whether the control should have rounded corners, 
-        /// or not.
-        /// </summary>
-        public bool Rounded { get; set; }
-
-        /// <summary>
-        /// This property indicates whether the control should show weekly numbers, 
-        /// or not.
-        /// </summary>
-        public bool ShowWeekNumbers { get; set; }
-
-        /// <summary>
-        /// This property indicates whether the control should show square corners, 
-        /// or not.
-        /// </summary>
-        public bool Square { get; set; }
-
-        /// <summary>
-        /// This property contains an optional starting month date for the control.
-        /// </summary>
-        public DateTime? StartMonth { get; set; }
-
-        /// <summary>
-        /// This property indicates the CSS styles to use for the control.
+        /// This property contains user styles, applied on top of the component's 
+        /// own classes and styles
         /// </summary>
         public string Style { get; set; }
 
         /// <summary>
-        /// This property contains the tag for the control.
+        /// This property contains a use Tag to attach any user data object to the 
+        /// component for your convenience.
         /// </summary>
         public object Tag { get; set; }
-
-        /// <summary>
-        /// This property indicates the format to use for the selected date, in
-        /// the title of the control.
-        /// </summary>
-        public string TitleDateFormat { get; set; }
-
-        /// <summary>
-        /// This property contains any CSS classes to use for the control's tool
-        /// bar.
-        /// </summary>
-        public string ToolBarClass { get; set; }
-
-        /// <summary>
-        /// This property contains any user attributes to use for the control.
+                
+        /// This property contains any user attributes to use for the tabs panel.
         /// </summary>
         public IDictionary<string, object> UserAttributes { get; set; }
 
         /// <summary>
-        /// This property contains the variant for the control.
+        /// This property contains the variant to use with the control.
         /// </summary>
         public Variant Variant { get; set; }
 
@@ -219,47 +210,43 @@ namespace MudBlazor
         #region Constructors
 
         /// <summary>
-        /// This constructor creates a new instance of the <see cref="RenderMudDatePickerAttribute"/>
+        /// This constructor creates a new instance of the <see cref="RenderMudSelectAttribute"/>
         /// class.
         /// </summary>
-        public RenderMudDatePickerAttribute()
+        public RenderMudSelectAttribute()
         {
             // Set default values.
             Adornment = Adornment.End;
             AdornmentColor = Color.Default;
             AdornmentIcon = string.Empty;
-            AllowKeyboardInput = false;
-            AutoClose = false;
+            AdornmentText = string.Empty;
+            AutoFocus = false;
             Class = string.Empty;
-            ClassActions = string.Empty;
-            ClosingDelay = 100;
-            Color = Color.Primary;
-            DateFormat = string.Empty;
+            Clearable = false;
+            CloseIcon = string.Empty;
+            Dense = false;
+            Direction = Direction.Bottom;
             Disabled = false;
-            DisableToolbar = false;
-            DisplayMonths = 1;
-            Editable = false;
-            Elevation = 0;
-            FirstDayOfWeek = null;
+            DisableUnderLine = false;
+            Format = string.Empty;
+            FullWidth = false;
             IconSize = Size.Medium;
+            Immediate = false;
+            InputMode = InputMode.text;
             Label = string.Empty;
+            Lines = 1;
             Margin = Margin.None;
-            MaxDate = null;
-            MaxMonthColumns = null;
-            MinDate = null;
-            OpenTo = OpenTo.Date;
-            Orientation = Orientation.Portrait;
-            PickerVariant = PickerVariant.Inline;
+            MaxHeight = 300;
+            MultiSelection = false;
+            OffsetX = false;
+            OffsetY = false;
+            OpenIcon = string.Empty;
+            Options = string.Empty;
+            Pattern = string.Empty;
             ReadOnly = false;
-            Required = false;
-            Rounded = false;
-            ShowWeekNumbers = false;
-            Square = false;
-            StartMonth = null;
+            Strict = false;
             Style = string.Empty;
             Tag = null;
-            TitleDateFormat = string.Empty;
-            ToolBarClass = string.Empty;
             UserAttributes = null;
             Variant = Variant.Text;
         }
@@ -300,17 +287,17 @@ namespace MudBlazor
             }
 
             // Does this property have a non-default value?
-            if (false != AllowKeyboardInput)
+            if (false == string.IsNullOrEmpty(AdornmentText))
             {
                 // Add the property value.
-                attr[nameof(AllowKeyboardInput)] = AllowKeyboardInput;
+                attr[nameof(AdornmentText)] = AdornmentText;
             }
 
             // Does this property have a non-default value?
-            if (false != AutoClose)
+            if (false != AutoFocus)
             {
                 // Add the property value.
-                attr[nameof(AutoClose)] = AutoClose;
+                attr[nameof(AutoFocus)] = AutoFocus;
             }
 
             // Does this property have a non-default value?
@@ -321,31 +308,31 @@ namespace MudBlazor
             }
 
             // Does this property have a non-default value?
-            if (false == string.IsNullOrEmpty(ClassActions))
+            if (false != Clearable)
             {
                 // Add the property value.
-                attr[nameof(ClassActions)] = ClassActions;
+                attr[nameof(Clearable)] = Clearable;
             }
 
             // Does this property have a non-default value?
-            if (100 != ClosingDelay)
+            if (false == string.IsNullOrEmpty(CloseIcon))
             {
                 // Add the property value.
-                attr[nameof(ClosingDelay)] = ClosingDelay;
+                attr[nameof(CloseIcon)] = CloseIcon;
             }
 
             // Does this property have a non-default value?
-            if (Color.Primary != Color)
+            if (false != Dense)
             {
                 // Add the property value.
-                attr[nameof(Color)] = Color;
+                attr[nameof(Dense)] = Dense;
             }
 
             // Does this property have a non-default value?
-            if (false == string.IsNullOrEmpty(DateFormat))
+            if (Direction.Bottom != Direction)
             {
                 // Add the property value.
-                attr[nameof(DateFormat)] = DateFormat;
+                attr[nameof(Direction)] = Direction;
             }
 
             // Does this property have a non-default value?
@@ -356,38 +343,24 @@ namespace MudBlazor
             }
 
             // Does this property have a non-default value?
-            if (false != DisableToolbar)
+            if (false != DisableUnderLine)
             {
                 // Add the property value.
-                attr[nameof(DisableToolbar)] = DisableToolbar;
+                attr[nameof(DisableUnderLine)] = DisableUnderLine;
             }
 
             // Does this property have a non-default value?
-            if (1 != DisplayMonths)
+            if (false == string.IsNullOrEmpty(Format))
             {
                 // Add the property value.
-                attr[nameof(DisplayMonths)] = DisplayMonths;
+                attr[nameof(Format)] = Format;
             }
 
             // Does this property have a non-default value?
-            if (false != Editable)
+            if (false != FullWidth)
             {
                 // Add the property value.
-                attr[nameof(Editable)] = Editable;
-            }
-
-            // Does this property have a non-default value?
-            if (0 != Elevation)
-            {
-                // Add the property value.
-                attr[nameof(Elevation)] = Elevation;
-            }
-
-            // Does this property have a non-default value?
-            if (null != FirstDayOfWeek)
-            {
-                // Add the property value.
-                attr[nameof(FirstDayOfWeek)] = FirstDayOfWeek.Value;
+                attr[nameof(FullWidth)] = FullWidth;
             }
 
             // Does this property have a non-default value?
@@ -398,10 +371,31 @@ namespace MudBlazor
             }
 
             // Does this property have a non-default value?
+            if (false != Immediate)
+            {
+                // Add the property value.
+                attr[nameof(Immediate)] = Immediate;
+            }
+
+            // Does this property have a non-default value?
+            if (InputMode.text != InputMode)
+            {
+                // Add the property value.
+                attr[nameof(InputMode)] = InputMode;
+            }
+
+            // Does this property have a non-default value?
             if (false == string.IsNullOrEmpty(Label))
             {
                 // Add the property value.
                 attr[nameof(Label)] = Label;
+            }
+
+            // Does this property have a non-default value?
+            if (1 != Lines)
+            {
+                // Add the property value.
+                attr[nameof(Lines)] = Lines;
             }
 
             // Does this property have a non-default value?
@@ -412,45 +406,52 @@ namespace MudBlazor
             }
 
             // Does this property have a non-default value?
-            if (null != MaxDate)
+            if (300 != MaxHeight)
             {
                 // Add the property value.
-                attr[nameof(MaxDate)] = MaxDate;
+                attr[nameof(MaxHeight)] = MaxHeight;
             }
 
             // Does this property have a non-default value?
-            if (null != MaxMonthColumns)
+            if (false != MultiSelection)
             {
                 // Add the property value.
-                attr[nameof(MaxMonthColumns)] = MaxMonthColumns;
+                attr[nameof(MultiSelection)] = MultiSelection;
             }
 
             // Does this property have a non-default value?
-            if (null != MinDate)
+            if (false != OffsetX)
             {
                 // Add the property value.
-                attr[nameof(MinDate)] = MinDate;
+                attr[nameof(OffsetX)] = OffsetX;
             }
 
             // Does this property have a non-default value?
-            if (OpenTo.Date != OpenTo)
+            if (false != OffsetY)
             {
                 // Add the property value.
-                attr[nameof(OpenTo)] = OpenTo;
+                attr[nameof(OffsetY)] = OffsetY;
             }
 
             // Does this property have a non-default value?
-            if (Orientation.Portrait != Orientation)
+            if (false == string.IsNullOrEmpty(Pattern))
             {
                 // Add the property value.
-                attr[nameof(Orientation)] = Orientation;
+                attr[nameof(Pattern)] = Pattern;
             }
 
             // Does this property have a non-default value?
-            if (PickerVariant.Inline != PickerVariant)
+            if (false == string.IsNullOrEmpty(OpenIcon))
             {
                 // Add the property value.
-                attr[nameof(PickerVariant)] = PickerVariant;
+                attr[nameof(OpenIcon)] = OpenIcon;
+            }
+
+            // Does this property have a non-default value?
+            if (false == string.IsNullOrEmpty(Pattern))
+            {
+                // Add the property value.
+                attr[nameof(Pattern)] = Pattern;
             }
 
             // Does this property have a non-default value?
@@ -461,38 +462,10 @@ namespace MudBlazor
             }
 
             // Does this property have a non-default value?
-            if (false != Required)
+            if (false != Strict)
             {
                 // Add the property value.
-                attr[nameof(Required)] = Required;
-            }
-
-            // Does this property have a non-default value?
-            if (false != Rounded)
-            {
-                // Add the property value.
-                attr[nameof(Rounded)] = Rounded;
-            }
-
-            // Does this property have a non-default value?
-            if (false != ShowWeekNumbers)
-            {
-                // Add the property value.
-                attr[nameof(ShowWeekNumbers)] = ShowWeekNumbers;
-            }
-
-            // Does this property have a non-default value?
-            if (false != Square)
-            {
-                // Add the property value.
-                attr[nameof(Square)] = Square;
-            }
-
-            // Does this property have a non-default value?
-            if (null != StartMonth)
-            {
-                // Add the property value.
-                attr[nameof(StartMonth)] = StartMonth;
+                attr[nameof(Strict)] = Strict;
             }
 
             // Does this property have a non-default value?
@@ -507,20 +480,6 @@ namespace MudBlazor
             {
                 // Add the property value.
                 attr[nameof(Tag)] = Tag;
-            }
-
-            // Does this property have a non-default value?
-            if (false == string.IsNullOrEmpty(TitleDateFormat))
-            {
-                // Add the property value.
-                attr[nameof(TitleDateFormat)] = TitleDateFormat;
-            }
-
-            // Does this property have a non-default value?
-            if (false == string.IsNullOrEmpty(ToolBarClass))
-            {
-                // Add the property value.
-                attr[nameof(ToolBarClass)] = ToolBarClass;
             }
 
             // Does this property have a non-default value?

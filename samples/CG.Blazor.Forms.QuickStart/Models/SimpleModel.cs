@@ -12,7 +12,7 @@ namespace CG.Blazor.Forms.QuickStart.Models
         /// <summary>
         /// This property demonstrates binding a string to a mudtextfield
         /// </summary>
-        [RenderMudTextField]
+        [RenderMudSelect(Options = "Code, Mark, Bob, Cindy, Rachael, George")]
         [Required]
         public string FirstName { get; set; }
 
@@ -28,6 +28,12 @@ namespace CG.Blazor.Forms.QuickStart.Models
         /// </summary>
         [RenderMudDatePicker]
         public DateTime? DateOfBirth { get; set; }
+
+        /// <summary>
+        /// This property demonstrates binding a slider to an int.
+        /// </summary>
+        [RenderMudSlider(Min = 0, Max = 10)]
+        public int HatSize { get; set; }
 
         public SimpleModel()
         {

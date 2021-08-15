@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Reflection.Emit;
+using CG.Blazor.Forms.Attributes;
 
 namespace CG.Blazor.Forms.QuickStart.Models
 {
@@ -21,13 +21,9 @@ namespace CG.Blazor.Forms.QuickStart.Models
         /// <summary>
         /// To demonstrate a child model that will be rendered.
         /// </summary>
+        [RenderObject]
         public PartAModel PartAModel { get; set; }
-
-        /// <summary>
-        /// The generation process ignores this because its not decorated.
-        /// </summary>
-        public string[] _blah = new string[] { "A", "B", "C", "D", "E", "F" };
-
+        
         public ComplexModel()
         {
             PartAModel = new PartAModel();
@@ -39,6 +35,11 @@ namespace CG.Blazor.Forms.QuickStart.Models
         /// </summary>
         [RenderMudAutocomplete(SearchFunc = "Search1", Label = "Auto Complete")]
         public string Z { get; set; }
+
+        /// <summary>
+        /// The generation process ignores this because its not decorated.
+        /// </summary>
+        public string[] _blah = new string[] { "A", "B", "C", "D", "E", "F" };
 
         /// <summary>
         /// This method is called wire up to the rendered autocomplete control
@@ -88,13 +89,9 @@ namespace CG.Blazor.Forms.QuickStart.Models
         public string C { get; set; }
 
         /// <summary>
-        /// The generation process ignores this because its not decorated.
-        /// </summary>
-        public string[] _blah = new string[] { "1", "2", "3", "4", "5", "6" };
-
-        /// <summary>
         /// To demonstrate a child model that will be rendered.
         /// </summary>
+        [RenderObject]
         public PartBModel PartBModel { get; set; }
 
         public PartAModel()
@@ -103,24 +100,6 @@ namespace CG.Blazor.Forms.QuickStart.Models
             A = "1";
             B = "2";
             C = "3";
-        }
-
-        /// <summary>
-        /// This method is called wire up to the rendered autocomplete control
-        /// by the form generator, and will be called, dynamically, at runtime.
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        private async Task<IEnumerable<string>> Search1(string value)
-        {
-            // In real life use an asynchronous function for fetching data from an api.
-            await Task.Delay(5);
-
-            // If text is null or empty, show complete list
-            if (string.IsNullOrEmpty(value))
-                return _blah;
-            // Otherwise, show the filter results.
-            return _blah.Where(x => x.Contains(value, StringComparison.InvariantCultureIgnoreCase));
         }
     }
 
@@ -171,6 +150,8 @@ namespace CG.Blazor.Forms.QuickStart.Models
         /// <summary>
         /// To demonstrate a child model that will be rendered.
         /// </summary>
+        //[RenderMudPaper()]
+        [RenderMuddyGroupBox()]
         public PartCModel PartCModel { get; set; }
 
         public PartBModel()

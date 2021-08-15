@@ -255,7 +255,7 @@ namespace MudBlazor
             }
 
             // Does this property have a non-default value?
-            if (false != string.IsNullOrEmpty(AdornmentIcon))
+            if (false == string.IsNullOrEmpty(AdornmentIcon))
             {
                 // Add the property value.
                 attr[nameof(AdornmentIcon)] = AdornmentIcon;
@@ -283,14 +283,14 @@ namespace MudBlazor
             }
 
             // Does this property have a non-default value?
-            if (false != string.IsNullOrEmpty(Class))
+            if (false == string.IsNullOrEmpty(Class))
             {
                 // Add the property value.
                 attr[nameof(Class)] = Class;
             }
 
             // Does this property have a non-default value?
-            if (false != string.IsNullOrEmpty(ClassActions))
+            if (false == string.IsNullOrEmpty(ClassActions))
             {
                 // Add the property value.
                 attr[nameof(ClassActions)] = ClassActions;
@@ -409,7 +409,7 @@ namespace MudBlazor
             }
 
             // Does this property have a non-default value?
-            if (false != string.IsNullOrEmpty(Style))
+            if (false == string.IsNullOrEmpty(Style))
             {
                 // Add the property value.
                 attr[nameof(Style)] = Style;

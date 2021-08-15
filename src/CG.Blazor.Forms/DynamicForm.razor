@@ -2,39 +2,52 @@
 @typeparam T
 
 <div class="dynamic-form-wrapper">
-     @if (OnSubmit.HasDelegate)
+    @if (NoForm)
     {
-        <EditForm Model="@Model" OnSubmit="@OnSubmit">
-            @GenerateFormBody()
-            <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
-        </EditForm>
-    }
-    else if (!OnValidSubmit.HasDelegate && OnInvalidSubmit.HasDelegate)
-    {
-        <EditForm Model="@Model" OnInvalidSubmit="@OnInvalidSubmit">
-            @GenerateFormBody()
-            <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
-        </EditForm>
-    }
-    else if (OnValidSubmit.HasDelegate && !OnInvalidSubmit.HasDelegate)
-    {
-        <EditForm Model="@Model" OnValidSubmit="@OnValidSubmit">
-            @GenerateFormBody()
-            <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
-        </EditForm>
-    }
-    else if (OnValidSubmit.HasDelegate && OnInvalidSubmit.HasDelegate)
-    {
-        <EditForm Model="@Model" OnInvalidSubmit="@OnInvalidSubmit" OnValidSubmit="@OnValidSubmit">
-            @GenerateFormBody()
-            <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
-        </EditForm>
+        @GenerateFormBody()
     }
     else
     {
-        <EditForm Model="@Model">
-            @GenerateFormBody()
-            <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
-        </EditForm>
+        @if (OnSubmit.HasDelegate)
+        {
+            <EditForm Model="@Model" OnSubmit="@OnSubmit">
+                @GenerateFormBody()
+                <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
+            </EditForm>
+        }
+        else if (!OnValidSubmit.HasDelegate && OnInvalidSubmit.HasDelegate)
+        {
+            <EditForm Model="@Model" OnInvalidSubmit="@OnInvalidSubmit">
+                @GenerateFormBody()
+                <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
+            </EditForm>
+        }
+        else if (OnValidSubmit.HasDelegate && !OnInvalidSubmit.HasDelegate)
+        {
+            <EditForm Model="@Model" OnValidSubmit="@OnValidSubmit">
+                @GenerateFormBody()
+                <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
+            </EditForm>
+        }
+        else if (OnValidSubmit.HasDelegate && OnInvalidSubmit.HasDelegate)
+        {
+            <EditForm Model="@Model" OnInvalidSubmit="@OnInvalidSubmit" OnValidSubmit="@OnValidSubmit">
+                @GenerateFormBody()
+                <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
+            </EditForm>
+        }
+        else
+        {
+            <EditForm Model="@Model">
+                @GenerateFormBody()
+                <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
+            </EditForm>
+        }
     }
 </div>
+
+<style>
+.dynamic-form-wrapper {
+    margin: 5px;
+}
+</style>

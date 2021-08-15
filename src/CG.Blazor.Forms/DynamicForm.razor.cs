@@ -18,22 +18,24 @@ namespace CG.Blazor.Forms
         #region Properties
 
         /// <summary>
+        /// This property contains a form generator service.
+        /// </summary>
+        [Inject]
+        private IFormGenerator FormGenerator { get; set; }
+
+        /// <summary>
         /// This parameter contains a reference to the data model for the form.
         /// </summary>
         [Parameter]
         public T Model { get; set; }
 
         /// <summary>
-        /// This parameter contains a callback for the OnValidSubmit event.
+        /// This parameter indicates whether the model and it's properties
+        /// should be rendered inside a form, or not. True to render just 
+        /// the model; False to render the model inside a form.
         /// </summary>
         [Parameter]
-        public EventCallback<EditContext> OnValidSubmit { get; set; }
-
-        /// <summary>
-        /// This parameter contains a callback for the OnSubmit event.
-        /// </summary>
-        [Parameter]
-        public EventCallback<EditContext> OnSubmit { get; set; }
+        public bool NoForm { get; set; }
 
         /// <summary>
         /// This parameter contains a callback for the OnInvalidSubmit event.
@@ -42,10 +44,16 @@ namespace CG.Blazor.Forms
         public EventCallback<EditContext> OnInvalidSubmit { get; set; }
 
         /// <summary>
-        /// This property contains a form generator service.
+        /// This parameter contains a callback for the OnSubmit event.
         /// </summary>
-        [Inject]
-        private IFormGenerator FormGenerator { get; set; }
+        [Parameter]
+        public EventCallback<EditContext> OnSubmit { get; set; }
+
+        /// <summary>
+        /// This parameter contains a callback for the OnValidSubmit event.
+        /// </summary>
+        [Parameter]
+        public EventCallback<EditContext> OnValidSubmit { get; set; }
 
         #endregion
 
