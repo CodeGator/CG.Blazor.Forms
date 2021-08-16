@@ -232,6 +232,17 @@ control.</p>
     <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
 public class RenderMudPaperAttribute : RenderObjectAttribute</code></pre>
   </div>
+  <h5 id="MudBlazor_RenderMudPaperAttribute_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Decorating an object property with this attribute causes the form generator 
+to render the public properties of the object inside a <span class="xref">MudBlazor.MudPaper</span>
+component. 
+</p>
+<p>
+This attribute is only valid when placed on a property that returns an 
+object type.
+</p>
+</div>
   <h3 id="constructors">Constructors
   </h3>
   <a id="MudBlazor_RenderMudPaperAttribute__ctor_" data-uid="MudBlazor.RenderMudPaperAttribute.#ctor*"></a>

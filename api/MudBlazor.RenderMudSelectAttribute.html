@@ -230,6 +230,22 @@ rendered with a <span class="xref">MudBlazor.MudSelect`1</span> control.</p>
     <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
 public class RenderMudSelectAttribute : FormGeneratorAttribute</code></pre>
   </div>
+  <h5 id="MudBlazor_RenderMudSelectAttribute_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Decorating a <span class="xref">System.String</span> property with this attribute causes the 
+form generator to render the property as a <span class="xref">MudBlazor.MudSelect`1</span> 
+component. 
+</p>
+<p>
+This attribute is only valid when placed on a property that returns a 
+<span class="xref">System.String</span> value.
+</p>
+<p>
+The options, for the select should be specified using the 
+<a class="xref" href="MudBlazor.RenderMudSelectAttribute.html#MudBlazor_RenderMudSelectAttribute_Options">Options</a> parameter, with a comma 
+separated list of string values.
+</p>
+</div>
   <h3 id="constructors">Constructors
   </h3>
   <a id="MudBlazor_RenderMudSelectAttribute__ctor_" data-uid="MudBlazor.RenderMudSelectAttribute.#ctor*"></a>

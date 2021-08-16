@@ -230,6 +230,17 @@ rendered using a <span class="xref">MudBlazor.MudDatePicker</span> control.</p>
     <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
 public class RenderMudDatePickerAttribute : FormGeneratorAttribute</code></pre>
   </div>
+  <h5 id="MudBlazor_RenderMudDatePickerAttribute_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Decorating a <span class="xref">System.DateTime</span> property with this attribute causes 
+the form generator to render the property as a <span class="xref">MudBlazor.MudDatePicker</span> 
+component. 
+</p>
+<p>
+This attribute is only valid when placed on a property that returns a 
+<span class="xref">System.DateTime</span> value.
+</p>
+</div>
   <h3 id="constructors">Constructors
   </h3>
   <a id="MudBlazor_RenderMudDatePickerAttribute__ctor_" data-uid="MudBlazor.RenderMudDatePickerAttribute.#ctor*"></a>

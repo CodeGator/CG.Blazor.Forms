@@ -230,6 +230,17 @@ rendered with a <span class="xref">MudBlazor.MudNumericField`1</span> control.</
     <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
 public class RenderMudNumericFieldAttribute : FormGeneratorAttribute</code></pre>
   </div>
+  <h5 id="MudBlazor_RenderMudNumericFieldAttribute_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+Decorating a numeric property with this attribute causes the form generator
+to render the property as a <span class="xref">MudBlazor.MudNumericField`1</span> component. 
+</p>
+<p>
+This attribute is only valid when placed on a property that returns a 
+numeric value (in other words, an int, long, byte, float, double, or 
+decimal type).
+</p>
+</div>
   <h3 id="constructors">Constructors
   </h3>
   <a id="MudBlazor_RenderMudNumericFieldAttribute__ctor_" data-uid="MudBlazor.RenderMudNumericFieldAttribute.#ctor*"></a>

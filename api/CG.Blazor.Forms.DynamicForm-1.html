@@ -165,6 +165,14 @@ public T Model { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="CG_Blazor_Forms_DynamicForm_1_Model_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Any type can be used as a model, for form generation, but it was
+designed to work with a simple, to moderately complex POCO class,
+containing properties that return either primitive types, or, 
+other POCO references.
+</p>
+</div>
   <a id="CG_Blazor_Forms_DynamicForm_1_NoForm_" data-uid="CG.Blazor.Forms.DynamicForm`1.NoForm*"></a>
   <h4 id="CG_Blazor_Forms_DynamicForm_1_NoForm" data-uid="CG.Blazor.Forms.DynamicForm`1.NoForm">NoForm</h4>
   <div class="markdown level1 summary"><p>This parameter indicates whether the model and it's properties
@@ -192,6 +200,19 @@ public bool NoForm { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="CG_Blazor_Forms_DynamicForm_1_NoForm_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+Setting this value to True prevents the form generator from wrapping
+the properties of the <a class="xref" href="CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_Model">Model</a> object in
+an <span class="xref">Microsoft.AspNetCore.Components.Forms.EditForm</span> component. That, in turn, prevents any
+of the form related callbacks from ever getting raised, since there
+isn&apos;t a form to raise them.
+</p>
+<p>
+This property is good to set if you need a form with dynamic content, 
+but, you want to handle the <span class="xref">Microsoft.AspNetCore.Components.Forms.EditForm</span> part yourself.
+</p>
+</div>
   <a id="CG_Blazor_Forms_DynamicForm_1_OnInvalidSubmit_" data-uid="CG.Blazor.Forms.DynamicForm`1.OnInvalidSubmit*"></a>
   <h4 id="CG_Blazor_Forms_DynamicForm_1_OnInvalidSubmit" data-uid="CG.Blazor.Forms.DynamicForm`1.OnInvalidSubmit">OnInvalidSubmit</h4>
   <div class="markdown level1 summary"><p>This parameter contains a callback for the OnInvalidSubmit event.</p>
@@ -217,6 +238,18 @@ public EventCallback&lt;EditContext&gt; OnInvalidSubmit { get; set; }</code></pr
       </tr>
     </tbody>
   </table>
+  <h5 id="CG_Blazor_Forms_DynamicForm_1_OnInvalidSubmit_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This callback is optional. It will be called whenever the form
+is submitted with one or more invalid form values. As such,
+it will only be called if the <a class="xref" href="CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_NoForm">NoForm</a> 
+property is set to false, and the <a class="xref" href="CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_Model">Model</a> 
+property has been set to a valid POCO reference, and the model&apos;s 
+class has been decorated with a <a class="xref" href="CG.Blazor.Forms.Attributes.DataAnnotationsValidatorAttribute.html">DataAnnotationsValidatorAttribute</a> 
+attribute (or equivilant), and at least one or more properties 
+on the model have a value (or values) that fail form validation.
+</p>
+</div>
   <a id="CG_Blazor_Forms_DynamicForm_1_OnSubmit_" data-uid="CG.Blazor.Forms.DynamicForm`1.OnSubmit*"></a>
   <h4 id="CG_Blazor_Forms_DynamicForm_1_OnSubmit" data-uid="CG.Blazor.Forms.DynamicForm`1.OnSubmit">OnSubmit</h4>
   <div class="markdown level1 summary"><p>This parameter contains a callback for the OnSubmit event.</p>
@@ -242,6 +275,16 @@ public EventCallback&lt;EditContext&gt; OnSubmit { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="CG_Blazor_Forms_DynamicForm_1_OnSubmit_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This callback is optional. It will be called whenever the form
+is submitted by the user, whether or not the form&apos;s values would
+otherwise pass validation, or not. As such, it will only be called 
+if the <see cref="!:DynamicForm.NoForm"></see> property is set to false, 
+and the <see cref="!:DynamicForm.Model"></see>  property has been set to a 
+valid POCO reference.
+</p>
+</div>
   <a id="CG_Blazor_Forms_DynamicForm_1_OnValidSubmit_" data-uid="CG.Blazor.Forms.DynamicForm`1.OnValidSubmit*"></a>
   <h4 id="CG_Blazor_Forms_DynamicForm_1_OnValidSubmit" data-uid="CG.Blazor.Forms.DynamicForm`1.OnValidSubmit">OnValidSubmit</h4>
   <div class="markdown level1 summary"><p>This parameter contains a callback for the OnValidSubmit event.</p>
@@ -267,6 +310,17 @@ public EventCallback&lt;EditContext&gt; OnValidSubmit { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="CG_Blazor_Forms_DynamicForm_1_OnValidSubmit_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+This callback is optional. It will be called whenever the form
+is submitted with valid form values. As such, it will only be 
+called if the <see cref="!:DynamicForm.NoForm"></see> property is set to 
+false, and the <see cref="!:DynamicForm.Model"></see>  property has been 
+set to a valid POCO reference, and the model&apos;s  class has been 
+decorated with a <a class="xref" href="CG.Blazor.Forms.Attributes.DataAnnotationsValidatorAttribute.html">DataAnnotationsValidatorAttribute</a> 
+attribute (or equivilant).
+</p>
+</div>
 </article>
           </div>
           

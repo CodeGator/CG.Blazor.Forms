@@ -232,6 +232,18 @@ have all it's public child properties rendered.</p>
     <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
 public class RenderObjectAttribute : FormGeneratorAttribute</code></pre>
   </div>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderObjectAttribute_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+In order to render a property that returns an object reference (in other
+words, not a primitive type), that property must be decorated with this
+attribute type, or a derived attribute type. Otherwise, the property will 
+be ignored during form generation.
+</p>
+<p>
+This attribute is only valid when placed on a property that returns an 
+object type.
+</p>
+</div>
   <h3 id="constructors">Constructors
   </h3>
   <a id="CG_Blazor_Forms_Attributes_RenderObjectAttribute__ctor_" data-uid="CG.Blazor.Forms.Attributes.RenderObjectAttribute.#ctor*"></a>
