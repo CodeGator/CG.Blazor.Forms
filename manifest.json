@@ -30,7 +30,19 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html",
-          "hash": "+MP4o5y/kPOHXOkt0lsFbKm2ijZe+7vRmhD+5L9neEs="
+          "hash": "jt7590LIzwvFZTfyrlFDZTDqju2FaHeDucxprQ3CujM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.html",
+          "hash": "hr0HmP/ovdI2/mbWMHek3BqBAAfZm8SfygeXXTUz+tE="
         }
       },
       "is_incremental": false,
@@ -54,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Blazor.Forms.Attributes.html",
-          "hash": "BtAU66IqxhuaLogpwq7TRo4Y0Pmjz+yvIRernNIe++E="
+          "hash": "qB5oq/DNxUZiCj0ZQXQX45R6l3itYROfRH0SL2/8bW8="
         }
       },
       "is_incremental": false,
@@ -366,7 +378,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "2JSsgVqouX8cpwFftFXd5SlXvKAejVVcKi6JsNJLaBU="
+          "hash": "mWnVOfdOHjL20QnHcyc2oKBrGxOyjmc1vcLjixYXXMw="
         }
       },
       "is_incremental": false,
@@ -485,7 +497,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 29,
+          "total_file_count": 30,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

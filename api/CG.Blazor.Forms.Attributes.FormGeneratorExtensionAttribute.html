@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class FormGeneratorAttribute
+    <title>Class FormGeneratorExtensionAttribute
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class FormGeneratorAttribute
+    <meta name="title" content="Class FormGeneratorExtensionAttribute
    ">
     <meta name="generator" content="docfx 2.58.0.0">
     
@@ -78,38 +78,26 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorAttribute">
+            <article class="content wrap" id="_content" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute">
   
   
-  <h1 id="CG_Blazor_Forms_Attributes_FormGeneratorAttribute" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorAttribute" class="text-break">Class FormGeneratorAttribute
+  <h1 id="CG_Blazor_Forms_Attributes_FormGeneratorExtensionAttribute" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute" class="text-break">Class FormGeneratorExtensionAttribute
   </h1>
-  <div class="markdown level0 summary"><p>This class is the base for all form generation attributes.</p>
+  <div class="markdown level0 summary"><p>This class is the base for all form generation extension attributes.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">System.Attribute</span></div>
-    <div class="level2"><span class="xref">FormGeneratorAttribute</span></div>
-      <div class="level3"><a class="xref" href="CG.Blazor.Forms.Attributes.DataAnnotationsValidatorAttribute.html">DataAnnotationsValidatorAttribute</a></div>
-      <div class="level3"><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.html">FormGeneratorExtensionAttribute</a></div>
-      <div class="level3"><a class="xref" href="CG.Blazor.Forms.Attributes.RenderObjectAttribute.html">RenderObjectAttribute</a></div>
-      <div class="level3"><a class="xref" href="MudBlazor.RenderMudAlertAttribute.html">RenderMudAlertAttribute</a></div>
-      <div class="level3"><a class="xref" href="MudBlazor.RenderMudAutocompleteAttribute.html">RenderMudAutocompleteAttribute</a></div>
-      <div class="level3"><a class="xref" href="MudBlazor.RenderMudCheckBoxAttribute.html">RenderMudCheckBoxAttribute</a></div>
-      <div class="level3"><a class="xref" href="MudBlazor.RenderMudColorPickerAttribute.html">RenderMudColorPickerAttribute</a></div>
-      <div class="level3"><a class="xref" href="MudBlazor.RenderMudDatePickerAttribute.html">RenderMudDatePickerAttribute</a></div>
-      <div class="level3"><a class="xref" href="MudBlazor.RenderMudFieldAttribute.html">RenderMudFieldAttribute</a></div>
-      <div class="level3"><a class="xref" href="MudBlazor.RenderMudNumericFieldAttribute.html">RenderMudNumericFieldAttribute</a></div>
-      <div class="level3"><a class="xref" href="MudBlazor.RenderMudRadioGroupAttribute.html">RenderMudRadioGroupAttribute</a></div>
-      <div class="level3"><a class="xref" href="MudBlazor.RenderMudSelectAttribute.html">RenderMudSelectAttribute</a></div>
-      <div class="level3"><a class="xref" href="MudBlazor.RenderMudSliderAttribute.html">RenderMudSliderAttribute</a></div>
-      <div class="level3"><a class="xref" href="MudBlazor.RenderMudSwitchAttribute.html">RenderMudSwitchAttribute</a></div>
-      <div class="level3"><a class="xref" href="MudBlazor.RenderMudTextFieldAttribute.html">RenderMudTextFieldAttribute</a></div>
-      <div class="level3"><a class="xref" href="MudBlazor.RenderMudTimePickerAttribute.html">RenderMudTimePickerAttribute</a></div>
+    <div class="level2"><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html">FormGeneratorAttribute</a></div>
+    <div class="level3"><span class="xref">FormGeneratorExtensionAttribute</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html#CG_Blazor_Forms_Attributes_FormGeneratorAttribute_ToAttributes">FormGeneratorAttribute.ToAttributes()</a>
+    </div>
     <div>
       <span class="xref">System.Attribute.Equals(System.Object)</span>
     </div>
@@ -239,21 +227,59 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="CG.Blazor.Forms.Attributes.html">CG.Blazor.Forms.Attributes</a></h6>
   <h6><strong>Assembly</strong>: CG.Blazor.Forms.dll</h6>
-  <h5 id="CG_Blazor_Forms_Attributes_FormGeneratorAttribute_syntax">Syntax</h5>
+  <h5 id="CG_Blazor_Forms_Attributes_FormGeneratorExtensionAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class FormGeneratorAttribute : Attribute</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class FormGeneratorExtensionAttribute : FormGeneratorAttribute</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
-  <a id="CG_Blazor_Forms_Attributes_FormGeneratorAttribute_ToAttributes_" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.ToAttributes*"></a>
-  <h4 id="CG_Blazor_Forms_Attributes_FormGeneratorAttribute_ToAttributes" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.ToAttributes">ToAttributes()</h4>
-  <div class="markdown level1 summary"><p>This method can be overridden to produce a table of named attributes.</p>
+  <a id="CG_Blazor_Forms_Attributes_FormGeneratorExtensionAttribute_OnRender_" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.OnRender*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_FormGeneratorExtensionAttribute_OnRender_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Object_" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.OnRender(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Object)">OnRender(RenderTreeBuilder, Int32, IHandleEvent, Object)</h4>
+  <div class="markdown level1 summary"><p>This method is called by the form generator to extend the form
+rendering process to include custom content, from the attribute.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IDictionary&lt;string, object&gt; ToAttributes()</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract int OnRender(RenderTreeBuilder builder, int index, IHandleEvent eventTarget, object viewModel)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder</span></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>The builder to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.AspNetCore.Components.IHandleEvent</span></td>
+        <td><span class="parametername">eventTarget</span></td>
+        <td><p>The event target to use for the
+operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">viewModel</span></td>
+        <td><p>The view-model to use for the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -264,8 +290,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
-        <td><p>A table of named attributes.</p>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The index after rendering is complete.</p>
 </td>
       </tr>
     </tbody>

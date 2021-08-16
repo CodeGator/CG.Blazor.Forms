@@ -38,6 +38,25 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.FormGeneratorAttribute.ToAttributes
   nameWithType: FormGeneratorAttribute.ToAttributes
+- uid: CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute
+  name: FormGeneratorExtensionAttribute
+  href: api/CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.html
+  commentId: T:CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute
+  fullName: CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute
+  nameWithType: FormGeneratorExtensionAttribute
+- uid: CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.OnRender(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Object)
+  name: OnRender(RenderTreeBuilder, Int32, IHandleEvent, Object)
+  href: api/CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.html#CG_Blazor_Forms_Attributes_FormGeneratorExtensionAttribute_OnRender_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Object_
+  commentId: M:CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.OnRender(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Object)
+  fullName: CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.OnRender(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Object)
+  nameWithType: FormGeneratorExtensionAttribute.OnRender(RenderTreeBuilder, Int32, IHandleEvent, Object)
+- uid: CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.OnRender*
+  name: OnRender
+  href: api/CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.html#CG_Blazor_Forms_Attributes_FormGeneratorExtensionAttribute_OnRender_
+  commentId: Overload:CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.OnRender
+  isSpec: "True"
+  fullName: CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.OnRender
+  nameWithType: FormGeneratorExtensionAttribute.OnRender
 - uid: CG.Blazor.Forms.Attributes.RenderObjectAttribute
   name: RenderObjectAttribute
   href: api/CG.Blazor.Forms.Attributes.RenderObjectAttribute.html
