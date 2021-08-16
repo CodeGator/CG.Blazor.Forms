@@ -17,5 +17,7 @@
 
 * I did a moderate amount of refactoring, just to make parameter names, order, and types more consistent.
 
+* I added the ability for extension attributes to generate custom content.
+
 
 

@@ -40,8 +40,23 @@ namespace MudBlazor
                 // Get the type of the viewModel.
                 var propValueType = viewModel?.GetType();
 
+                // Loop through any expansion attributes on the view-model.
+                var expAttrs = propValueType.GetCustomAttributes<FormGeneratorExtensionAttribute>();
+                foreach (var expAttr in expAttrs)
+                {
+                    var index2 = index; // Reset the index.
+
+                    // Allow the attribute to generate custom content.
+                    index2 = expAttr.OnRender(
+                        builder, 
+                        index2, 
+                        eventTarget, 
+                        viewModel
+                        );
+                }
+
                 // Should we render a data validator for the form?
-                var validatorAttr = propValueType?.GetCustomAttribute<DataAnnotationsValidatorAttribute>();
+                var validatorAttr = propValueType.GetCustomAttribute<DataAnnotationsValidatorAttribute>();
                 if (null != validatorAttr)
                 {
                     // Render the tag in the form.
@@ -88,8 +103,7 @@ namespace MudBlazor
         /// <param name="propValue">The propValue to use for the operation.</param>
         /// <param name="prop">The property info to use for the operation.</param>
         /// <param name="viewModel">The viewModel to use for the operation.</param>
-        /// <returns>the value of the <paramref name="builder"/> property, for
-        /// chaining calls together.</returns>
+        /// <returns>The index value after the operation completed.</returns>
         private int RenderObjectWrapped(
             RenderTreeBuilder builder,
             int index,
@@ -216,8 +230,7 @@ namespace MudBlazor
         /// <param name="propValue">The propValue to use for the operation.</param>
         /// <param name="prop">The property info to use for the operation.</param>
         /// <param name="viewModel">The viewModel to use for the operation.</param>
-        /// <returns>the value of the <paramref name="builder"/> property, for
-        /// chaining calls together.</returns>
+        /// <returns>The index value after the operation completed.</returns>
         private int RenderObject(
             RenderTreeBuilder builder,
             int index,
@@ -313,8 +326,7 @@ namespace MudBlazor
         /// <param name="propValue">The property value to use for the operation.</param>
         /// <param name="prop">The property info to use for the operation.</param>
         /// <param name="viewModel">The viewModel to use for the operation.</param>
-        /// <returns>the value of the <paramref name="builder"/> property, for
-        ///// chaining calls together.</returns>
+        /// <returns>The index value after the operation completed.</returns>
         private static int RenderPrimitives(
             RenderTreeBuilder builder,
             int index,
@@ -431,8 +443,7 @@ namespace MudBlazor
         /// <param name="propValue">The property value to use for the operation.</param>
         /// <param name="prop">The property info to use for the operation.</param>
         /// <param name="viewModel">The viewModel to use for the operation.</param>
-        /// <returns>the value of the <paramref name="builder"/> property, for
-        /// chaining calls together.</returns>
+        /// <returns>The index value after the operation completed.</returns>
         private static int RenderBool(
             RenderTreeBuilder builder,
             int index,
@@ -488,8 +499,7 @@ namespace MudBlazor
         /// <param name="propValue">The property value to use for the operation.</param>
         /// <param name="prop">The property info to use for the operation.</param>
         /// <param name="viewModel">The viewModel to use for the operation.</param>
-        /// <returns>the value of the <paramref name="builder"/> property, for
-        /// chaining calls together.</returns>
+        /// <returns>The index value after the operation completed.</returns>
         private static int RenderNumeric(
             RenderTreeBuilder builder,
             int index,
@@ -693,8 +703,7 @@ namespace MudBlazor
         /// <param name="propValue">The property value to use for the operation.</param>
         /// <param name="prop">The property info to use for the operation.</param>
         /// <param name="viewModel">The viewModel to use for the operation.</param>
-        /// <returns>the value of the <paramref name="builder"/> property, for
-        /// chaining calls together.</returns>
+        /// <returns>The index value after the operation completed.</returns>
         private static int RenderString(
             RenderTreeBuilder builder,
             int index,
@@ -797,8 +806,7 @@ namespace MudBlazor
         /// <param name="propValue">The property value to use for the operation.</param>
         /// <param name="prop">The property info to use for the operation.</param>
         /// <param name="viewModel">The viewModel to use for the operation.</param>
-        /// <returns>the value of the <paramref name="builder"/> property, for
-        /// chaining calls together.</returns>
+        /// <returns>The index value after the operation completed.</returns>
         private static int RenderDateTime(
             RenderTreeBuilder builder,
             int index,
@@ -839,8 +847,7 @@ namespace MudBlazor
         /// <param name="propValue">The property value to use for the operation.</param>
         /// <param name="prop">The property info to use for the operation.</param>
         /// <param name="viewModel">The viewModel to use for the operation.</param>
-        /// <returns>the value of the <paramref name="builder"/> property, for
-        /// chaining calls together.</returns>
+        /// <returns>The index value after the operation completed.</returns>
         private static int RenderTimeSpan(
             RenderTreeBuilder builder,
             int index,
@@ -881,8 +888,7 @@ namespace MudBlazor
         /// <param name="propValue">The property value to use for the operation.</param>
         /// <param name="prop">The property info to use for the operation.</param>
         /// <param name="viewModel">The viewModel to use for the operation.</param>
-        /// <returns>the value of the <paramref name="builder"/> property, for
-        /// chaining calls together.</returns>
+        /// <returns>The index value after the operation completed.</returns>
         private static int RenderColor(
             RenderTreeBuilder builder,
             int index,
