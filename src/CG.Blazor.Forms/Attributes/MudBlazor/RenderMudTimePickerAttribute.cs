@@ -8,6 +8,17 @@ namespace MudBlazor
     /// This class is an attribute that indicates a decorated class should be
     /// rendered using a <see cref="MudTimePicker"/> control.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Decorating a <see cref="TimeSpan"/> property with this attribute causes 
+    /// the form generator to render the property as a <see cref="MudTimePicker"/> 
+    /// component. 
+    /// </para>
+    /// <para>
+    /// This attribute is only valid when placed on a property that returns a 
+    /// <see cref="TimeSpan"/> value.
+    /// </para>
+    /// </remarks>
     [AttributeUsage(AttributeTargets.Property)]
     public class RenderMudTimePickerAttribute : FormGeneratorAttribute
     {

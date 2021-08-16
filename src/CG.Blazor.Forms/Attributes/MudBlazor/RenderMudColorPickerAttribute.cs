@@ -1,6 +1,7 @@
 ﻿using CG.Blazor.Forms.Attributes;
 using System;
 using System.Collections.Generic;
+using MudBlazor.Utilities;
 
 namespace MudBlazor
 {
@@ -8,6 +9,17 @@ namespace MudBlazor
     /// This class is an attribute that indicates a decorated class should be
     /// rendered using a <see cref="MudColorPicker"/> control.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Decorating a <see cref="MudColor"/> property with this attribute causes 
+    /// the form generator to render the property as a <see cref="MudColorPicker"/> 
+    /// component. 
+    /// </para>
+    /// <para>
+    /// This attribute is only valid when placed on a property that returns a 
+    /// <see cref="MudColor"/> value.
+    /// </para>
+    /// </remarks>
     [AttributeUsage(AttributeTargets.Property)]
     public class RenderMudColorPickerAttribute : FormGeneratorAttribute
     {

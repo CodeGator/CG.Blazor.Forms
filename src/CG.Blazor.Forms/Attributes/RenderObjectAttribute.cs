@@ -7,6 +7,18 @@ namespace CG.Blazor.Forms.Attributes
     /// This class is an attribute that indicates a decorated property should 
     /// have all it's public child properties rendered.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// In order to render a property that returns an object reference (in other
+    /// words, not a primitive type), that property must be decorated with this
+    /// attribute type, or a derived attribute type. Otherwise, the property will 
+    /// be ignored during form generation.
+    /// </para>
+    /// <para>
+    /// This attribute is only valid when placed on a property that returns an 
+    /// object type.
+    /// </para>
+    /// </remarks>
     [AttributeUsage(AttributeTargets.Property)]
     public class RenderObjectAttribute : FormGeneratorAttribute
     {

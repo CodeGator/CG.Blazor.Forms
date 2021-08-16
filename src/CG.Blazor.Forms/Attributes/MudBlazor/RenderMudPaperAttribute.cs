@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using CG.Blazor.Forms.Attributes;
-using MudBlazor;
 
 namespace MudBlazor
 {
@@ -10,6 +9,17 @@ namespace MudBlazor
     /// have all it's public child properties rendered inside a <see cref="MudPaper"/>
     /// control.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Decorating an object property with this attribute causes the form generator 
+    /// to render the public properties of the object inside a <see cref="MudPaper"/>
+    /// component. 
+    /// </para>
+    /// <para>
+    /// This attribute is only valid when placed on a property that returns an 
+    /// object type.
+    /// </para>
+    /// </remarks>
     [AttributeUsage(AttributeTargets.Property)]
     public class RenderMudPaperAttribute : RenderObjectAttribute
     {

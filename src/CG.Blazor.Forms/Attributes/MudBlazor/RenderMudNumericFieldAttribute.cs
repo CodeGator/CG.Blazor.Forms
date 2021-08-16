@@ -8,6 +8,17 @@ namespace MudBlazor
     /// This class is an attribute that indicates a decorated property should be 
     /// rendered with a <see cref="MudNumericField{T}"/> control.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Decorating a numeric property with this attribute causes the form generator
+    /// to render the property as a <see cref="MudNumericField{T}"/> component. 
+    /// </para>
+    /// <para>
+    /// This attribute is only valid when placed on a property that returns a 
+    /// numeric value (in other words, an int, long, byte, float, double, or 
+    /// decimal type).
+    /// </para>
+    /// </remarks>
     [AttributeUsage(AttributeTargets.Property)]
     public class RenderMudNumericFieldAttribute : FormGeneratorAttribute
     {

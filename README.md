@@ -14,13 +14,19 @@ The package contains server side Blazor forms extensions used by other CodeGator
 #### Commonly used types:
 * Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
 * CG.Blazor.Forms.Components.DynamicForm
+* MudBlazor.RenderObjectAttribute
 * MudBlazor.RenderMudAlertAttribute
 * MudBlazor.RenderMudAutocompleteAttribute
 * MudBlazor.RenderMudCheckBoxAttribute
 * MudBlazor.RenderMudColorPickerAttribute
 * MudBlazor.RenderMudDatePickerAttribute
+* MudBlazor.RenderMuddyGroupBoxAttribute
+* MudBlazor.RenderMudFieldAttribute
 * MudBlazor.RenderMudNumericFieldAttribute
+* MudBlazor.RenderMudPaperAttribute
 * MudBlazor.RenderMudRadioGroupAttribute
+* MudBlazor.RenderMudSelectAttribute
+* MudBlazor.RenderMudSliderAttribute
 * MudBlazor.RenderMudSwitchAttribute
 * MudBlazor.RenderMudTextFieldAttribute
 * MudBlazor.RenderMudTimePickerAttribute

@@ -8,6 +8,17 @@ namespace MudBlazor
     /// This class is an attribute that indicates a decorated property should be 
     /// rendered with a <see cref="MudField"/> control.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Decorating a <see cref="string"/> property with this attribute causes 
+    /// the form generator to render the property as a <see cref="MudField"/> 
+    /// component. 
+    /// </para>
+    /// <para>
+    /// This attribute is only valid when placed on a property that returns a 
+    /// <see cref="string"/> value.
+    /// </para>
+    /// </remarks>
     [AttributeUsage(AttributeTargets.Property)]
     public class RenderMudFieldAttribute : FormGeneratorAttribute
     {

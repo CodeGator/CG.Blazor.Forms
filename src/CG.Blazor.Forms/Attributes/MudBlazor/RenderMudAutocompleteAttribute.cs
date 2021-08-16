@@ -8,6 +8,24 @@ namespace MudBlazor
     /// This class is an attribute that indicates a decorated property should be 
     /// rendered with a <see cref="MudAutocomplete{T}"/> control.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Decorating a string property with this attribute causes the form generator
+    /// to render the property as a <see cref="MudAutocomplete{T}"/> component. 
+    /// </para>
+    /// <para>
+    /// This attribute is only valid when placed on a property that returns a 
+    /// string value.
+    /// </para>
+    /// <para>
+    /// In order for the search operation to function, in the auto-complete 
+    /// control, the name of a publicly accessable search function must be placed
+    /// into the <see cref="RenderMudAutocompleteAttribute.SearchFunc"/> property.
+    /// That search function can either live on the same object as the decorated
+    /// property, or, it can live on the top-level model for the form, which can
+    /// then be thought of as a kind of view-model.
+    /// </para>
+    /// </remarks>
     [AttributeUsage(AttributeTargets.Property)]
     public class RenderMudAutocompleteAttribute : FormGeneratorAttribute
     {

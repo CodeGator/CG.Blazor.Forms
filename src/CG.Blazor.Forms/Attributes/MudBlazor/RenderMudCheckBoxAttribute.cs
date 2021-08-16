@@ -9,6 +9,16 @@ namespace MudBlazor
     /// This class is an attribute that indicates a decorated property should be 
     /// rendered with a <see cref="MudCheckBox{T}"/> control.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Decorating a bool property with this attribute causes the form generator
+    /// to render the property as a <see cref="MudCheckBox{T}"/> component. 
+    /// </para>
+    /// <para>
+    /// This attribute is only valid when placed on a property that returns a 
+    /// bool value.
+    /// </para>
+    /// </remarks>
     [AttributeUsage(AttributeTargets.Property)]
     public class RenderMudCheckBoxAttribute : FormGeneratorAttribute
     {

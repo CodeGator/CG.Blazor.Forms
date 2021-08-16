@@ -1,5 +1,4 @@
 ﻿using CG.Blazor.Forms.Attributes;
-using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 
@@ -9,6 +8,22 @@ namespace MudBlazor
     /// This class is an attribute that indicates a decorated property should be 
     /// rendered with a <see cref="MudSelect{T}"/> control.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Decorating a <see cref="string"/> property with this attribute causes the 
+    /// form generator to render the property as a <see cref="MudSelect{T}"/> 
+    /// component. 
+    /// </para>
+    /// <para>
+    /// This attribute is only valid when placed on a property that returns a 
+    /// <see cref="string"/> value.
+    /// </para>
+    /// <para>
+    /// The options, for the select should be specified using the 
+    /// <see cref="RenderMudSelectAttribute.Options"/> parameter, with a comma 
+    /// separated list of string values.
+    /// </para>
+    /// </remarks>
     [AttributeUsage(AttributeTargets.Property)]
     public class RenderMudSelectAttribute : FormGeneratorAttribute
     {

@@ -9,6 +9,17 @@ namespace MudBlazor
     /// This class is an attribute that indicates a decorated property should be
     /// rendered using a <see cref="MuddyGroupBox"/> control.
     /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Decorating an object property with this attribute causes the form generator
+    /// to render the public properties of the object inside a <see cref="MuddyGroupBox"/>
+    /// component. 
+    /// </para>
+    /// <para>
+    /// This attribute is only valid when placed on a property that returns an 
+    /// object type.
+    /// </para>
+    /// </remarks>
     [AttributeUsage(AttributeTargets.Property)]
     public class RenderMuddyGroupBoxAttribute : RenderObjectAttribute
     {
