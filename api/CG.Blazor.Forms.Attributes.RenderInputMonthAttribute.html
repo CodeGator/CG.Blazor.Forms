@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class RenderMuddyGroupBoxAttribute
+    <title>Class RenderInputMonthAttribute
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class RenderMuddyGroupBoxAttribute
+    <meta name="title" content="Class RenderInputMonthAttribute
    ">
     <meta name="generator" content="docfx 2.58.0.0">
     
@@ -78,13 +78,14 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute">
+            <article class="content wrap" id="_content" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute">
   
   
-  <h1 id="MudBlazor_RenderMuddyGroupBoxAttribute" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute" class="text-break">Class RenderMuddyGroupBoxAttribute
+  <h1 id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute" class="text-break">Class RenderInputMonthAttribute
   </h1>
-  <div class="markdown level0 summary"><p>This class is an attribute that indicates a decorated property should be
-rendered using a <a class="xref" href="CG.Blazor.Forms.Components.MuddyGroupBox.html">MuddyGroupBox</a> control.</p>
+  <div class="markdown level0 summary"><p>This class is an attribute that, when applied to a DateTime property,
+causes the form generator to render the property as an month HTML
+element.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,11 +93,35 @@ rendered using a <a class="xref" href="CG.Blazor.Forms.Components.MuddyGroupBox.
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">System.Attribute</span></div>
     <div class="level2"><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html">FormGeneratorAttribute</a></div>
-    <div class="level3"><a class="xref" href="CG.Blazor.Forms.Attributes.RenderObjectAttribute.html">RenderObjectAttribute</a></div>
-    <div class="level4"><span class="xref">RenderMuddyGroupBoxAttribute</span></div>
+    <div class="level3"><a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html">HtmlAttribute</a></div>
+    <div class="level4"><span class="xref">RenderInputMonthAttribute</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_AutoFocus">HtmlAttribute.AutoFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Class">HtmlAttribute.Class</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Id">HtmlAttribute.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_InputMode">HtmlAttribute.InputMode</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Label">HtmlAttribute.Label</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Name">HtmlAttribute.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Style">HtmlAttribute.Style</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_TabIndex">HtmlAttribute.TabIndex</a>
+    </div>
     <div>
       <span class="xref">System.Attribute.Equals(System.Object)</span>
     </div>
@@ -224,46 +249,50 @@ rendered using a <a class="xref" href="CG.Blazor.Forms.Components.MuddyGroupBox.
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MudBlazor.html">MudBlazor</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Blazor.Forms.Attributes.html">CG.Blazor.Forms.Attributes</a></h6>
   <h6><strong>Assembly</strong>: CG.Blazor.Forms.dll</h6>
-  <h5 id="MudBlazor_RenderMuddyGroupBoxAttribute_syntax">Syntax</h5>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
-public class RenderMuddyGroupBoxAttribute : RenderObjectAttribute</code></pre>
+public class RenderInputMonthAttribute : HtmlAttribute</code></pre>
   </div>
-  <h5 id="MudBlazor_RenderMuddyGroupBoxAttribute_remarks"><strong>Remarks</strong></h5>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
-Decorating an object property with this attribute causes the form generator
-to render the public properties of the object inside a <a class="xref" href="CG.Blazor.Forms.Components.MuddyGroupBox.html">MuddyGroupBox</a>
-component. 
-</p>
-<p>
-This attribute is only valid when placed on a property that returns an 
-object type.
+This attribute is only valid when placed on a property of type: Datetime
 </p>
 </div>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_examples"><strong>Examples</strong></h5>
+  <p>Here is an example of decorating a model property to render a month:</p>
+<pre><code>using CG.Blazor.Forms.Attributes;
+class MyModel
+{
+    [RenderInputMonth]
+    public Datetime MyProperty { get;set; }
+}</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
-  <a id="MudBlazor_RenderMuddyGroupBoxAttribute__ctor_" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.#ctor*"></a>
-  <h4 id="MudBlazor_RenderMuddyGroupBoxAttribute__ctor" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.#ctor">RenderMuddyGroupBoxAttribute()</h4>
-  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="MudBlazor.RenderMuddyGroupBoxAttribute.html">RenderMuddyGroupBoxAttribute</a>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute__ctor_" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.#ctor*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute__ctor" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.#ctor">RenderInputMonthAttribute()</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of <a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.html">RenderInputMonthAttribute</a>
 class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RenderMuddyGroupBoxAttribute()</code></pre>
+    <pre><code class="lang-csharp hljs">public RenderInputMonthAttribute()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="MudBlazor_RenderMuddyGroupBoxAttribute_Class_" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Class*"></a>
-  <h4 id="MudBlazor_RenderMuddyGroupBoxAttribute_Class" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Class">Class</h4>
-  <div class="markdown level1 summary"><p>This property contains any CSS classes to use for the control.</p>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Max_" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Max*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Max" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Max">Max</h4>
+  <div class="markdown level1 summary"><p>This property contains the maximum date for the element. The format
+MUST be yyyy-MM-dd.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Class { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Max { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,16 +309,192 @@ class.</p>
       </tr>
     </tbody>
   </table>
-  <a id="MudBlazor_RenderMuddyGroupBoxAttribute_Elevation_" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Elevation*"></a>
-  <h4 id="MudBlazor_RenderMuddyGroupBoxAttribute_Elevation" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Elevation">Elevation</h4>
-  <div class="markdown level1 summary"><p>This property contains the elevation to use for the control.</p>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Min_" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Min*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Min" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Min">Min</h4>
+  <div class="markdown level1 summary"><p>This property contains the minimum date for the element. The format
+MUST be yyyy-MM-dd.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Elevation { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Min { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Options_" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Options*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Options" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Options">Options</h4>
+  <div class="markdown level1 summary"><p>This property contains a list of pre-defined autocomplete options
+for the element. The values should be space separated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Options { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Placeholder_" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Placeholder*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Placeholder" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Placeholder">Placeholder</h4>
+  <div class="markdown level1 summary"><p>This property contains a short hint that describes the expected
+value of the component.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Placeholder { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_ReadOnly_" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.ReadOnly*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_ReadOnly" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.ReadOnly">ReadOnly</h4>
+  <div class="markdown level1 summary"><p>This property indicates the component is read only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReadOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Step_" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Step*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Step" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Step">Step</h4>
+  <div class="markdown level1 summary"><p>This property contains the stepping interval, when clicking up and down
+spinner buttons and validating the input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Step { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Generate_" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Generate*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})">Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</h4>
+  <div class="markdown level1 summary"><p>This method is called by the form generator to generate content for
+the specified property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Generate(RenderTreeBuilder builder, int index, IHandleEvent eventTarget, Stack&lt;object&gt; path, PropertyInfo prop, ILogger&lt;IFormGenerator&gt; logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder</span></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>The builder to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.AspNetCore.Components.IHandleEvent</span></td>
+        <td><span class="parametername">eventTarget</span></td>
+        <td><p>The event target to use for the
+operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Stack</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path to the current model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Reflection.PropertyInfo</span></td>
+        <td><span class="parametername">prop</span></td>
+        <td><p>The reflection information for the property.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span>&lt;<a class="xref" href="CG.Blazor.Forms.Services.IFormGenerator.html">IFormGenerator</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger to use for the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -300,210 +505,38 @@ class.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>The index after rendering is complete.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <a id="MudBlazor_RenderMuddyGroupBoxAttribute_Label_" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Label*"></a>
-  <h4 id="MudBlazor_RenderMuddyGroupBoxAttribute_Label" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Label">Label</h4>
-  <div class="markdown level1 summary"><p>This property contains the label for the component.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Label { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html#CG_Blazor_Forms_Attributes_FormGeneratorAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__">FormGeneratorAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</a></div>
+  <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Description</th>
+        <th>Condition</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>This exception is thrown whenever
+one of more arguments are missing, or invalid.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CG.Blazor.Forms.Services.FormGenerationException.html">FormGenerationException</a></td>
+        <td><p>This exception is thrown whenever
+the rendering operation fails to complete.</p>
+</td>
       </tr>
     </tbody>
   </table>
-  <a id="MudBlazor_RenderMuddyGroupBoxAttribute_LabelColor_" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.LabelColor*"></a>
-  <h4 id="MudBlazor_RenderMuddyGroupBoxAttribute_LabelColor" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.LabelColor">LabelColor</h4>
-  <div class="markdown level1 summary"><p>This property contains the color for the label.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Color LabelColor { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">MudBlazor.Color</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMuddyGroupBoxAttribute_LabelTypo_" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.LabelTypo*"></a>
-  <h4 id="MudBlazor_RenderMuddyGroupBoxAttribute_LabelTypo" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.LabelTypo">LabelTypo</h4>
-  <div class="markdown level1 summary"><p>This property contains the typography for the label.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Typo LabelTypo { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">MudBlazor.Typo</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMuddyGroupBoxAttribute_Outlined_" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Outlined*"></a>
-  <h4 id="MudBlazor_RenderMuddyGroupBoxAttribute_Outlined" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Outlined">Outlined</h4>
-  <div class="markdown level1 summary"><p>This property indicates whether the control should be outlined,
-or not.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Outlined { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMuddyGroupBoxAttribute_Square_" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Square*"></a>
-  <h4 id="MudBlazor_RenderMuddyGroupBoxAttribute_Square" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Square">Square</h4>
-  <div class="markdown level1 summary"><p>This property indicates whether the control should show square corners,
-or not.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Square { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMuddyGroupBoxAttribute_Style_" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Style*"></a>
-  <h4 id="MudBlazor_RenderMuddyGroupBoxAttribute_Style" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Style">Style</h4>
-  <div class="markdown level1 summary"><p>This property indicates the CSS styles to use for the control.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Style { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMuddyGroupBoxAttribute_Tag_" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Tag*"></a>
-  <h4 id="MudBlazor_RenderMuddyGroupBoxAttribute_Tag" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.Tag">Tag</h4>
-  <div class="markdown level1 summary"><p>This property contain a tag to attach any user data object to the component
-for your convenience.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object Tag { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMuddyGroupBoxAttribute_UserAttributes_" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.UserAttributes*"></a>
-  <h4 id="MudBlazor_RenderMuddyGroupBoxAttribute_UserAttributes" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.UserAttributes">UserAttributes</h4>
-  <div class="markdown level1 summary"><p>This property contains attributes you add to the component that don't match
-any of its parameters. They will be splatted onto the underlying HTML tag.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, object&gt; UserAttributes { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <a id="MudBlazor_RenderMuddyGroupBoxAttribute_ToAttributes_" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.ToAttributes*"></a>
-  <h4 id="MudBlazor_RenderMuddyGroupBoxAttribute_ToAttributes" data-uid="MudBlazor.RenderMuddyGroupBoxAttribute.ToAttributes">ToAttributes()</h4>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_ToAttributes_" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.ToAttributes*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_ToAttributes" data-uid="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.ToAttributes">ToAttributes()</h4>
   <div class="markdown level1 summary"><p>This method can be overridden to produce a table of named attributes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -528,7 +561,7 @@ any of its parameters. They will be splatted onto the underlying HTML tag.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="CG.Blazor.Forms.Attributes.RenderObjectAttribute.html#CG_Blazor_Forms_Attributes_RenderObjectAttribute_ToAttributes">RenderObjectAttribute.ToAttributes()</a></div>
+  <div><a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_ToAttributes">HtmlAttribute.ToAttributes()</a></div>
 </article>
           </div>
           

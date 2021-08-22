@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class FormGeneratorAttribute
+    <title>Class RenderInputWeekAttribute
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class FormGeneratorAttribute
+    <meta name="title" content="Class RenderInputWeekAttribute
    ">
     <meta name="generator" content="docfx 2.58.0.0">
     
@@ -78,25 +78,50 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorAttribute">
+            <article class="content wrap" id="_content" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute">
   
   
-  <h1 id="CG_Blazor_Forms_Attributes_FormGeneratorAttribute" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorAttribute" class="text-break">Class FormGeneratorAttribute
+  <h1 id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute" class="text-break">Class RenderInputWeekAttribute
   </h1>
-  <div class="markdown level0 summary"><p>This class is the base for all form generation attributes.</p>
+  <div class="markdown level0 summary"><p>This class is an attribute that, when applied to a DateTime property,
+causes the form generator to render the property as an week HTML
+element.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">System.Attribute</span></div>
-    <div class="level2"><span class="xref">FormGeneratorAttribute</span></div>
-      <div class="level3"><a class="xref" href="CG.Blazor.Forms.Attributes.FormValidationAttribute.html">FormValidationAttribute</a></div>
-      <div class="level3"><a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html">HtmlAttribute</a></div>
-      <div class="level3"><a class="xref" href="CG.Blazor.Forms.Attributes.RenderObjectAttribute.html">RenderObjectAttribute</a></div>
+    <div class="level2"><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html">FormGeneratorAttribute</a></div>
+    <div class="level3"><a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html">HtmlAttribute</a></div>
+    <div class="level4"><span class="xref">RenderInputWeekAttribute</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_AutoFocus">HtmlAttribute.AutoFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Class">HtmlAttribute.Class</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Id">HtmlAttribute.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_InputMode">HtmlAttribute.InputMode</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Label">HtmlAttribute.Label</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Name">HtmlAttribute.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Style">HtmlAttribute.Style</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_TabIndex">HtmlAttribute.TabIndex</a>
+    </div>
     <div>
       <span class="xref">System.Attribute.Equals(System.Object)</span>
     </div>
@@ -226,21 +251,149 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="CG.Blazor.Forms.Attributes.html">CG.Blazor.Forms.Attributes</a></h6>
   <h6><strong>Assembly</strong>: CG.Blazor.Forms.dll</h6>
-  <h5 id="CG_Blazor_Forms_Attributes_FormGeneratorAttribute_syntax">Syntax</h5>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class FormGeneratorAttribute : Attribute</code></pre>
+    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
+public class RenderInputWeekAttribute : HtmlAttribute</code></pre>
   </div>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>
+This attribute is only valid when placed on a property of type: string
+</p>
+</div>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_examples"><strong>Examples</strong></h5>
+  <p>Here is an example of decorating a model property to render a week:</p>
+<pre><code>using CG.Blazor.Forms.Attributes;
+class MyModel
+{
+    [RenderInputWeek]
+    public string MyProperty { get;set; }
+}</code></pre>
+
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute__ctor_" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.#ctor*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute__ctor" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.#ctor">RenderInputWeekAttribute()</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of <a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.html">RenderInputWeekAttribute</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RenderInputWeekAttribute()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_Max_" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Max*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_Max" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Max">Max</h4>
+  <div class="markdown level1 summary"><p>This property contains the maximum date for the element. The format
+MUST be yyyy-MM-dd.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Max { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_Min_" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Min*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_Min" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Min">Min</h4>
+  <div class="markdown level1 summary"><p>This property contains the minimum date for the element. The format
+MUST be yyyy-MM-dd.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Min { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_ReadOnly_" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.ReadOnly*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_ReadOnly" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.ReadOnly">ReadOnly</h4>
+  <div class="markdown level1 summary"><p>This property indicates the component is read only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReadOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_Step_" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Step*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_Step" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Step">Step</h4>
+  <div class="markdown level1 summary"><p>This property contains the stepping interval, when clicking up and down
+spinner buttons and validating the date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Step { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="CG_Blazor_Forms_Attributes_FormGeneratorAttribute_Generate_" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.Generate*"></a>
-  <h4 id="CG_Blazor_Forms_Attributes_FormGeneratorAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})">Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</h4>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_Generate_" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Generate*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})">Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</h4>
   <div class="markdown level1 summary"><p>This method is called by the form generator to generate content for
 the specified property.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual int Generate(RenderTreeBuilder builder, int index, IHandleEvent eventTarget, Stack&lt;object&gt; path, PropertyInfo prop, ILogger&lt;IFormGenerator&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public override int Generate(RenderTreeBuilder builder, int index, IHandleEvent eventTarget, Stack&lt;object&gt; path, PropertyInfo prop, ILogger&lt;IFormGenerator&gt; logger)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -307,6 +460,8 @@ operation.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html#CG_Blazor_Forms_Attributes_FormGeneratorAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__">FormGeneratorAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</a></div>
   <h5 class="exceptions">Exceptions</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -330,14 +485,14 @@ the rendering operation fails to complete.</p>
       </tr>
     </tbody>
   </table>
-  <a id="CG_Blazor_Forms_Attributes_FormGeneratorAttribute_ToAttributes_" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.ToAttributes*"></a>
-  <h4 id="CG_Blazor_Forms_Attributes_FormGeneratorAttribute_ToAttributes" data-uid="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.ToAttributes">ToAttributes()</h4>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_ToAttributes_" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.ToAttributes*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_ToAttributes" data-uid="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.ToAttributes">ToAttributes()</h4>
   <div class="markdown level1 summary"><p>This method can be overridden to produce a table of named attributes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IDictionary&lt;string, object&gt; ToAttributes()</code></pre>
+    <pre><code class="lang-csharp hljs">public override IDictionary&lt;string, object&gt; ToAttributes()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -355,6 +510,8 @@ the rendering operation fails to complete.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_ToAttributes">HtmlAttribute.ToAttributes()</a></div>
 </article>
           </div>
           

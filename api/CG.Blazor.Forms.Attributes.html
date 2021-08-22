@@ -87,19 +87,106 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.DataAnnotationsValidatorAttribute.html">DataAnnotationsValidatorAttribute</a></h4>
-      <section><p>This class is an attribute that indicates the form should be
-rendered with a <span class="xref">Microsoft.AspNetCore.Components.Forms.DataAnnotationsValidator</span> tag.</p>
-</section>
       <h4><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html">FormGeneratorAttribute</a></h4>
       <section><p>This class is the base for all form generation attributes.</p>
 </section>
-      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.html">FormGeneratorExtensionAttribute</a></h4>
-      <section><p>This class is the base for all form generation extension attributes.</p>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.FormValidationAttribute.html">FormValidationAttribute</a></h4>
+      <section><p>This class is a base for all form generaton validation attributes.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html">HtmlAttribute</a></h4>
+      <section><p>This class is a base for all HTML specific form generation attributes.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.html">RenderCheckBoxAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a bool property, causes
+the form generator to render the property as a checkbox HTML element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.html">RenderDataAnnotationsValidatorAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a class, causes
+the form generator to render a <span class="xref">Microsoft.AspNetCore.Components.Forms.DataAnnotationsValidator</span>
+tag, within the form.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputColorAttribute.html">RenderInputColorAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a string property, causes
+the form generator to render the property as a color HTML element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.html">RenderInputDateAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a DateTime property,
+causes the form generator to render the property as an date HTML
+element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.html">RenderInputEmailAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a string property, causes
+the form generator to render the property as an email HTML element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.html">RenderInputMonthAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a DateTime property,
+causes the form generator to render the property as an month HTML
+element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.html">RenderInputNumberAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a numeric property, causes
+the form generator to render the property as a number HTML element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.html">RenderInputPasswordAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a string property, causes
+the form generator to render the property as a password HTML element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.html">RenderInputRangeAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a numeric property, causes
+the form generator to render the property as a range HTML element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.html">RenderInputTelephoneAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a string property, causes
+the form generator to render the property as a telephone HTML element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputTextAttribute.html">RenderInputTextAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a string property, causes
+the form generator to render the property as an input HTML element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.html">RenderInputTimeAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a TimeSpan property,
+causes the form generator to render the property as an time HTML
+element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.html">RenderInputUrlAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a string property,
+causes the form generator to render the property as an URL HTML
+element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.html">RenderInputWeekAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a DateTime property,
+causes the form generator to render the property as an week HTML
+element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderMeterAttribute.html">RenderMeterAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a numeric property,
+causes the form generator to render the property as a meter HTML element.</p>
 </section>
       <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderObjectAttribute.html">RenderObjectAttribute</a></h4>
-      <section><p>This class is an attribute that indicates a decorated property should
-have all it's public child properties rendered.</p>
+      <section><p>This class is an attribute that, when applied to a class, or an object
+property on a class, causes the form generator to render the properties
+of the object as HTML.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderProgressAttribute.html">RenderProgressAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a numeric property,
+causes the form generator to render the property as a progress HTML element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.html">RenderRadioGroupAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a bool property, causes
+the form generator to render the property as a radio group HTML element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderSelectAttribute.html">RenderSelectAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a string property, causes
+the form generator to render the property as a select HTML element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.html">RenderTextAreaAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a string property, causes
+the form generator to render the property as a textarea HTML element.</p>
+</section>
+      <h4><a class="xref" href="CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.html">RenderValidationSummaryAttribute</a></h4>
+      <section><p>This class is an attribute that, when applied to a class, causes
+the form generator to render a <span class="xref">Microsoft.AspNetCore.Components.Forms.ValidationSummary</span>
+tag, withing the form.</p>
 </section>
 </article>
           </div>

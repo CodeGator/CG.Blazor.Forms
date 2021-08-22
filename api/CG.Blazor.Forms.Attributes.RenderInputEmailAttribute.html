@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class RenderMudRadioGroupAttribute
+    <title>Class RenderInputEmailAttribute
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class RenderMudRadioGroupAttribute
+    <meta name="title" content="Class RenderInputEmailAttribute
    ">
     <meta name="generator" content="docfx 2.58.0.0">
     
@@ -78,13 +78,13 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MudBlazor.RenderMudRadioGroupAttribute">
+            <article class="content wrap" id="_content" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute">
   
   
-  <h1 id="MudBlazor_RenderMudRadioGroupAttribute" data-uid="MudBlazor.RenderMudRadioGroupAttribute" class="text-break">Class RenderMudRadioGroupAttribute
+  <h1 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute" class="text-break">Class RenderInputEmailAttribute
   </h1>
-  <div class="markdown level0 summary"><p>This class is an attribute that indicates a decorated property should be
-rendered with a <span class="xref">MudBlazor.MudRadioGroup`1</span> control.</p>
+  <div class="markdown level0 summary"><p>This class is an attribute that, when applied to a string property, causes
+the form generator to render the property as an email HTML element.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,10 +92,35 @@ rendered with a <span class="xref">MudBlazor.MudRadioGroup`1</span> control.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">System.Attribute</span></div>
     <div class="level2"><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html">FormGeneratorAttribute</a></div>
-    <div class="level3"><span class="xref">RenderMudRadioGroupAttribute</span></div>
+    <div class="level3"><a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html">HtmlAttribute</a></div>
+    <div class="level4"><span class="xref">RenderInputEmailAttribute</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_AutoFocus">HtmlAttribute.AutoFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Class">HtmlAttribute.Class</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Id">HtmlAttribute.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_InputMode">HtmlAttribute.InputMode</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Label">HtmlAttribute.Label</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Name">HtmlAttribute.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Style">HtmlAttribute.Style</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_TabIndex">HtmlAttribute.TabIndex</a>
+    </div>
     <div>
       <span class="xref">System.Attribute.Equals(System.Object)</span>
     </div>
@@ -223,52 +248,50 @@ rendered with a <span class="xref">MudBlazor.MudRadioGroup`1</span> control.</p>
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MudBlazor.html">MudBlazor</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Blazor.Forms.Attributes.html">CG.Blazor.Forms.Attributes</a></h6>
   <h6><strong>Assembly</strong>: CG.Blazor.Forms.dll</h6>
-  <h5 id="MudBlazor_RenderMudRadioGroupAttribute_syntax">Syntax</h5>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
-public class RenderMudRadioGroupAttribute : FormGeneratorAttribute</code></pre>
+public class RenderInputEmailAttribute : HtmlAttribute</code></pre>
   </div>
-  <h5 id="MudBlazor_RenderMudRadioGroupAttribute_remarks"><strong>Remarks</strong></h5>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
-Decorating a <span class="xref">System.String</span> property with this attribute causes the 
-form generator to render the property as a <span class="xref">MudBlazor.MudNumericField`1</span> 
-component. 
-</p>
-<p>
-This attribute is only valid when placed on a property that returns a 
-<span class="xref">System.String</span> value.
-</p>
-<p>
-The options, for the radio buttons in the group, should be specified using
-the <a class="xref" href="MudBlazor.RenderMudRadioGroupAttribute.html#MudBlazor_RenderMudRadioGroupAttribute_Options">Options</a> parameter, with a 
-comma separated list of string values.
+This attribute is only valid when placed on a property of type: string.
 </p>
 </div>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_examples"><strong>Examples</strong></h5>
+  <p>Here is an example of decorating a model property to render an email:</p>
+<pre><code>using CG.Blazor.Forms.Attributes;
+class MyModel
+{
+    [RenderInputEmail]
+    public string MyProperty { get;set; }
+}</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
-  <a id="MudBlazor_RenderMudRadioGroupAttribute__ctor_" data-uid="MudBlazor.RenderMudRadioGroupAttribute.#ctor*"></a>
-  <h4 id="MudBlazor_RenderMudRadioGroupAttribute__ctor" data-uid="MudBlazor.RenderMudRadioGroupAttribute.#ctor">RenderMudRadioGroupAttribute()</h4>
-  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="MudBlazor.RenderMudRadioGroupAttribute.html">RenderMudRadioGroupAttribute</a>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute__ctor_" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.#ctor*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute__ctor" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.#ctor">RenderInputEmailAttribute()</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of <a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.html">RenderInputEmailAttribute</a>
 class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RenderMudRadioGroupAttribute()</code></pre>
+    <pre><code class="lang-csharp hljs">public RenderInputEmailAttribute()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="MudBlazor_RenderMudRadioGroupAttribute_Colors_" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Colors*"></a>
-  <h4 id="MudBlazor_RenderMudRadioGroupAttribute_Colors" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Colors">Colors</h4>
-  <div class="markdown level1 summary"><p>This property contains a comma separated list of colors for the
-radio buttons in the group.</p>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_MaxLength_" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.MaxLength*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_MaxLength" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.MaxLength">MaxLength</h4>
+  <div class="markdown level1 summary"><p>This property indicates the maximum number of characters the input
+should accept.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Colors { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string MaxLength { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,40 +308,15 @@ radio buttons in the group.</p>
       </tr>
     </tbody>
   </table>
-  <a id="MudBlazor_RenderMudRadioGroupAttribute_Dense_" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Dense*"></a>
-  <h4 id="MudBlazor_RenderMudRadioGroupAttribute_Dense" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Dense">Dense</h4>
-  <div class="markdown level1 summary"><p>This property indicates whether the radio buttons in the group
-should be dense, or not.</p>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_MinLength_" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.MinLength*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_MinLength" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.MinLength">MinLength</h4>
+  <div class="markdown level1 summary"><p>This property indicates the minimum number of characters the input
+should accept.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Dense { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMudRadioGroupAttribute_Disabled_" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Disabled*"></a>
-  <h4 id="MudBlazor_RenderMudRadioGroupAttribute_Disabled" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Disabled">Disabled</h4>
-  <div class="markdown level1 summary"><p>This property contains a comma separated list of disabled flags
-for the radio buttons in the group.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Disabled { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string MinLength { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -335,15 +333,15 @@ for the radio buttons in the group.</p>
       </tr>
     </tbody>
   </table>
-  <a id="MudBlazor_RenderMudRadioGroupAttribute_DisableRipple_" data-uid="MudBlazor.RenderMudRadioGroupAttribute.DisableRipple*"></a>
-  <h4 id="MudBlazor_RenderMudRadioGroupAttribute_DisableRipple" data-uid="MudBlazor.RenderMudRadioGroupAttribute.DisableRipple">DisableRipple</h4>
-  <div class="markdown level1 summary"><p>This property indicates whether the radio buttons in the group
-should disable the ripple, or not.</p>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Multiple_" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Multiple*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Multiple" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Multiple">Multiple</h4>
+  <div class="markdown level1 summary"><p>This property indicates whether the control allows multiple,
+comma-separated, email addresses to be entered.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DisableRipple { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Multiple { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -360,10 +358,10 @@ should disable the ripple, or not.</p>
       </tr>
     </tbody>
   </table>
-  <a id="MudBlazor_RenderMudRadioGroupAttribute_Options_" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Options*"></a>
-  <h4 id="MudBlazor_RenderMudRadioGroupAttribute_Options" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Options">Options</h4>
-  <div class="markdown level1 summary"><p>This property contains a comma separated list of options for the
-radio buttons in the group.</p>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Options_" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Options*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Options" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Options">Options</h4>
+  <div class="markdown level1 summary"><p>This property contains a list of pre-defined autocomplete options
+for the element. The values should be space separated.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -385,64 +383,15 @@ radio buttons in the group.</p>
       </tr>
     </tbody>
   </table>
-  <a id="MudBlazor_RenderMudRadioGroupAttribute_Placement_" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Placement*"></a>
-  <h4 id="MudBlazor_RenderMudRadioGroupAttribute_Placement" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Placement">Placement</h4>
-  <div class="markdown level1 summary"><p>This property indicates the placement for the radio buttons in the
-group.</p>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Pattern_" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Pattern*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Pattern" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Pattern">Pattern</h4>
+  <div class="markdown level1 summary"><p>This property contains a regular expression the input's contents
+must match in order to be valid.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Placement Placement { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">MudBlazor.Placement</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMudRadioGroupAttribute_Size_" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Size*"></a>
-  <h4 id="MudBlazor_RenderMudRadioGroupAttribute_Size" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Size">Size</h4>
-  <div class="markdown level1 summary"><p>This property indicates the size for the radio buttons in the group.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Size Size { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">MudBlazor.Size</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMudRadioGroupAttribute_Style_" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Style*"></a>
-  <h4 id="MudBlazor_RenderMudRadioGroupAttribute_Style" data-uid="MudBlazor.RenderMudRadioGroupAttribute.Style">Style</h4>
-  <div class="markdown level1 summary"><p>This property indicates the CSS style to use for the buttons in the
-group.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Style { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Pattern { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -459,15 +408,15 @@ group.</p>
       </tr>
     </tbody>
   </table>
-  <a id="MudBlazor_RenderMudRadioGroupAttribute_UserAttributes_" data-uid="MudBlazor.RenderMudRadioGroupAttribute.UserAttributes*"></a>
-  <h4 id="MudBlazor_RenderMudRadioGroupAttribute_UserAttributes" data-uid="MudBlazor.RenderMudRadioGroupAttribute.UserAttributes">UserAttributes</h4>
-  <div class="markdown level1 summary"><p>This property contains user attributes to be used for the buttons in
-the group.</p>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Placeholder_" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Placeholder*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Placeholder" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Placeholder">Placeholder</h4>
+  <div class="markdown level1 summary"><p>This property contains a short hint that describes the expected
+value of the component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, object&gt; UserAttributes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Placeholder { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -479,15 +428,190 @@ the group.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_ReadOnly_" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.ReadOnly*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_ReadOnly" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.ReadOnly">ReadOnly</h4>
+  <div class="markdown level1 summary"><p>This property indicates the component is read only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReadOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Size_" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Size*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Size" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Size">Size</h4>
+  <div class="markdown level1 summary"><p>This property indicates how many characters wide the input field
+should be.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Size { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_SpellCheck_" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.SpellCheck*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_SpellCheck" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.SpellCheck">SpellCheck</h4>
+  <div class="markdown level1 summary"><p>This property indicates whether or not to enable spell checking
+for the input field, or if the default spell checking configuration
+should be used</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SpellCheck { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="MudBlazor_RenderMudRadioGroupAttribute_ToAttributes_" data-uid="MudBlazor.RenderMudRadioGroupAttribute.ToAttributes*"></a>
-  <h4 id="MudBlazor_RenderMudRadioGroupAttribute_ToAttributes" data-uid="MudBlazor.RenderMudRadioGroupAttribute.ToAttributes">ToAttributes()</h4>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Generate_" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Generate*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})">Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</h4>
+  <div class="markdown level1 summary"><p>This method is called by the form generator to generate content for
+the specified property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Generate(RenderTreeBuilder builder, int index, IHandleEvent eventTarget, Stack&lt;object&gt; path, PropertyInfo prop, ILogger&lt;IFormGenerator&gt; logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder</span></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>The builder to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.AspNetCore.Components.IHandleEvent</span></td>
+        <td><span class="parametername">eventTarget</span></td>
+        <td><p>The event target to use for the
+operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Stack</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path to the current model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Reflection.PropertyInfo</span></td>
+        <td><span class="parametername">prop</span></td>
+        <td><p>The reflection information for the property.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span>&lt;<a class="xref" href="CG.Blazor.Forms.Services.IFormGenerator.html">IFormGenerator</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger to use for the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The index after rendering is complete.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html#CG_Blazor_Forms_Attributes_FormGeneratorAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__">FormGeneratorAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</a></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>This exception is thrown whenever
+one of more arguments are missing, or invalid.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CG.Blazor.Forms.Services.FormGenerationException.html">FormGenerationException</a></td>
+        <td><p>This exception is thrown whenever
+the rendering operation fails to complete.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_ToAttributes_" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.ToAttributes*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_ToAttributes" data-uid="CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.ToAttributes">ToAttributes()</h4>
   <div class="markdown level1 summary"><p>This method can be overridden to produce a table of named attributes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -512,7 +636,7 @@ the group.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html#CG_Blazor_Forms_Attributes_FormGeneratorAttribute_ToAttributes">FormGeneratorAttribute.ToAttributes()</a></div>
+  <div><a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_ToAttributes">HtmlAttribute.ToAttributes()</a></div>
 </article>
           </div>
           

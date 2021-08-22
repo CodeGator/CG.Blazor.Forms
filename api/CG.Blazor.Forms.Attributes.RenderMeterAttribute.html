@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class RenderObjectAttribute
+    <title>Class RenderMeterAttribute
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class RenderObjectAttribute
+    <meta name="title" content="Class RenderMeterAttribute
    ">
     <meta name="generator" content="docfx 2.58.0.0">
     
@@ -78,14 +78,13 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CG.Blazor.Forms.Attributes.RenderObjectAttribute">
+            <article class="content wrap" id="_content" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute">
   
   
-  <h1 id="CG_Blazor_Forms_Attributes_RenderObjectAttribute" data-uid="CG.Blazor.Forms.Attributes.RenderObjectAttribute" class="text-break">Class RenderObjectAttribute
+  <h1 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute" class="text-break">Class RenderMeterAttribute
   </h1>
-  <div class="markdown level0 summary"><p>This class is an attribute that, when applied to a class, or an object
-property on a class, causes the form generator to render the properties
-of the object as HTML.</p>
+  <div class="markdown level0 summary"><p>This class is an attribute that, when applied to a numeric property,
+causes the form generator to render the property as a meter HTML element.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -93,12 +92,34 @@ of the object as HTML.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">System.Attribute</span></div>
     <div class="level2"><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html">FormGeneratorAttribute</a></div>
-    <div class="level3"><span class="xref">RenderObjectAttribute</span></div>
+    <div class="level3"><a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html">HtmlAttribute</a></div>
+    <div class="level4"><span class="xref">RenderMeterAttribute</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html#CG_Blazor_Forms_Attributes_FormGeneratorAttribute_ToAttributes">FormGeneratorAttribute.ToAttributes()</a>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_AutoFocus">HtmlAttribute.AutoFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Class">HtmlAttribute.Class</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Id">HtmlAttribute.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_InputMode">HtmlAttribute.InputMode</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Label">HtmlAttribute.Label</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Name">HtmlAttribute.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Style">HtmlAttribute.Style</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_TabIndex">HtmlAttribute.TabIndex</a>
     </div>
     <div>
       <span class="xref">System.Attribute.Equals(System.Object)</span>
@@ -229,21 +250,232 @@ of the object as HTML.</p>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="CG.Blazor.Forms.Attributes.html">CG.Blazor.Forms.Attributes</a></h6>
   <h6><strong>Assembly</strong>: CG.Blazor.Forms.dll</h6>
-  <h5 id="CG_Blazor_Forms_Attributes_RenderObjectAttribute_syntax">Syntax</h5>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Class | AttributeTargets.Property)]
-public class RenderObjectAttribute : FormGeneratorAttribute</code></pre>
+    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
+public class RenderMeterAttribute : HtmlAttribute</code></pre>
   </div>
-  <h5 id="CG_Blazor_Forms_Attributes_RenderObjectAttribute_remarks"><strong>Remarks</strong></h5>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
-This attribute is only valid when placed on a property of type: object,
-or on a class definition itself.
+This attribute is only valid when placed on a property of type: numeric.
+Which means, byte, int, long, float, double, or decimal.
 </p>
 </div>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_examples"><strong>Examples</strong></h5>
+  <p>Here is an example of decorating a model property to render a meter:</p>
+<pre><code>using CG.Blazor.Forms.Attributes;
+class MyModel
+{
+    [RenderMeter]
+    public float MyProperty { get;set; }
+}</code></pre>
+
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="CG_Blazor_Forms_Attributes_RenderMeterAttribute__ctor_" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.#ctor*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute__ctor" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.#ctor">RenderMeterAttribute()</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of <a class="xref" href="CG.Blazor.Forms.Attributes.RenderMeterAttribute.html">RenderMeterAttribute</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RenderMeterAttribute()</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <a id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_High_" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.High*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_High" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.High">High</h4>
+  <div class="markdown level1 summary"><p>This property contains the lower numeric bound of the high end of the
+measured range. This must be less than the maximum value (max attribute),
+and it also must be greater than the low value and minimum value (low
+attribute and min attribute, respectively), if any are specified. If
+unspecified, or if greater than the maximum value, the high value is
+equal to the maximum value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string High { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_Low_" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.Low*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_Low" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.Low">Low</h4>
+  <div class="markdown level1 summary"><p>This property contains the upper numeric bound of the low end of the
+measured range. This must be greater than the minimum value (min attribute),
+and it also must be less than the high value and maximum value (high attribute
+and max attribute, respectively), if any are specified. If unspecified, or if
+less than the minimum value, the low value is equal to the minimum value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Low { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_Max_" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.Max*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_Max" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.Max">Max</h4>
+  <div class="markdown level1 summary"><p>This property indicates the upper numeric bound of the measured range.
+This must be greater than the minimum value (min attribute), if specified.
+If unspecified, the maximum value is 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Max { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_Min_" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.Min*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_Min" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.Min">Min</h4>
+  <div class="markdown level1 summary"><p>This property indicates the lower numeric bound of the measured range.
+This must be less than the maximum value (max attribute), if specified.
+If unspecified, the minimum value is 0.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Min { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_Optimum_" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.Optimum*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_Optimum" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.Optimum">Optimum</h4>
+  <div class="markdown level1 summary"><p>This property indicates the optimal numeric value. It must be within the range
+(as defined by the min attribute and max attribute). When used with the low
+attribute and high attribute, it gives an indication where along the range is
+considered preferable. For example, if it is between the min attribute and the
+low attribute, then the lower range is considered preferred. The browser may
+color the meter's bar differently depending on whether the value is less than
+or equal to the optimum value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Optimum { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_ReadOnly_" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.ReadOnly*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_ReadOnly" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.ReadOnly">ReadOnly</h4>
+  <div class="markdown level1 summary"><p>This property indicates the component is read only.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ReadOnly { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_Step_" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.Step*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_Step" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.Step">Step</h4>
+  <div class="markdown level1 summary"><p>This property contains the stepping interval, when clicking up and down
+spinner buttons and validating the input.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Step { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="CG_Blazor_Forms_Attributes_RenderObjectAttribute_Generate_" data-uid="CG.Blazor.Forms.Attributes.RenderObjectAttribute.Generate*"></a>
-  <h4 id="CG_Blazor_Forms_Attributes_RenderObjectAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__" data-uid="CG.Blazor.Forms.Attributes.RenderObjectAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})">Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</h4>
+  <a id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_Generate_" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.Generate*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})">Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</h4>
   <div class="markdown level1 summary"><p>This method is called by the form generator to generate content for
 the specified property.</p>
 </div>
@@ -342,6 +574,33 @@ the rendering operation fails to complete.</p>
       </tr>
     </tbody>
   </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_ToAttributes_" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.ToAttributes*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderMeterAttribute_ToAttributes" data-uid="CG.Blazor.Forms.Attributes.RenderMeterAttribute.ToAttributes">ToAttributes()</h4>
+  <div class="markdown level1 summary"><p>This method can be overridden to produce a table of named attributes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override IDictionary&lt;string, object&gt; ToAttributes()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><p>A table of named attributes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_ToAttributes">HtmlAttribute.ToAttributes()</a></div>
 </article>
           </div>
           

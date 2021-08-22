@@ -138,6 +138,18 @@ razor component.</p>
       </tr>
     </tbody>
   </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <a id="CG_Blazor_Forms_DynamicForm_1__ctor_" data-uid="CG.Blazor.Forms.DynamicForm`1.#ctor*"></a>
+  <h4 id="CG_Blazor_Forms_DynamicForm_1__ctor" data-uid="CG.Blazor.Forms.DynamicForm`1.#ctor">DynamicForm()</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="CG.Blazor.Forms.DynamicForm-1.html">DynamicForm&lt;T&gt;</a>
+class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DynamicForm()</code></pre>
+  </div>
   <h3 id="properties">Properties
   </h3>
   <a id="CG_Blazor_Forms_DynamicForm_1_Model_" data-uid="CG.Blazor.Forms.DynamicForm`1.Model*"></a>
@@ -177,7 +189,8 @@ other POCO references.
   <h4 id="CG_Blazor_Forms_DynamicForm_1_NoForm" data-uid="CG.Blazor.Forms.DynamicForm`1.NoForm">NoForm</h4>
   <div class="markdown level1 summary"><p>This parameter indicates whether the model and it's properties
 should be rendered inside a form, or not. True to render just
-the model; False to render the model inside a form.</p>
+the properties on the model; False to render the model inside
+an <span class="xref">Microsoft.AspNetCore.Components.Forms.EditForm</span> HTML tag.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -205,12 +218,12 @@ public bool NoForm { get; set; }</code></pre>
 Setting this value to True prevents the form generator from wrapping
 the properties of the <a class="xref" href="CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_Model">Model</a> object in
 an <span class="xref">Microsoft.AspNetCore.Components.Forms.EditForm</span> component. That, in turn, prevents any
-of the form related callbacks from ever getting raised, since there
-isn&apos;t a form to raise them.
+of the form related callbacks from ever getting invoked, since there
+isn&apos;t a form to invoke them.
 </p>
 <p>
-This property is good to set if you need a form with dynamic content, 
-but, you want to handle the <span class="xref">Microsoft.AspNetCore.Components.Forms.EditForm</span> part yourself.
+This property helps when you need dynamic content, but, you want to 
+handle the <span class="xref">Microsoft.AspNetCore.Components.Forms.EditForm</span> part yourself.
 </p>
 </div>
   <a id="CG_Blazor_Forms_DynamicForm_1_OnInvalidSubmit_" data-uid="CG.Blazor.Forms.DynamicForm`1.OnInvalidSubmit*"></a>
@@ -245,7 +258,7 @@ is submitted with one or more invalid form values. As such,
 it will only be called if the <a class="xref" href="CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_NoForm">NoForm</a> 
 property is set to false, and the <a class="xref" href="CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_Model">Model</a> 
 property has been set to a valid POCO reference, and the model&apos;s 
-class has been decorated with a <a class="xref" href="CG.Blazor.Forms.Attributes.DataAnnotationsValidatorAttribute.html">DataAnnotationsValidatorAttribute</a> 
+class has been decorated with a <see cref="!:DataAnnotationsValidatorAttribute"></see> 
 attribute (or equivilant), and at least one or more properties 
 on the model have a value (or values) that fail form validation.
 </p>
@@ -317,10 +330,36 @@ is submitted with valid form values. As such, it will only be
 called if the <see cref="!:DynamicForm.NoForm"></see> property is set to 
 false, and the <see cref="!:DynamicForm.Model"></see>  property has been 
 set to a valid POCO reference, and the model&apos;s  class has been 
-decorated with a <a class="xref" href="CG.Blazor.Forms.Attributes.DataAnnotationsValidatorAttribute.html">DataAnnotationsValidatorAttribute</a> 
+decorated with a <see cref="!:DataAnnotationsValidatorAttribute"></see> 
 attribute (or equivilant).
 </p>
 </div>
+  <a id="CG_Blazor_Forms_DynamicForm_1_ShowResetButton_" data-uid="CG.Blazor.Forms.DynamicForm`1.ShowResetButton*"></a>
+  <h4 id="CG_Blazor_Forms_DynamicForm_1_ShowResetButton" data-uid="CG.Blazor.Forms.DynamicForm`1.ShowResetButton">ShowResetButton</h4>
+  <div class="markdown level1 summary"><p>This parameter indicates whether the form should display a reset
+button, or not. True to show; False otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Parameter]
+public bool ShowResetButton { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

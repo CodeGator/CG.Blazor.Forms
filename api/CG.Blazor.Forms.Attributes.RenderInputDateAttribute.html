@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class RenderMudCheckBoxAttribute
+    <title>Class RenderInputDateAttribute
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class RenderMudCheckBoxAttribute
+    <meta name="title" content="Class RenderInputDateAttribute
    ">
     <meta name="generator" content="docfx 2.58.0.0">
     
@@ -78,13 +78,14 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MudBlazor.RenderMudCheckBoxAttribute">
+            <article class="content wrap" id="_content" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute">
   
   
-  <h1 id="MudBlazor_RenderMudCheckBoxAttribute" data-uid="MudBlazor.RenderMudCheckBoxAttribute" class="text-break">Class RenderMudCheckBoxAttribute
+  <h1 id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute" class="text-break">Class RenderInputDateAttribute
   </h1>
-  <div class="markdown level0 summary"><p>This class is an attribute that indicates a decorated property should be
-rendered with a <span class="xref">MudBlazor.MudCheckBox`1</span> control.</p>
+  <div class="markdown level0 summary"><p>This class is an attribute that, when applied to a DateTime property,
+causes the form generator to render the property as an date HTML
+element.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -92,10 +93,35 @@ rendered with a <span class="xref">MudBlazor.MudCheckBox`1</span> control.</p>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">System.Attribute</span></div>
     <div class="level2"><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html">FormGeneratorAttribute</a></div>
-    <div class="level3"><span class="xref">RenderMudCheckBoxAttribute</span></div>
+    <div class="level3"><a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html">HtmlAttribute</a></div>
+    <div class="level4"><span class="xref">RenderInputDateAttribute</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_AutoFocus">HtmlAttribute.AutoFocus</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Class">HtmlAttribute.Class</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Id">HtmlAttribute.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_InputMode">HtmlAttribute.InputMode</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Label">HtmlAttribute.Label</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Name">HtmlAttribute.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_Style">HtmlAttribute.Style</a>
+    </div>
+    <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_TabIndex">HtmlAttribute.TabIndex</a>
+    </div>
     <div>
       <span class="xref">System.Attribute.Equals(System.Object)</span>
     </div>
@@ -223,45 +249,50 @@ rendered with a <span class="xref">MudBlazor.MudCheckBox`1</span> control.</p>
       <span class="xref">System.Object.ToString()</span>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="MudBlazor.html">MudBlazor</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CG.Blazor.Forms.Attributes.html">CG.Blazor.Forms.Attributes</a></h6>
   <h6><strong>Assembly</strong>: CG.Blazor.Forms.dll</h6>
-  <h5 id="MudBlazor_RenderMudCheckBoxAttribute_syntax">Syntax</h5>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
-public class RenderMudCheckBoxAttribute : FormGeneratorAttribute</code></pre>
+public class RenderInputDateAttribute : HtmlAttribute</code></pre>
   </div>
-  <h5 id="MudBlazor_RenderMudCheckBoxAttribute_remarks"><strong>Remarks</strong></h5>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
-Decorating a bool property with this attribute causes the form generator
-to render the property as a <span class="xref">MudBlazor.MudCheckBox`1</span> component. 
-</p>
-<p>
-This attribute is only valid when placed on a property that returns a 
-bool value.
+This attribute is only valid when placed on a property of type: Datetime
 </p>
 </div>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_examples"><strong>Examples</strong></h5>
+  <p>Here is an example of decorating a model property to render a date:</p>
+<pre><code>using CG.Blazor.Forms.Attributes;
+class MyModel
+{
+    [RenderInputDate]
+    public Datetime MyProperty { get;set; }
+}</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute__ctor_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.#ctor*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute__ctor" data-uid="MudBlazor.RenderMudCheckBoxAttribute.#ctor">RenderMudCheckBoxAttribute()</h4>
-  <div class="markdown level1 summary"><p>This constructor creates a new instance of the <a class="xref" href="MudBlazor.RenderMudCheckBoxAttribute.html">RenderMudCheckBoxAttribute</a>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute__ctor_" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.#ctor*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute__ctor" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.#ctor">RenderInputDateAttribute()</h4>
+  <div class="markdown level1 summary"><p>This constructor creates a new instance of <a class="xref" href="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.html">RenderInputDateAttribute</a>
 class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RenderMudCheckBoxAttribute()</code></pre>
+    <pre><code class="lang-csharp hljs">public RenderInputDateAttribute()</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_CheckedIcon_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.CheckedIcon*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_CheckedIcon" data-uid="MudBlazor.RenderMudCheckBoxAttribute.CheckedIcon">CheckedIcon</h4>
-  <div class="markdown level1 summary"><p>This property contains a custom checked icon, leave null for default.</p>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_Max_" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Max*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_Max" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Max">Max</h4>
+  <div class="markdown level1 summary"><p>This property contains the maximum date for the element. The format
+MUST be yyyy-MM-dd.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string CheckedIcon { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Max { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -278,14 +309,15 @@ class.</p>
       </tr>
     </tbody>
   </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_Class_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Class*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_Class" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Class">Class</h4>
-  <div class="markdown level1 summary"><p>This property contains user class names, separated by space.</p>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_Min_" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Min*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_Min" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Min">Min</h4>
+  <div class="markdown level1 summary"><p>This property contains the minimum date for the element. The format
+MUST be yyyy-MM-dd.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Class { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Min { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -302,112 +334,15 @@ class.</p>
       </tr>
     </tbody>
   </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_Color_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Color*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_Color" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Color">Color</h4>
-  <div class="markdown level1 summary"><p>This property indicates the color of the component. It supports
-the theme colors.</p>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_Placeholder_" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Placeholder*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_Placeholder" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Placeholder">Placeholder</h4>
+  <div class="markdown level1 summary"><p>This property contains a short hint that describes the expected
+value of the component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Color Color { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">MudBlazor.Color</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_Dense_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Dense*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_Dense" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Dense">Dense</h4>
-  <div class="markdown level1 summary"><p>This proerty, if true, causes compact padding to be applied.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Dense { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_Disabled_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Disabled*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_Disabled" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Disabled">Disabled</h4>
-  <div class="markdown level1 summary"><p>This property, if true, the input will be disabled.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Disabled { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_DisableRipple_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.DisableRipple*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_DisableRipple" data-uid="MudBlazor.RenderMudCheckBoxAttribute.DisableRipple">DisableRipple</h4>
-  <div class="markdown level1 summary"><p>This property, if true, disables ripple effect.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool DisableRipple { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_IndeterminateIcon_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.IndeterminateIcon*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_IndeterminateIcon" data-uid="MudBlazor.RenderMudCheckBoxAttribute.IndeterminateIcon">IndeterminateIcon</h4>
-  <div class="markdown level1 summary"><p>This property contains a custom indeterminate icon, leave
-null for default.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string IndeterminateIcon { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Placeholder { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -424,33 +359,9 @@ null for default.</p>
       </tr>
     </tbody>
   </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_Label_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Label*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_Label" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Label">Label</h4>
-  <div class="markdown level1 summary"><p>This property contains an optional label for the text field.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Label { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_ReadOnly_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.ReadOnly*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_ReadOnly" data-uid="MudBlazor.RenderMudCheckBoxAttribute.ReadOnly">ReadOnly</h4>
-  <div class="markdown level1 summary"><p>This property, if true, the input will be read-only.</p>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_ReadOnly_" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.ReadOnly*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_ReadOnly" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.ReadOnly">ReadOnly</h4>
+  <div class="markdown level1 summary"><p>This property indicates the component is read only.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -472,39 +383,15 @@ null for default.</p>
       </tr>
     </tbody>
   </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_Size_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Size*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_Size" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Size">Size</h4>
-  <div class="markdown level1 summary"><p>This property cotnains the size of the component.</p>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_Step_" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Step*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_Step" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Step">Step</h4>
+  <div class="markdown level1 summary"><p>This property contains the stepping interval, when clicking up and down
+spinner buttons and validating the date.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Size Size { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">MudBlazor.Size</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_Style_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Style*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_Style" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Style">Style</h4>
-  <div class="markdown level1 summary"><p>This property contains user styles, applied on top of the component's
-own classes and styles</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Style { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Step { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -517,112 +404,114 @@ own classes and styles</p>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_Tag_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Tag*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_Tag" data-uid="MudBlazor.RenderMudCheckBoxAttribute.Tag">Tag</h4>
-  <div class="markdown level1 summary"><p>This property contains a use Tag to attach any user data object to the
-component for your convenience.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public object Tag { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Object</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_TriState_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.TriState*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_TriState" data-uid="MudBlazor.RenderMudCheckBoxAttribute.TriState">TriState</h4>
-  <div class="markdown level1 summary"><p>This property indicates if the checkbox can cycle again through
-indeterminate status.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TriState { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_UncheckedIcon_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.UncheckedIcon*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_UncheckedIcon" data-uid="MudBlazor.RenderMudCheckBoxAttribute.UncheckedIcon">UncheckedIcon</h4>
-  <div class="markdown level1 summary"><p>This property contains a custom unchecked icon, leave null for default.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string UncheckedIcon { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_UserAttributes_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.UserAttributes*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_UserAttributes" data-uid="MudBlazor.RenderMudCheckBoxAttribute.UserAttributes">UserAttributes</h4>
-  <div class="markdown level1 summary"><p>This property contains any user attributes to use for the tabs panel.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IDictionary&lt;string, object&gt; UserAttributes { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
-  <a id="MudBlazor_RenderMudCheckBoxAttribute_ToAttributes_" data-uid="MudBlazor.RenderMudCheckBoxAttribute.ToAttributes*"></a>
-  <h4 id="MudBlazor_RenderMudCheckBoxAttribute_ToAttributes" data-uid="MudBlazor.RenderMudCheckBoxAttribute.ToAttributes">ToAttributes()</h4>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_Generate_" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Generate*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})">Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</h4>
+  <div class="markdown level1 summary"><p>This method is called by the form generator to generate content for
+the specified property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int Generate(RenderTreeBuilder builder, int index, IHandleEvent eventTarget, Stack&lt;object&gt; path, PropertyInfo prop, ILogger&lt;IFormGenerator&gt; logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder</span></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>The builder to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index to use for the operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.AspNetCore.Components.IHandleEvent</span></td>
+        <td><span class="parametername">eventTarget</span></td>
+        <td><p>The event target to use for the
+operation.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Stack</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path to the current model.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Reflection.PropertyInfo</span></td>
+        <td><span class="parametername">prop</span></td>
+        <td><p>The reflection information for the property.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span>&lt;<a class="xref" href="CG.Blazor.Forms.Services.IFormGenerator.html">IFormGenerator</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger to use for the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>The index after rendering is complete.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html#CG_Blazor_Forms_Attributes_FormGeneratorAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__">FormGeneratorAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</a></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p>This exception is thrown whenever
+one of more arguments are missing, or invalid.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="CG.Blazor.Forms.Services.FormGenerationException.html">FormGenerationException</a></td>
+        <td><p>This exception is thrown whenever
+the rendering operation fails to complete.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_ToAttributes_" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.ToAttributes*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderInputDateAttribute_ToAttributes" data-uid="CG.Blazor.Forms.Attributes.RenderInputDateAttribute.ToAttributes">ToAttributes()</h4>
   <div class="markdown level1 summary"><p>This method can be overridden to produce a table of named attributes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -647,7 +536,7 @@ indeterminate status.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html#CG_Blazor_Forms_Attributes_FormGeneratorAttribute_ToAttributes">FormGeneratorAttribute.ToAttributes()</a></div>
+  <div><a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_ToAttributes">HtmlAttribute.ToAttributes()</a></div>
 </article>
           </div>
           

@@ -14,23 +14,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Blazor.Forms.Attributes.DataAnnotationsValidatorAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Blazor.Forms.Attributes.DataAnnotationsValidatorAttribute.html",
-          "hash": "HH0unfvZNxPFACx4NJMH5emqENnr0w1dV9Z5kl3nZOE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/CG.Blazor.Forms.Attributes.FormGeneratorAttribute.yml",
       "output": {
         ".html": {
           "relative_path": "api/CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html",
-          "hash": "jt7590LIzwvFZTfyrlFDZTDqju2FaHeDucxprQ3CujM="
+          "hash": "A5z9H4JUZURjRN8agTS+P4etOcCBrXs+niSRXWdOXOE="
         }
       },
       "is_incremental": false,
@@ -38,11 +26,203 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.yml",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.FormValidationAttribute.yml",
       "output": {
         ".html": {
-          "relative_path": "api/CG.Blazor.Forms.Attributes.FormGeneratorExtensionAttribute.html",
-          "hash": "hr0HmP/ovdI2/mbWMHek3BqBAAfZm8SfygeXXTUz+tE="
+          "relative_path": "api/CG.Blazor.Forms.Attributes.FormValidationAttribute.html",
+          "hash": "v4jxR3/NGI0/Wp3RsgblaKuMyC8qEbGWo8+oew0mYw8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.HtmlAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.HtmlAttribute.html",
+          "hash": "s6tY6g+HLGmRp8a8YdY6myexgpqKV5Za/V1yHFA5mSQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.html",
+          "hash": "YjsIusJmpzWrSalNXhvXspJFAbx4pqlnBNB/3z52GWs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.html",
+          "hash": "xqUTSXjtOoYqnK8fSyo/CCUz+yzLWOBgAjtW0aPdYw8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputColorAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputColorAttribute.html",
+          "hash": "n7m1N1u00SMZ5E6n7iNBK4KGiv908C0U3DEvjNfiyl4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputDateAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputDateAttribute.html",
+          "hash": "26FC1Uc26zWSvz4wWnJLfe1ToTHbfViZURbNaIUkPVc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.html",
+          "hash": "tFMHviGLBEjhv9heAWCEz/lYz5N7CUGuFsbkz2iz1o8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.html",
+          "hash": "Pc7zNJGIz6rDYK6e8IEu4V98s+x/UASjkg50vKqaiWI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.html",
+          "hash": "xvZuvn0Lq6IG8ZgLH6OmzDD4glWw4STfuu2GUwsk7NQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.html",
+          "hash": "kno2AOKos6MQIxi7LjLA28w2Q9yKpU3gO/dHMYWx0Cs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.html",
+          "hash": "jS0Sh/0gB/H6atTk+GBSTyooRIGqhXy+jeb1TSvb1Ho="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.html",
+          "hash": "o5+lRVM668Z8lS+0MH7ZKJF895nOMXjnLlXWsKfEh5A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputTextAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputTextAttribute.html",
+          "hash": "3+DV6OMI5zUenMnHAnuu8KKtfbW/MUAipquNzV6CZMk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.html",
+          "hash": "igxepk8TpwJt3+OZSVx1ISS/GHRkRxcsrYEn6YPWB0M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.html",
+          "hash": "JtKcAsGj9SZpMnUeAQTTKNU5niJio/P/iDetUHO+E2s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.html",
+          "hash": "tB0BTyvHOd2JQE0m1ckGYr76B59ZgJ9mE2ZMoVq9UfE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderMeterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderMeterAttribute.html",
+          "hash": "tPFKAJp6wX9AfaPu+cTSOZsf58mg7n1XEm3DvFm4Q8g="
         }
       },
       "is_incremental": false,
@@ -54,7 +234,67 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Blazor.Forms.Attributes.RenderObjectAttribute.html",
-          "hash": "lAVCpUd3UoHf1edg6rE4qf3QKy0inwduj+TmH55hFRQ="
+          "hash": "gg3ew1Ln1MMeJct4MtOp/ZfyshOqkNo6WEIY+ShEkaA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderProgressAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderProgressAttribute.html",
+          "hash": "sMgKjid0fS0q8U1biKrZA46XRhAEw7AYdtWC5uzLL0Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.html",
+          "hash": "K51c/C3zwIkCVS1xCGgYchpJdXsTBkAGq9mbVuRrMYw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderSelectAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderSelectAttribute.html",
+          "hash": "sMtlfrCbCrcT2QO/C2Gm/SjPwIQr0+hqwj+mgWBr/cw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.html",
+          "hash": "cCuC1rSzaKvVqMyDO9nDBwdFIjjNylIhAXqmizpUpSU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.html",
+          "hash": "we4UmkgEHM6vCNkPI20Lg8bpaSnEY8nLYTgKd+54KLs="
         }
       },
       "is_incremental": false,
@@ -66,31 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Blazor.Forms.Attributes.html",
-          "hash": "qB5oq/DNxUZiCj0ZQXQX45R6l3itYROfRH0SL2/8bW8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Blazor.Forms.Components.MuddyGroupBox.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Blazor.Forms.Components.MuddyGroupBox.html",
-          "hash": "SH/FXxVwBN0V+BBtvg0adas18i8ydRHV4IOdZSRIeNs="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/CG.Blazor.Forms.Components.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/CG.Blazor.Forms.Components.html",
-          "hash": "zOTIImnC2Th+I10iy4KhMmCBvLKZzdzTRo3UqUKB+/Y="
+          "hash": "PzSapJC3R62QuqTyRyJDTZbNEkn5ZCeBWwdhb2XZiXQ="
         }
       },
       "is_incremental": false,
@@ -102,7 +318,19 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Blazor.Forms.DynamicForm-1.html",
-          "hash": "8PPX9iC8cjm7vrCIZ5hWtFMjCPvh0fQPF8GknjsPBlw="
+          "hash": "xHX3apAGZz2G7RgB0j/KrqXN+U1FG9yxsY26vraFvFI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.RenderTreeBuilderExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.RenderTreeBuilderExtensions.html",
+          "hash": "oYsJwIWiHkymo/HgLi0UoW8j4oIBOwyOo69cb1D5Hzo="
         }
       },
       "is_incremental": false,
@@ -150,7 +378,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Blazor.Forms.html",
-          "hash": "H/dxRv5kg+64h/+CQkSmxqmcGhSJmczYQCJJFBjB+dU="
+          "hash": "gL5WmOKFwFu7x/9eeap/2SnI8y5gT0JarfACGXt1vt4="
         }
       },
       "is_incremental": false,
@@ -162,7 +390,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.html",
-          "hash": "x6MV7e1dgUMbstg7e8HMbEOY1oh7vlKRbus1JU4sRFQ="
+          "hash": "ZCQNaNemg0Hr2RcrkyVbedVXt1BuPxY71oK0hqvAWIs="
         }
       },
       "is_incremental": false,
@@ -181,204 +409,12 @@
       "version": ""
     },
     {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudAlertAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudAlertAttribute.html",
-          "hash": "7IHbPBZYmQDs86bQpDZNzM5jnW6V9nxjZlrBYbc/tW8="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudAutocompleteAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudAutocompleteAttribute.html",
-          "hash": "Ju6o1yOYbYcJMD8uWQ5zHxtM+ZubcRfcM3GbdeXU0zI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudCheckBoxAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudCheckBoxAttribute.html",
-          "hash": "ejV8r2WaCMB3TeFYrYjkWwJZ+HkxzGe/7FZUjVmVX5w="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudColorPickerAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudColorPickerAttribute.html",
-          "hash": "NWySwBW5fFjFzHDgb28XuSNq86PL5gCfTXmdKKVEGME="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudDatePickerAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudDatePickerAttribute.html",
-          "hash": "cn7uZMfJ7JsscGUww32/tYzxMxQhbi/CW4PY0JsC39s="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudFieldAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudFieldAttribute.html",
-          "hash": "XYT1/ke377vc7kbE4R+33e02nK6GRmWHJJCKExiZG48="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudNumericFieldAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudNumericFieldAttribute.html",
-          "hash": "GX/xSPIfIKr2ezYm5dipztZ8xEb978GffqG3dKu/GKo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudPaperAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudPaperAttribute.html",
-          "hash": "o66D5sdjpQpoPtgxXZOcytmlJYNQuhqLkWCgsHEITr0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudRadioGroupAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudRadioGroupAttribute.html",
-          "hash": "ZOJQEjQuFvdPMOorDrU1WrNpu/YtuGgNAo2I8ahw/OM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudSelectAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudSelectAttribute.html",
-          "hash": "r72nZ0I/drRpfrdQdj1a1nlpC5VvzM6Nb7oJbMQd35o="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudSliderAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudSliderAttribute.html",
-          "hash": "0A6vzswTtLkQPqIWj2dc8jDJtU1xib5bwI4lfZA1ZGc="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudSwitchAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudSwitchAttribute.html",
-          "hash": "4zOtM2WhRkbRyEMIHIDYXA9LEe+BkkXF7yXTuDuWQrM="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudTextFieldAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudTextFieldAttribute.html",
-          "hash": "MvoJzeQxi1LAG8NMh33g4WzOxs3lfaC452Qsrd3yqVQ="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMudTimePickerAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMudTimePickerAttribute.html",
-          "hash": "cf1S8ognb5c/ITleZsKsOaIf8pqYMAN8aQZUGs2A3Js="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.RenderMuddyGroupBoxAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.RenderMuddyGroupBoxAttribute.html",
-          "hash": "fLr4hz8+iUB8d9Qc7mIOY1PL6hW9QTjzKuTa937wWmE="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MudBlazor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MudBlazor.html",
-          "hash": "fnaqpjlwd5TCydPlxcqMh/oca+fD2AkGuYuo1HRvDck="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "mWnVOfdOHjL20QnHcyc2oKBrGxOyjmc1vcLjixYXXMw="
+          "hash": "HVHwI9BPdW7g27JEvSvkiioP90vublVsLsH2qZo39Mk="
         }
       },
       "is_incremental": false,
@@ -497,7 +533,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 30,
+          "total_file_count": 33,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
