@@ -14,22 +14,30 @@ The package contains server side Blazor forms extensions used by other CodeGator
 #### Commonly used types:
 * Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions
 * CG.Blazor.Forms.Components.DynamicForm
-* MudBlazor.RenderObjectAttribute
-* MudBlazor.RenderMudAlertAttribute
-* MudBlazor.RenderMudAutocompleteAttribute
-* MudBlazor.RenderMudCheckBoxAttribute
-* MudBlazor.RenderMudColorPickerAttribute
-* MudBlazor.RenderMudDatePickerAttribute
-* MudBlazor.RenderMuddyGroupBoxAttribute
-* MudBlazor.RenderMudFieldAttribute
-* MudBlazor.RenderMudNumericFieldAttribute
-* MudBlazor.RenderMudPaperAttribute
-* MudBlazor.RenderMudRadioGroupAttribute
-* MudBlazor.RenderMudSelectAttribute
-* MudBlazor.RenderMudSliderAttribute
-* MudBlazor.RenderMudSwitchAttribute
-* MudBlazor.RenderMudTextFieldAttribute
-* MudBlazor.RenderMudTimePickerAttribute
+* CG.Blazor.Forms.Attributes.FormGeneratorAttribute
+* CG.Blazor.Forms.Attributes.FormValidationAttribute
+* CG.Blazor.Forms.Attributes.RenderObjectAttribute
+* CG.Blazor.Forms.Attributes.Validation.RenderDataAnnotationsValidatorAttribute
+* CG.Blazor.Forms.Attributes.Validation.RenderValidationSummaryAttribute
+* CG.Blazor.Forms.Attributes.Html.HtmlAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderCheckBoxAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderInputColorAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderInputDateAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderInputEmailAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderInputMonthAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderInputNumberAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderInputPasswordAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderInputRangeAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderInputSelectAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderInputTelephoneAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderInputTextAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderInputTimeAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderInputUrlAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderInputWeekAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderMeterAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderProgressAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderRadioGroupAttribute
+* CG.Blazor.Forms.Attributes.Html.RenderTextAreaAttribute
 
 #### What platform(s) does it support?
 * .NET 5.x or higher
@@ -59,31 +67,28 @@ Steps to get started:
 
 1. Create a Blazor project to get started.
 
-2. Add MudBlazor to the project, since MudBlazor is (so far) the only supported UI package. [HERE](https://mudblazor.com/getting-started/installation#manual-install) is a good link to get started with MudBlazor.
-
 2. Add the CG.Blazor.Forms NUGET package to the project.
 
-3. Add `@using CG.Blazor.Forms` to the _Imports.razor file.
+3. Add `@using CG.Blazor.Forms.Attributes` to the _Imports.razor file.
 
 4. Add `<DynamicForm Model="@Model" OnValidSubmit="OnValidSubmit"/>` to the razor component where you want your dynamic form generated. Note that `Model` is a reference to your POCO object, and `OnValidSubmit` is a reference to your form's submit handler.
 
-5. Add `services.AddMudBlazorFormGeneration();` to the `ConfigureServices` method of the `Startup` class.
+5. Add `services.AddFormGeneration();` to the `ConfigureServices` method of the `Startup` class.
 
 6. Create your model type. Use attributes from the NUGET package to decorate any properties you want to be rendered on the form. Here is an example:
 
 ```
+[RenderValidationSummary()]
+[RenderFluentValidationValidator]
 public class MyForm
 {
-	[RenderMudTextField]
+	[RenderInputText]
 	[Required]
 	public string FirstName { get; set; }
 
-	[RenderMudTextField]
+	[RenderInputText]
 	[Required]
 	public string LastName { get; set; }
-
-	[RenderMudDatePicker]
-	public DateTime? DateOfBirth { get; set; }
 }
 ```
 
