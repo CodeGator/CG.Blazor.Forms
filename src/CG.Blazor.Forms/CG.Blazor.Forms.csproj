@@ -26,10 +26,8 @@ Platforms supported:
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CG.Validations" Version="2021.3.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Forms" Version="5.0.8" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.8" />
-    <PackageReference Include="MudBlazor" Version="5.1.0" />
+    <PackageReference Include="CG.Validations" Version="2021.3.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.9" />
     <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.231">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

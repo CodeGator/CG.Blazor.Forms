@@ -17,6 +17,8 @@ namespace CG.Blazor.Forms.Services
         /// <param name="model">The POCO data model to use for the operation.</param>
         /// <exception cref="FormGenerationException">This exception is thrown whenever
         /// the generation operation fails to complete.</exception>
+        /// <exception cref="ArgumentException">This extension is thrown whenever one or 
+        /// more arguments are missing, or invalid.</exception>
         /// <remarks>
         /// <para>
         /// The properties on the associated POCO model must be decorated with one or more 

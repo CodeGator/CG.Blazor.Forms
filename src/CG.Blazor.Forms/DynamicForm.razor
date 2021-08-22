@@ -1,6 +1,8 @@
 ﻿@namespace CG.Blazor.Forms
 @typeparam T
 
+@using Microsoft.AspNetCore.Components.Forms
+
 <div class="dynamic-form-wrapper">
     @if (NoForm)
     {
@@ -8,46 +10,39 @@
     }
     else
     {
-        @if (OnSubmit.HasDelegate)
-        {
-            <EditForm Model="@Model" OnSubmit="@OnSubmit">
-                @GenerateFormBody()
-                <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
-            </EditForm>
-        }
-        else if (!OnValidSubmit.HasDelegate && OnInvalidSubmit.HasDelegate)
-        {
-            <EditForm Model="@Model" OnInvalidSubmit="@OnInvalidSubmit">
-                @GenerateFormBody()
-                <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
-            </EditForm>
-        }
-        else if (OnValidSubmit.HasDelegate && !OnInvalidSubmit.HasDelegate)
-        {
-            <EditForm Model="@Model" OnValidSubmit="@OnValidSubmit">
-                @GenerateFormBody()
-                <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
-            </EditForm>
-        }
-        else if (OnValidSubmit.HasDelegate && OnInvalidSubmit.HasDelegate)
-        {
-            <EditForm Model="@Model" OnInvalidSubmit="@OnInvalidSubmit" OnValidSubmit="@OnValidSubmit">
-                @GenerateFormBody()
-                <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
-            </EditForm>
-        }
-        else
-        {
-            <EditForm Model="@Model">
-                @GenerateFormBody()
-                <MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
-            </EditForm>
-        }
+        <EditForm Model="@Model" 
+                  OnInvalidSubmit="@OnInvalidSubmit" 
+                  OnValidSubmit="@OnValidSubmit"
+                  OnSubmit="@OnSubmit">
+            @GenerateFormBody()
+            <br />
+            <div class="dynamic-form-buttons">
+                <button class="btn dynamic-form-submit" type="submit">Submit</button>
+                @if (ShowResetButton)
+                {
+                    <button class="btn dynamic-form-reset" type="reset">Reset</button> 
+                }
+	        </div>
+        </EditForm>
+
     }
 </div>
 
 <style>
 .dynamic-form-wrapper {
     margin: 5px;
+}
+
+.dynamic-form-buttons {
+    display: flex; 
+    margin: 5px;
+}
+
+.dynamic-form-reset {    
+    margin-left: auto
+}
+
+.dynamic-form-submit {
+    
 }
 </style>

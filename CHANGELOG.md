@@ -1,6 +1,14 @@
 # CG.Blazor.Forms
 ---
 
+## 2021.2
+
+* I added support for generating vanilla HTML elements.
+
+* I moved the MudBlazor support into a separate NUGET package.
+
+* I rewrote the demo to better display the capabilities of the library.
+
 ## 2021.1
 
 * I created the package.

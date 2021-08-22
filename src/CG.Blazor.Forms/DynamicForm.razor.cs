@@ -1,7 +1,6 @@
 ﻿using CG.Blazor.Forms.Services;
-using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components;
-using CG.Blazor.Forms.Attributes;
+using Microsoft.AspNetCore.Components.Forms;
 
 namespace CG.Blazor.Forms
 {
@@ -41,19 +40,20 @@ namespace CG.Blazor.Forms
         /// <summary>
         /// This parameter indicates whether the model and it's properties
         /// should be rendered inside a form, or not. True to render just 
-        /// the model; False to render the model inside a form.
+        /// the properties on the model; False to render the model inside 
+        /// an <see cref="EditForm"/> HTML tag.
         /// </summary>
         /// <remarks>
         /// <para>
         /// Setting this value to True prevents the form generator from wrapping
         /// the properties of the <see cref="DynamicForm{T}.Model"/> object in
         /// an <see cref="EditForm"/> component. That, in turn, prevents any
-        /// of the form related callbacks from ever getting raised, since there
-        /// isn't a form to raise them.
+        /// of the form related callbacks from ever getting invoked, since there
+        /// isn't a form to invoke them.
         /// </para>
         /// <para>
-        /// This property is good to set if you need a form with dynamic content, 
-        /// but, you want to handle the <see cref="EditForm"/> part yourself.
+        /// This property helps when you need dynamic content, but, you want to 
+        /// handle the <see cref="EditForm"/> part yourself.
         /// </para>
         /// </remarks>
         [Parameter]
@@ -109,6 +109,31 @@ namespace CG.Blazor.Forms
         /// </remarks>
         [Parameter]
         public EventCallback<EditContext> OnValidSubmit { get; set; }
+
+        /// <summary>
+        /// This parameter indicates whether the form should display a reset 
+        /// button, or not. True to show; False otherwise.
+        /// </summary>
+        [Parameter]
+        public bool ShowResetButton { get; set; }
+
+        #endregion
+
+        // *******************************************************************
+        // Constructors.
+        // *******************************************************************
+
+        #region Constructors
+
+        /// <summary>
+        /// This constructor creates a new instance of the <see cref="DynamicForm{T}"/>
+        /// class.
+        /// </summary>
+        public DynamicForm()
+        {
+            // Set default values.
+            ShowResetButton = false;
+        }
 
         #endregion
 

@@ -1,0 +1,33 @@
+﻿@page "/demo"
+
+@using System.Text.Json
+
+<h4>HTML elements.</h4>
+<p>Everything on this page is generated through the <code>DynamicForm</code> component. Every control is a standard HTML element. All controls are bound to a property on an <code>HtmlView</code> instance.</p>
+<p>This form is generally unstyled, except for basic bootstrap form styling. Adding styling is easy using styles and CSS. on the view-model attributes.</p>
+<hr />
+<p>Scroll to the bottom of the page for the submit button.</p>
+
+<div style="max-width: 680px; margin-bottom: 20px">
+    <DynamicForm Model="@Model" OnValidSubmit="OnValidSubmit"/>
+    <p>Press Submit to see the state of the view-model, as formatted JSON</p>
+    <pre>@JSON</pre>
+</div>
+
+@code {
+
+    HtmlVM Model { get; set; } = new HtmlVM();
+    string JSON { get; set; } = "";
+
+	private void OnValidSubmit(
+        EditContext editContext
+        )
+    {
+        JSON = $"Model (as of {DateTime.Now}) -> \r\n" + JsonSerializer.Serialize<HtmlVM>(
+            Model, 
+            new JsonSerializerOptions() { WriteIndented = true }
+            );
+
+        StateHasChanged();
+    }
+}

@@ -24,7 +24,7 @@ namespace CG.Blazor.Forms.QuickStart
             services.AddServerSideBlazor();
 
             services.AddMudServices();
-            services.AddMudBlazorFormGeneration();
+            services.AddFormGeneration();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
