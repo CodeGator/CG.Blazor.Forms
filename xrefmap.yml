@@ -2355,6 +2355,40 @@ references:
   fullName.vb: CG.Blazor.Forms.DynamicForm(Of T).DynamicForm
   nameWithType: DynamicForm<T>.DynamicForm
   nameWithType.vb: DynamicForm(Of T).DynamicForm
+- uid: CG.Blazor.Forms.DynamicForm`1.ChildContent
+  name: ChildContent
+  href: api/CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_ChildContent
+  commentId: P:CG.Blazor.Forms.DynamicForm`1.ChildContent
+  fullName: CG.Blazor.Forms.DynamicForm<T>.ChildContent
+  fullName.vb: CG.Blazor.Forms.DynamicForm(Of T).ChildContent
+  nameWithType: DynamicForm<T>.ChildContent
+  nameWithType.vb: DynamicForm(Of T).ChildContent
+- uid: CG.Blazor.Forms.DynamicForm`1.ChildContent*
+  name: ChildContent
+  href: api/CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_ChildContent_
+  commentId: Overload:CG.Blazor.Forms.DynamicForm`1.ChildContent
+  isSpec: "True"
+  fullName: CG.Blazor.Forms.DynamicForm<T>.ChildContent
+  fullName.vb: CG.Blazor.Forms.DynamicForm(Of T).ChildContent
+  nameWithType: DynamicForm<T>.ChildContent
+  nameWithType.vb: DynamicForm(Of T).ChildContent
+- uid: CG.Blazor.Forms.DynamicForm`1.ChildContentAfter
+  name: ChildContentAfter
+  href: api/CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_ChildContentAfter
+  commentId: P:CG.Blazor.Forms.DynamicForm`1.ChildContentAfter
+  fullName: CG.Blazor.Forms.DynamicForm<T>.ChildContentAfter
+  fullName.vb: CG.Blazor.Forms.DynamicForm(Of T).ChildContentAfter
+  nameWithType: DynamicForm<T>.ChildContentAfter
+  nameWithType.vb: DynamicForm(Of T).ChildContentAfter
+- uid: CG.Blazor.Forms.DynamicForm`1.ChildContentAfter*
+  name: ChildContentAfter
+  href: api/CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_ChildContentAfter_
+  commentId: Overload:CG.Blazor.Forms.DynamicForm`1.ChildContentAfter
+  isSpec: "True"
+  fullName: CG.Blazor.Forms.DynamicForm<T>.ChildContentAfter
+  fullName.vb: CG.Blazor.Forms.DynamicForm(Of T).ChildContentAfter
+  nameWithType: DynamicForm<T>.ChildContentAfter
+  nameWithType.vb: DynamicForm(Of T).ChildContentAfter
 - uid: CG.Blazor.Forms.DynamicForm`1.Model
   name: Model
   href: api/CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_Model
