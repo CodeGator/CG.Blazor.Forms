@@ -14,7 +14,15 @@
                   OnInvalidSubmit="@OnInvalidSubmit" 
                   OnValidSubmit="@OnValidSubmit"
                   OnSubmit="@OnSubmit">
+            @if (!ChildContentAfter)
+            {
+                @ChildContent
+            }
             @GenerateFormBody()
+            @if (ChildContentAfter)
+            {
+                @ChildContent
+            }
             <br />
             <div class="dynamic-form-buttons">
                 <button class="btn dynamic-form-submit" type="submit">Submit</button>

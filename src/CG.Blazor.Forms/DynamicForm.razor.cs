@@ -18,6 +18,20 @@ namespace CG.Blazor.Forms
         #region Properties
 
         /// <summary>
+        /// This property contains any child content for the form.
+        /// </summary>
+        public RenderFragment ChildContent { get; set; }
+
+        /// <summary>
+        /// This property indicates whether the child content should be rendered
+        /// before, or after the generated content. True to render the child
+        /// content before the rendered content; false to render the child
+        /// content after the rendered content.
+        /// </summary>
+        [Parameter]
+        public bool ChildContentAfter { get; set; }
+
+        /// <summary>
         /// This property contains a form generator service.
         /// </summary>
         [Inject]

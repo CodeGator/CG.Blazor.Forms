@@ -9,6 +9,8 @@
 
 * I rewrote the demo to better display the capabilities of the library.
 
+* I added the ability to render child content for the DynamicForm component.
+
 ## 2021.1
 
 * I created the package.
