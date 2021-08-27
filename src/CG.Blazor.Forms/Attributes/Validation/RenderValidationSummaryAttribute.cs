@@ -34,7 +34,7 @@ namespace CG.Blazor.Forms.Attributes
     /// }
     /// </code>
     /// </example>
-    [AttributeUsage(AttributeTargets.Class)]
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
     public class RenderValidationSummaryAttribute : FormValidationAttribute
     {
         // *******************************************************************

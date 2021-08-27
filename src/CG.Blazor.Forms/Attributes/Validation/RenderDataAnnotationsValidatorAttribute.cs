@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using CG.Blazor.Forms.Services;
 using CG.Validations;
@@ -34,7 +35,7 @@ namespace CG.Blazor.Forms.Attributes
     /// }
     /// </code>
     /// </example>
-    [AttributeUsage(AttributeTargets.Class)]
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
     public class RenderDataAnnotationsValidatorAttribute : FormValidationAttribute
     {
         // *******************************************************************
@@ -61,9 +62,22 @@ namespace CG.Blazor.Forms.Attributes
 
             try
             {
+                // Should never happen, but, pffft, check it anyway.
+                if (false == path.Any())
+                {
+                    // Let the world know what we're doing.
+                    logger.LogDebug(
+                        "RenderDataAnnotationsValidatorAttribute::Generate called with an empty path!"
+                        );
+
+                    // Return the index.
+                    return index;
+                }
+
                 // Let the world know what we're doing.
                 logger.LogDebug(
-                    "Rendering a data annotations validator for the form."
+                    "Rendering a data annotations validator for the '{ObjType}' view-model.",
+                    path.First().GetType().Name
                     );
 
                 // Render the data annotations validator.

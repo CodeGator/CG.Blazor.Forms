@@ -21,8 +21,20 @@ namespace CG.Blazor.Forms.Attributes
     /// or on a class definition itself.
     /// </para>
     /// </remarks>
-    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class)]
-     
+    /// <example>
+    /// Here is an example of decorating a model property to render:
+    /// <code>
+    /// using CG.Blazor.Forms.Attributes;
+    /// class MyModel
+    /// {
+    ///     [RenderObject]
+    ///     public MyModel2 MyProperty { get;set; }
+    /// }
+    /// </code>
+    /// </example>
+    [AttributeUsage(
+        AttributeTargets.Property | AttributeTargets.Class, 
+        AllowMultiple = false)]     
     public class RenderObjectAttribute : FormGeneratorAttribute
     {
         // *******************************************************************
@@ -70,6 +82,13 @@ namespace CG.Blazor.Forms.Attributes
                 // Get the model's type.
                 var modelType = model.GetType();
 
+                // Let the world know what we're doing.
+                logger.LogDebug(
+                    "Rendering child properties for a '{PropType}' object. [idx: '{Index}']",
+                    modelType.Name,
+                    index
+                    );
+
                 // Get the child properties.
                 var childProps = modelType.GetProperties()
                     .Where(x => x.CanWrite && x.CanRead);
@@ -77,6 +96,9 @@ namespace CG.Blazor.Forms.Attributes
                 // Loop through the child properties.
                 foreach (var childProp in childProps)
                 {
+                    // Create a complete property path, for logging.
+                    var propPath = $"{string.Join('.', path.Reverse().Select(x => x.GetType().Name))}.{childProp.Name}";
+
                     // Get the value of the child property.
                     var childValue = childProp.GetValue(model);
 
@@ -107,10 +129,10 @@ namespace CG.Blazor.Forms.Attributes
                         {
                             // Let the world know what we're doing.
                             logger.LogDebug(
-                                "ignoring property: '{PropName}' on: '{ParentName}' " +
-                                "because it's value is null!",
-                                childProp.Name,
-                                model.GetType().Name
+                                "Not rendering property: '{PropPath}' [idx: '{Index}'] " +
+                                "since it's value is null!",
+                                propPath,
+                                index
                                 );
 
                             // Ignore this property.
@@ -143,15 +165,15 @@ namespace CG.Blazor.Forms.Attributes
                     {
                         // Let the world know what we're doing.
                         logger.LogDebug(
-                            "ignoring property: '{PropName}' on: '{ParentName}' " +
-                            "because it's not decorated with a FormGenerator attribute!",
-                            childProp.Name,
-                            model.GetType().Name
+                            "Not rendering property: '{PropPath}' [idx: '{Index}'] " +
+                            "since it's not decorated with a FormGenerator attribute!",
+                            propPath,
+                            index
                             );
                     }
 
                     // Pop property off the path.
-                    path.Pop();                    
+                    path.Pop();
                 }
 
                 // Return the index.

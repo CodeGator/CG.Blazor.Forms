@@ -72,12 +72,8 @@ namespace CG.Blazor.Forms.Services
                 .ThrowIfNull(eventTarget, nameof(eventTarget))
                 .ThrowIfNull(viewModel, nameof(viewModel));
 
-            var stopWatch = new Stopwatch();
             try
             {
-                // Start the timer.
-                stopWatch.Start();
-
                 // Get the type of the viewModel.
                 var viewModelType = viewModel?.GetType();
 
@@ -196,17 +192,6 @@ namespace CG.Blazor.Forms.Services
                         $"viewModel instance. See inner exception(s) for more detail.",
                     innerException: ex
                    );
-            }
-            finally
-            {
-                // Stop the timer.
-                stopWatch.Stop();
-
-                // Let the world know what we're doing.
-                _logger.LogDebug(
-                    "Finished rendering HTML in '{Elapsed}'.",
-                    stopWatch.Elapsed
-                    );
             }
         }
 

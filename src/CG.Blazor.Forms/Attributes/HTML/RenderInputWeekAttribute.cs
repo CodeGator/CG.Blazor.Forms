@@ -270,7 +270,7 @@ namespace CG.Blazor.Forms.Attributes
                 {
                     // Let the world know what we're doing.
                     logger.LogDebug(
-                        "Ignoring property: '{PropName}' on: '{ObjName}' " +
+                        "Not rendering property: '{PropName}' on: '{ObjName}' " +
                         "because we only render week elements on properties " +
                         "that are of type: string. That property is of type: '{PropType}'!",
                         prop.Name,

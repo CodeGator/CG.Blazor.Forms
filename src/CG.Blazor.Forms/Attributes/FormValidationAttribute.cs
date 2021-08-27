@@ -11,8 +11,7 @@ namespace CG.Blazor.Forms.Attributes
     /// the top-level model.
     /// </para>
     /// </remarks>
-    [AttributeUsage(AttributeTargets.Class)]
-     
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]     
     public abstract class FormValidationAttribute : FormGeneratorAttribute
     {
         
