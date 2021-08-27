@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class RenderObjectAttribute
    ">
-    <meta name="generator" content="docfx 2.58.1.0">
+    <meta name="generator" content="docfx 2.58.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -231,7 +231,7 @@ of the object as HTML.</p>
   <h6><strong>Assembly</strong>: CG.Blazor.Forms.dll</h6>
   <h5 id="CG_Blazor_Forms_Attributes_RenderObjectAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Class | AttributeTargets.Property)]
+    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Class | AttributeTargets.Property, AllowMultiple = false)]
 public class RenderObjectAttribute : FormGeneratorAttribute</code></pre>
   </div>
   <h5 id="CG_Blazor_Forms_Attributes_RenderObjectAttribute_remarks"><strong>Remarks</strong></h5>
@@ -240,6 +240,15 @@ This attribute is only valid when placed on a property of type: object,
 or on a class definition itself.
 </p>
 </div>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderObjectAttribute_examples"><strong>Examples</strong></h5>
+  <p>Here is an example of decorating a model property to render:</p>
+<pre><code>using CG.Blazor.Forms.Attributes;
+class MyModel
+{
+    [RenderObject]
+    public MyModel2 MyProperty { get;set; }
+}</code></pre>
+
   <h3 id="methods">Methods
   </h3>
   <a id="CG_Blazor_Forms_Attributes_RenderObjectAttribute_Generate_" data-uid="CG.Blazor.Forms.Attributes.RenderObjectAttribute.Generate*"></a>
