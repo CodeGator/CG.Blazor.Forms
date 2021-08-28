@@ -5,11 +5,11 @@ using Microsoft.AspNetCore.Components.Forms;
 namespace CG.Blazor.Forms
 {
     /// <summary>
-    /// This class is the code-behind for the <see cref="DynamicForm{T}"/>
+    /// This class is the code-behind for the <see cref="DynamicContent{T}"/>
     /// razor component.
     /// </summary>
     /// <typeparam name="T">The type associated with the component.</typeparam>
-    public partial class DynamicForm<T>
+    public partial class DynamicContent<T>
     {
         // *******************************************************************
         // Properties.
@@ -21,15 +21,6 @@ namespace CG.Blazor.Forms
         /// This property contains any child content for the form.
         /// </summary>
         public RenderFragment ChildContent { get; set; }
-
-        /// <summary>
-        /// This property indicates whether the child content should be rendered
-        /// before, or after the generated content. True to render the child
-        /// content before the rendered content; false to render the child
-        /// content after the rendered content.
-        /// </summary>
-        [Parameter]
-        public bool ChildContentAfter { get; set; }
 
         /// <summary>
         /// This property contains a form generator service.
@@ -57,7 +48,13 @@ namespace CG.Blazor.Forms
         /// <remarks>
         /// <para>
         /// This callback is optional. It will be called whenever the form
-        /// is submitted by the user, with one or more invalid form values. 
+        /// is submitted with one or more invalid form values. As such,
+        /// it will only be called if the <see cref="DynamicContent{T}.NoForm"/> 
+        /// property is set to false, and the <see cref="DynamicContent{T}.Model"/> 
+        /// property has been set to a valid POCO reference, and the model's 
+        /// class has been decorated with a <see cref="DataAnnotationsValidatorAttribute"/> 
+        /// attribute (or equivilant), and at least one or more properties 
+        /// on the model have a value (or values) that fail form validation.
         /// </para>
         /// </remarks>
         [Parameter]
@@ -70,7 +67,10 @@ namespace CG.Blazor.Forms
         /// <para>
         /// This callback is optional. It will be called whenever the form
         /// is submitted by the user, whether or not the form's values would
-        /// otherwise pass validation, or not. 
+        /// otherwise pass validation, or not. As such, it will only be called 
+        /// if the <see cref="DynamicContent.NoForm"/> property is set to false, 
+        /// and the <see cref="DynamicContent.Model"/>  property has been set to a 
+        /// valid POCO reference.
         /// </para>
         /// </remarks>
         [Parameter]
@@ -82,7 +82,12 @@ namespace CG.Blazor.Forms
         /// <remarks>
         /// <para>
         /// This callback is optional. It will be called whenever the form
-        /// is submitted by the user, with valid form values. 
+        /// is submitted with valid form values. As such, it will only be 
+        /// called if the <see cref="DynamicContent.NoForm"/> property is set to 
+        /// false, and the <see cref="DynamicContent.Model"/>  property has been 
+        /// set to a valid POCO reference, and the model's  class has been 
+        /// decorated with a <see cref="DataAnnotationsValidatorAttribute"/> 
+        /// attribute (or equivilant).
         /// </para>
         /// </remarks>
         [Parameter]
@@ -104,10 +109,10 @@ namespace CG.Blazor.Forms
         #region Constructors
 
         /// <summary>
-        /// This constructor creates a new instance of the <see cref="DynamicForm{T}"/>
+        /// This constructor creates a new instance of the <see cref="DynamicContent{T}"/>
         /// class.
         /// </summary>
-        public DynamicForm()
+        public DynamicContent()
         {
             // Set default values.
             ShowResetButton = false;

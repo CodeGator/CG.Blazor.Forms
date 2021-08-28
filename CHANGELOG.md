@@ -11,6 +11,8 @@
 
 * I added the ability to render child content for the DynamicForm component.
 
+* I added another component, DynamicContent, to render dynamic content without a form.
+
 ## 2021.1
 
 * I created the package.

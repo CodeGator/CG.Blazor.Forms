@@ -4,36 +4,28 @@
 @using Microsoft.AspNetCore.Components.Forms
 
 <div class="dynamic-form-wrapper">
-    @if (NoForm)
-    {
+    <EditForm Model="@Model" 
+                OnInvalidSubmit="@OnInvalidSubmit" 
+                OnValidSubmit="@OnValidSubmit"
+                OnSubmit="@OnSubmit">
+        @if (!ChildContentAfter)
+        {
+            @ChildContent
+        }
         @GenerateFormBody()
-    }
-    else
-    {
-        <EditForm Model="@Model" 
-                  OnInvalidSubmit="@OnInvalidSubmit" 
-                  OnValidSubmit="@OnValidSubmit"
-                  OnSubmit="@OnSubmit">
-            @if (!ChildContentAfter)
+        @if (ChildContentAfter)
+        {
+            @ChildContent
+        }
+        <br />
+        <div class="dynamic-form-buttons">
+            <button class="btn dynamic-form-submit" type="submit">Submit</button>
+            @if (ShowResetButton)
             {
-                @ChildContent
+                <button class="btn dynamic-form-reset" type="reset">Reset</button> 
             }
-            @GenerateFormBody()
-            @if (ChildContentAfter)
-            {
-                @ChildContent
-            }
-            <br />
-            <div class="dynamic-form-buttons">
-                <button class="btn dynamic-form-submit" type="submit">Submit</button>
-                @if (ShowResetButton)
-                {
-                    <button class="btn dynamic-form-reset" type="reset">Reset</button> 
-                }
-	        </div>
-        </EditForm>
-
-    }
+	    </div>
+    </EditForm>
 </div>
 
 <style>

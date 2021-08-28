@@ -1,0 +1,14 @@
+﻿@namespace CG.Blazor.Forms
+@typeparam T
+
+@using Microsoft.AspNetCore.Components.Forms
+
+<div class="dynamic-content-wrapper">
+    @GenerateFormBody()
+</div>
+
+<style>
+.dynamic-content-wrapper {
+    margin: 5px;
+}
+</style>
