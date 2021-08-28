@@ -2329,6 +2329,134 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.Generate
   nameWithType: RenderValidationSummaryAttribute.Generate
+- uid: CG.Blazor.Forms.DynamicContent`1
+  name: DynamicContent<T>
+  href: api/CG.Blazor.Forms.DynamicContent-1.html
+  commentId: T:CG.Blazor.Forms.DynamicContent`1
+  name.vb: DynamicContent(Of T)
+  fullName: CG.Blazor.Forms.DynamicContent<T>
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T)
+  nameWithType: DynamicContent<T>
+  nameWithType.vb: DynamicContent(Of T)
+- uid: CG.Blazor.Forms.DynamicContent`1.#ctor
+  name: DynamicContent()
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1__ctor
+  commentId: M:CG.Blazor.Forms.DynamicContent`1.#ctor
+  fullName: CG.Blazor.Forms.DynamicContent<T>.DynamicContent()
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).DynamicContent()
+  nameWithType: DynamicContent<T>.DynamicContent()
+  nameWithType.vb: DynamicContent(Of T).DynamicContent()
+- uid: CG.Blazor.Forms.DynamicContent`1.#ctor*
+  name: DynamicContent
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1__ctor_
+  commentId: Overload:CG.Blazor.Forms.DynamicContent`1.#ctor
+  isSpec: "True"
+  fullName: CG.Blazor.Forms.DynamicContent<T>.DynamicContent
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).DynamicContent
+  nameWithType: DynamicContent<T>.DynamicContent
+  nameWithType.vb: DynamicContent(Of T).DynamicContent
+- uid: CG.Blazor.Forms.DynamicContent`1.ChildContent
+  name: ChildContent
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1_ChildContent
+  commentId: P:CG.Blazor.Forms.DynamicContent`1.ChildContent
+  fullName: CG.Blazor.Forms.DynamicContent<T>.ChildContent
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).ChildContent
+  nameWithType: DynamicContent<T>.ChildContent
+  nameWithType.vb: DynamicContent(Of T).ChildContent
+- uid: CG.Blazor.Forms.DynamicContent`1.ChildContent*
+  name: ChildContent
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1_ChildContent_
+  commentId: Overload:CG.Blazor.Forms.DynamicContent`1.ChildContent
+  isSpec: "True"
+  fullName: CG.Blazor.Forms.DynamicContent<T>.ChildContent
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).ChildContent
+  nameWithType: DynamicContent<T>.ChildContent
+  nameWithType.vb: DynamicContent(Of T).ChildContent
+- uid: CG.Blazor.Forms.DynamicContent`1.Model
+  name: Model
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1_Model
+  commentId: P:CG.Blazor.Forms.DynamicContent`1.Model
+  fullName: CG.Blazor.Forms.DynamicContent<T>.Model
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).Model
+  nameWithType: DynamicContent<T>.Model
+  nameWithType.vb: DynamicContent(Of T).Model
+- uid: CG.Blazor.Forms.DynamicContent`1.Model*
+  name: Model
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1_Model_
+  commentId: Overload:CG.Blazor.Forms.DynamicContent`1.Model
+  isSpec: "True"
+  fullName: CG.Blazor.Forms.DynamicContent<T>.Model
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).Model
+  nameWithType: DynamicContent<T>.Model
+  nameWithType.vb: DynamicContent(Of T).Model
+- uid: CG.Blazor.Forms.DynamicContent`1.OnInvalidSubmit
+  name: OnInvalidSubmit
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1_OnInvalidSubmit
+  commentId: P:CG.Blazor.Forms.DynamicContent`1.OnInvalidSubmit
+  fullName: CG.Blazor.Forms.DynamicContent<T>.OnInvalidSubmit
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).OnInvalidSubmit
+  nameWithType: DynamicContent<T>.OnInvalidSubmit
+  nameWithType.vb: DynamicContent(Of T).OnInvalidSubmit
+- uid: CG.Blazor.Forms.DynamicContent`1.OnInvalidSubmit*
+  name: OnInvalidSubmit
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1_OnInvalidSubmit_
+  commentId: Overload:CG.Blazor.Forms.DynamicContent`1.OnInvalidSubmit
+  isSpec: "True"
+  fullName: CG.Blazor.Forms.DynamicContent<T>.OnInvalidSubmit
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).OnInvalidSubmit
+  nameWithType: DynamicContent<T>.OnInvalidSubmit
+  nameWithType.vb: DynamicContent(Of T).OnInvalidSubmit
+- uid: CG.Blazor.Forms.DynamicContent`1.OnSubmit
+  name: OnSubmit
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1_OnSubmit
+  commentId: P:CG.Blazor.Forms.DynamicContent`1.OnSubmit
+  fullName: CG.Blazor.Forms.DynamicContent<T>.OnSubmit
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).OnSubmit
+  nameWithType: DynamicContent<T>.OnSubmit
+  nameWithType.vb: DynamicContent(Of T).OnSubmit
+- uid: CG.Blazor.Forms.DynamicContent`1.OnSubmit*
+  name: OnSubmit
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1_OnSubmit_
+  commentId: Overload:CG.Blazor.Forms.DynamicContent`1.OnSubmit
+  isSpec: "True"
+  fullName: CG.Blazor.Forms.DynamicContent<T>.OnSubmit
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).OnSubmit
+  nameWithType: DynamicContent<T>.OnSubmit
+  nameWithType.vb: DynamicContent(Of T).OnSubmit
+- uid: CG.Blazor.Forms.DynamicContent`1.OnValidSubmit
+  name: OnValidSubmit
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1_OnValidSubmit
+  commentId: P:CG.Blazor.Forms.DynamicContent`1.OnValidSubmit
+  fullName: CG.Blazor.Forms.DynamicContent<T>.OnValidSubmit
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).OnValidSubmit
+  nameWithType: DynamicContent<T>.OnValidSubmit
+  nameWithType.vb: DynamicContent(Of T).OnValidSubmit
+- uid: CG.Blazor.Forms.DynamicContent`1.OnValidSubmit*
+  name: OnValidSubmit
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1_OnValidSubmit_
+  commentId: Overload:CG.Blazor.Forms.DynamicContent`1.OnValidSubmit
+  isSpec: "True"
+  fullName: CG.Blazor.Forms.DynamicContent<T>.OnValidSubmit
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).OnValidSubmit
+  nameWithType: DynamicContent<T>.OnValidSubmit
+  nameWithType.vb: DynamicContent(Of T).OnValidSubmit
+- uid: CG.Blazor.Forms.DynamicContent`1.ShowResetButton
+  name: ShowResetButton
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1_ShowResetButton
+  commentId: P:CG.Blazor.Forms.DynamicContent`1.ShowResetButton
+  fullName: CG.Blazor.Forms.DynamicContent<T>.ShowResetButton
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).ShowResetButton
+  nameWithType: DynamicContent<T>.ShowResetButton
+  nameWithType.vb: DynamicContent(Of T).ShowResetButton
+- uid: CG.Blazor.Forms.DynamicContent`1.ShowResetButton*
+  name: ShowResetButton
+  href: api/CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1_ShowResetButton_
+  commentId: Overload:CG.Blazor.Forms.DynamicContent`1.ShowResetButton
+  isSpec: "True"
+  fullName: CG.Blazor.Forms.DynamicContent<T>.ShowResetButton
+  fullName.vb: CG.Blazor.Forms.DynamicContent(Of T).ShowResetButton
+  nameWithType: DynamicContent<T>.ShowResetButton
+  nameWithType.vb: DynamicContent(Of T).ShowResetButton
 - uid: CG.Blazor.Forms.DynamicForm`1
   name: DynamicForm<T>
   href: api/CG.Blazor.Forms.DynamicForm-1.html
@@ -2406,23 +2534,6 @@ references:
   fullName.vb: CG.Blazor.Forms.DynamicForm(Of T).Model
   nameWithType: DynamicForm<T>.Model
   nameWithType.vb: DynamicForm(Of T).Model
-- uid: CG.Blazor.Forms.DynamicForm`1.NoForm
-  name: NoForm
-  href: api/CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_NoForm
-  commentId: P:CG.Blazor.Forms.DynamicForm`1.NoForm
-  fullName: CG.Blazor.Forms.DynamicForm<T>.NoForm
-  fullName.vb: CG.Blazor.Forms.DynamicForm(Of T).NoForm
-  nameWithType: DynamicForm<T>.NoForm
-  nameWithType.vb: DynamicForm(Of T).NoForm
-- uid: CG.Blazor.Forms.DynamicForm`1.NoForm*
-  name: NoForm
-  href: api/CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_NoForm_
-  commentId: Overload:CG.Blazor.Forms.DynamicForm`1.NoForm
-  isSpec: "True"
-  fullName: CG.Blazor.Forms.DynamicForm<T>.NoForm
-  fullName.vb: CG.Blazor.Forms.DynamicForm(Of T).NoForm
-  nameWithType: DynamicForm<T>.NoForm
-  nameWithType.vb: DynamicForm(Of T).NoForm
 - uid: CG.Blazor.Forms.DynamicForm`1.OnInvalidSubmit
   name: OnInvalidSubmit
   href: api/CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_OnInvalidSubmit

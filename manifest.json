@@ -314,11 +314,23 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CG.Blazor.Forms.DynamicContent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CG.Blazor.Forms.DynamicContent-1.html",
+          "hash": "v7ZD8VQt+XRwjUP8rqBL4Z+GVrn5aZrBhe34IC9AUCA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CG.Blazor.Forms.DynamicForm-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/CG.Blazor.Forms.DynamicForm-1.html",
-          "hash": "SHQ0oXHEddAtBkCn+SRluZQoxnPLTFWLvbtMZFhRpAI="
+          "hash": "EriEJh5Ib9On+ZFoxleZnT4c3tmCr9gmqR0Ql7MrQ7o="
         }
       },
       "is_incremental": false,
@@ -378,7 +390,7 @@
       "output": {
         ".html": {
           "relative_path": "api/CG.Blazor.Forms.html",
-          "hash": "e9DfuLGIdLa56Ovx2GGiI7oEAeiNGF70uRWbuhgsJ84="
+          "hash": "TH8oaLpnGTd7dYdGoJGurGL/kdhassxwrEVYDAIPOrY="
         }
       },
       "is_incremental": false,
@@ -414,7 +426,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "HVHwI9BPdW7g27JEvSvkiioP90vublVsLsH2qZo39Mk="
+          "hash": "aaxGyGO+2siLa7nZa+sYlu/QAWhI3gk449Gg9PtKv1A="
         }
       },
       "is_incremental": false,
@@ -533,7 +545,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 33,
+          "total_file_count": 34,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
