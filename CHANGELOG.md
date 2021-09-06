@@ -13,6 +13,8 @@
 
 * I added another component, DynamicContent, to render dynamic content without a form.
 
+* I added a VisibleExp property to the RenderObjectAttribute class, to allow for showing/hiding the associated object at render time.
+
 ## 2021.1
 
 * I created the package.

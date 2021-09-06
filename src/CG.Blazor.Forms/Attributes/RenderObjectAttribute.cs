@@ -6,6 +6,8 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Dynamic.Core;
+using System.Linq.Expressions;
 using System.Reflection;
 
 namespace CG.Blazor.Forms.Attributes
@@ -37,6 +39,34 @@ namespace CG.Blazor.Forms.Attributes
         AllowMultiple = false)]     
     public class RenderObjectAttribute : FormGeneratorAttribute
     {
+        // *******************************************************************
+        // Properties.
+        // *******************************************************************
+
+        #region Properties
+
+        /// <summary>
+        /// This property contains an optional LINQ expression, one that 
+        /// determines whether to render the associated object, or not. 
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// The format for the property is of type: x => x.Property = value,
+        /// where 'x' is a LINQ placeholder for the associated object, and 
+        /// 'Property' is the name of a property on that object, and 'value' 
+        /// is the value to test for. Any valid LINQ comparison may be used 
+        /// to produce the TRUE/FALSE return value.
+        /// </para>
+        /// <para>
+        /// The associated object is rendered normally if the property is empty, 
+        /// or. if the property contains a LINQ expression that resolved to TRUE.
+        /// If the expression returns FALSE, the associated object is not rendered.
+        /// </para>
+        /// </remarks>
+        public string VisibleExp { get; set; }
+
+        #endregion
+
         // *******************************************************************
         // Public methods.
         // *******************************************************************
@@ -81,6 +111,41 @@ namespace CG.Blazor.Forms.Attributes
 
                 // Get the model's type.
                 var modelType = model.GetType();
+
+                // Is the IsVisible expression itself invalid?
+                if (false == TryVisibleExp(
+                    path, 
+                    out var isVisible
+                    ))
+                {
+                    // Let the world know what we're doing.
+                    logger.LogDebug(
+                        "Not rendering a '{PropType}' object. [idx: '{Index}'] object " +
+                        "since the 'VisibleExp' property contains a malformed LINQ expression. " +
+                        "The expression should be like: x => x.Property = \"value\"",
+                        modelType.Name,
+                        index
+                        );
+
+                    // Return the index.
+                    return index;
+                }
+
+                // Is the IsVisible expression false?
+                if (false == isVisible)
+				{
+                    // Let the world know what we're doing.
+                    logger.LogDebug(
+                        "Not rendering a '{PropType}' object. [idx: '{Index}'] object " +
+                        "since the 'VisibleExp' property contains a LINQ expression that " +
+                        "resolves to false. ",
+                        modelType.Name,
+                        index
+                        );
+
+                    // Return the index.
+                    return index;
+                }
 
                 // Let the world know what we're doing.
                 logger.LogDebug(
@@ -191,5 +256,82 @@ namespace CG.Blazor.Forms.Attributes
         }
 
         #endregion
-    }
+
+        // *******************************************************************
+        // Private methods.
+        // *******************************************************************
+
+        #region Private methods
+
+        /// <summary>
+        /// This method checks the <see cref="VisibleExp"/> property, and if
+        /// populated, attemps to compile and invoke the LINQ expression contained 
+        /// therein, returning the results of the expression.
+        /// </summary>
+        /// <param name="path">The path to the current model.</param>
+        /// <param name="result">The results of the LINQ expression.</param>
+        /// <returns>True if the <see cref="VisibleExp"/> property is either
+        /// empty, or, contains a valid LINQ expression.</returns>
+        private bool TryVisibleExp(
+            Stack<object> path,
+            out bool result
+            )
+		{
+            // Make the compiler happy.
+            result = true;
+
+            // Is the expression missing, or empty?
+            if (string.IsNullOrEmpty(VisibleExp))
+			{
+                // No expression is ok.
+                return true;
+			}
+
+            // If we get here then we've determined there is a LINQ
+            //   expression in the VisibleExp property, so we need to
+            //   parse it now, and invoke the resulting Func to get
+            //   the results.
+
+            // Get the view-model reference.
+            var viewModel = path.Skip(1).First();
+
+            // Get the view-model's type.
+            var viewModelType = viewModel.GetType();
+
+            // Look for the expression parts.
+            var parts = VisibleExp.Split("=>")
+                .Select(x => x.Trim())
+                .ToArray();
+
+            // There should be 2 parts to a LINQ expression.
+            if (2 == parts.Length)
+            {
+                // Create the parameter expression.
+                var x = Expression.Parameter(
+                    viewModelType, 
+                    parts[0]
+                    );
+
+                // Parse the labmda expression.
+                var exp = DynamicExpressionParser.ParseLambda(
+                    new[] { x },
+                    null,
+                    parts[1]
+                    );
+
+                // Compile and invoke the expression.
+                result = (bool)exp.Compile().DynamicInvoke(
+                    viewModel
+                    );
+
+                // We have a valid result.
+                return true;
+            }
+
+            // The expression was invalid.
+            return false;
+        }
+
+		#endregion
+	}
 }

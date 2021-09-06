@@ -199,7 +199,9 @@ namespace CG.Blazor.Forms.Attributes
                     var label = string.IsNullOrEmpty(Label) ? prop.Name : Label;
 
                     // Split the options.
-                    var options = Options.Split(',');
+                    var options = Options.Split(',')
+                        .Select(x => x.Trim())
+                        .ToArray(); 
 
                     // Ensure the Name property value is set.
                     attributes["name"] = prop.Name;
