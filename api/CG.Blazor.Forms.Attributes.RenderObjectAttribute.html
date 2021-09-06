@@ -249,6 +249,47 @@ class MyModel
     public MyModel2 MyProperty { get;set; }
 }</code></pre>
 
+  <h3 id="properties">Properties
+  </h3>
+  <a id="CG_Blazor_Forms_Attributes_RenderObjectAttribute_VisibleExp_" data-uid="CG.Blazor.Forms.Attributes.RenderObjectAttribute.VisibleExp*"></a>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderObjectAttribute_VisibleExp" data-uid="CG.Blazor.Forms.Attributes.RenderObjectAttribute.VisibleExp">VisibleExp</h4>
+  <div class="markdown level1 summary"><p>This property contains an optional LINQ expression, one that
+determines whether to render the associated object, or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string VisibleExp { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="CG_Blazor_Forms_Attributes_RenderObjectAttribute_VisibleExp_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>
+The format for the property is of type: x => x.Property = value,
+where &apos;x&apos; is a LINQ placeholder for the associated object, and 
+&apos;Property&apos; is the name of a property on that object, and &apos;value&apos; 
+is the value to test for. Any valid LINQ comparison may be used 
+to produce the TRUE/FALSE return value.
+</p>
+<p>
+The associated object is rendered normally if the property is empty, 
+or. if the property contains a LINQ expression that resolved to TRUE.
+If the expression returns FALSE, the associated object is not rendered.
+</p>
+</div>
   <h3 id="methods">Methods
   </h3>
   <a id="CG_Blazor_Forms_Attributes_RenderObjectAttribute_Generate_" data-uid="CG.Blazor.Forms.Attributes.RenderObjectAttribute.Generate*"></a>

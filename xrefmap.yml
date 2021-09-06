@@ -1920,6 +1920,19 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderObjectAttribute.Generate
   nameWithType: RenderObjectAttribute.Generate
+- uid: CG.Blazor.Forms.Attributes.RenderObjectAttribute.VisibleExp
+  name: VisibleExp
+  href: api/CG.Blazor.Forms.Attributes.RenderObjectAttribute.html#CG_Blazor_Forms_Attributes_RenderObjectAttribute_VisibleExp
+  commentId: P:CG.Blazor.Forms.Attributes.RenderObjectAttribute.VisibleExp
+  fullName: CG.Blazor.Forms.Attributes.RenderObjectAttribute.VisibleExp
+  nameWithType: RenderObjectAttribute.VisibleExp
+- uid: CG.Blazor.Forms.Attributes.RenderObjectAttribute.VisibleExp*
+  name: VisibleExp
+  href: api/CG.Blazor.Forms.Attributes.RenderObjectAttribute.html#CG_Blazor_Forms_Attributes_RenderObjectAttribute_VisibleExp_
+  commentId: Overload:CG.Blazor.Forms.Attributes.RenderObjectAttribute.VisibleExp
+  isSpec: "True"
+  fullName: CG.Blazor.Forms.Attributes.RenderObjectAttribute.VisibleExp
+  nameWithType: RenderObjectAttribute.VisibleExp
 - uid: CG.Blazor.Forms.Attributes.RenderProgressAttribute
   name: RenderProgressAttribute
   href: api/CG.Blazor.Forms.Attributes.RenderProgressAttribute.html
