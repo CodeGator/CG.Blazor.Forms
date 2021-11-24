@@ -11,6 +11,12 @@ variables:
 
 steps:
 
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    useGlobalJson: true
+
+
 - task: NuGetToolInstaller@1
   inputs:
     versionSpec: '5.1.0'

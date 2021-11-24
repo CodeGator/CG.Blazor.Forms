@@ -14,7 +14,7 @@ namespace CG.Blazor.Forms.Services
         /// </summary>
         /// <param name="builder">The render tree builder to use for the operation.</param>
         /// <param name="eventTarget">The target for any form related events.</param>
-        /// <param name="model">The POCO data model to use for the operation.</param>
+        /// <param name="viewModel">The POCO data model to use for the operation.</param>
         /// <exception cref="FormGenerationException">This exception is thrown whenever
         /// the generation operation fails to complete.</exception>
         /// <exception cref="ArgumentException">This extension is thrown whenever one or 
@@ -29,7 +29,7 @@ namespace CG.Blazor.Forms.Services
         void Generate(
             RenderTreeBuilder builder,
             IHandleEvent eventTarget,
-            object model
+            object viewModel
             );
     }
 }

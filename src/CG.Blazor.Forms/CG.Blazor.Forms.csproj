@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Authors>Martin Cook</Authors>
@@ -9,8 +9,8 @@
     <Description>This package contains server side Blazor forms extensions used by other CodeGator packages. 
 
 Platforms supported:
-    .NET 5.x or above</Description>
-    <Copyright>Copyright © 2021 by CodeGator. All rights reserved.</Copyright>
+    .NET 6.x or above</Description>
+    <Copyright>Copyright © 2021 - 2022 by CodeGator. All rights reserved.</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/CodeGator/CG.Blazor.Forms</PackageProjectUrl>
     <RepositoryUrl>https://github.com/CodeGator/CG.Blazor.Forms</RepositoryUrl>
@@ -18,6 +18,8 @@ Platforms supported:
     <PackageIcon>packageDefaultIcon-50x50.png</PackageIcon>
     <PackageIconUrl />
     <PackageTags>forms, code generator, CG.Blazor.Forms, CodeGator</PackageTags>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>bin/Debug/net6.0/CG.Blazor.Forms.xml</DocumentationFile>
   </PropertyGroup>
 
   
@@ -26,13 +28,13 @@ Platforms supported:
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CG.Validations" Version="2021.3.6" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.10" />
-    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.231">
+    <PackageReference Include="CG.Validations" Version="2022.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.0" />
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.244">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.12" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.14" />
   </ItemGroup>
 
   <ItemGroup>

@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Dynamic;
 using System.Linq;
 using System.Reflection;
 
@@ -90,7 +91,7 @@ namespace CG.Blazor.Forms.Services
                     new[] { viewModel }
                     );
 
-                // Step 1, ensure we render any validation attributes.
+                // Step 1, ensure we render any validation attributes on the view-model type.
 
                 // Look for any form validation attributes (except a summary attribute).
                 var vAttrs = viewModelType.GetCustomAttributes<FormValidationAttribute>()
@@ -120,7 +121,7 @@ namespace CG.Blazor.Forms.Services
                         );
                 }
 
-                // Step 2, ensure we render any non validation attributes.
+                // Step 2, ensure we render any non validation attributes on the view-model type.
 
                 // Look for any form generation attributes (except for validation attributes).
                 var attrs = viewModelType.GetCustomAttributes<FormGeneratorAttribute>()
@@ -140,7 +141,7 @@ namespace CG.Blazor.Forms.Services
                         );
                 }
 
-                // Step 3, ensure we render all the model properties.
+                // Step 3, ensure we supply a missing attribute, if needed, to render properties.
 
                 // Ensure the view-model had at least one RenderObject attribute.
                 if (false == attrs.OfType<RenderObjectAttribute>().Any())
@@ -165,7 +166,7 @@ namespace CG.Blazor.Forms.Services
                         );
                 }
 
-                // Step 4, ensure we render a summary, if needed.
+                // Step 4, ensure we render a validation summary, if needed.
 
                 // Look for a summary attribute.
                 var sAttr = viewModelType.GetCustomAttribute<RenderValidationSummaryAttribute>();
