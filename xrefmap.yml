@@ -2496,6 +2496,23 @@ references:
   fullName.vb: CG.Blazor.Forms.DynamicForm(Of T).DynamicForm
   nameWithType: DynamicForm<T>.DynamicForm
   nameWithType.vb: DynamicForm(Of T).DynamicForm
+- uid: CG.Blazor.Forms.DynamicForm`1.ButtonContent
+  name: ButtonContent
+  href: api/CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_ButtonContent
+  commentId: P:CG.Blazor.Forms.DynamicForm`1.ButtonContent
+  fullName: CG.Blazor.Forms.DynamicForm<T>.ButtonContent
+  fullName.vb: CG.Blazor.Forms.DynamicForm(Of T).ButtonContent
+  nameWithType: DynamicForm<T>.ButtonContent
+  nameWithType.vb: DynamicForm(Of T).ButtonContent
+- uid: CG.Blazor.Forms.DynamicForm`1.ButtonContent*
+  name: ButtonContent
+  href: api/CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_ButtonContent_
+  commentId: Overload:CG.Blazor.Forms.DynamicForm`1.ButtonContent
+  isSpec: "True"
+  fullName: CG.Blazor.Forms.DynamicForm<T>.ButtonContent
+  fullName.vb: CG.Blazor.Forms.DynamicForm(Of T).ButtonContent
+  nameWithType: DynamicForm<T>.ButtonContent
+  nameWithType.vb: DynamicForm(Of T).ButtonContent
 - uid: CG.Blazor.Forms.DynamicForm`1.ChildContent
   name: ChildContent
   href: api/CG.Blazor.Forms.DynamicForm-1.html#CG_Blazor_Forms_DynamicForm_1_ChildContent
