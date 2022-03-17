@@ -1,0 +1,45 @@
+﻿@page "/demo2"
+
+@using System.Text.Json
+
+<h4>Advanced Demo.</h4>
+<p>This page demonstrates rendering custom form button(s) using a RenderFragment in the DynamicForm component.</p>
+<hr />
+
+<div style="max-width: 680px; margin-bottom: 20px">
+    <DynamicForm Model="@Model" OnValidSubmit="OnValidSubmit">
+        <ButtonContent>
+            <button class="custom-button" type="submit">This is a custom submit button!</button>
+        </ButtonContent>
+    </DynamicForm>
+    <br />
+    <pre>@JSON</pre>
+</div>
+
+@code {
+
+    HtmlVM Model { get; set; } = new HtmlVM();
+    string JSON { get; set; } = "";
+
+	private void OnValidSubmit(
+        EditContext editContext
+        )
+    {
+        JSON = $"Model (as of {DateTime.Now}) -> \r\n" + JsonSerializer.Serialize<HtmlVM>(
+            Model, 
+            new JsonSerializerOptions() { WriteIndented = true }
+            );
+
+        StateHasChanged();
+    }
+}
+
+<style>
+.custom-button {
+    font-size:larger; 
+    background-color:coral; 
+    color:white;
+    width:250px;
+    height:50px;
+}
+</style>

@@ -20,7 +20,14 @@ namespace CG.Blazor.Forms
         /// <summary>
         /// This property contains any child content for the form.
         /// </summary>
+        [Parameter]
         public RenderFragment ChildContent { get; set; }
+
+        /// <summary>
+        /// This property contains any custom button(s) for the form.
+        /// </summary>
+        [Parameter]
+        public RenderFragment ButtonContent { get; set; }
 
         /// <summary>
         /// This property indicates whether the child content should be rendered

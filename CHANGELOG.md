@@ -5,6 +5,7 @@
 
 * I switched the runtime to .net 6.0
 * bug fixes
+* I added a RenderFragment property for the form buttons.
 
 ## 2021.2
 

@@ -17,14 +17,21 @@
         {
             @ChildContent
         }
-        <br />
-        <div class="dynamic-form-buttons">
-            <button class="btn dynamic-form-submit" type="submit">Submit</button>
-            @if (ShowResetButton)
-            {
-                <button class="btn dynamic-form-reset" type="reset">Reset</button> 
-            }
-	    </div>
+        @if (null == ButtonContent)
+        {
+            <br />
+            <div class="dynamic-form-buttons">
+                <button class="btn dynamic-form-submit" type="submit">Submit</button>
+                @if (ShowResetButton)
+                {
+                    <button class="btn dynamic-form-reset" type="reset">Reset</button>
+                }
+            </div>
+        }
+        else
+        {
+            @ButtonContent   
+        }
     </EditForm>
 </div>
 
