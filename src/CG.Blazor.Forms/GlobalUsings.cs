@@ -1,0 +1,13 @@
+﻿global using CG.Blazor.Forms.Services;
+global using Microsoft.AspNetCore.Components;
+global using Microsoft.AspNetCore.Components.Forms;
+global using Microsoft.AspNetCore.Components.Rendering;
+global using System;
+global using CG.Validations;
+global using System.Collections.Generic;
+global using System.Runtime.Serialization;
+global using CG.Blazor.Forms.Attributes;
+global using Microsoft.Extensions.Logging;
+global using System.Linq;
+global using System.Reflection;
+global using Microsoft.AspNetCore.Components.CompilerServices;
