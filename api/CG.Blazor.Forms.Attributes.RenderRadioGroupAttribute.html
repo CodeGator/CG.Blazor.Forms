@@ -122,6 +122,9 @@ the form generator to render the property as a radio group HTML element.</p>
       <a class="xref" href="CG.Blazor.Forms.Attributes.HtmlAttribute.html#CG_Blazor_Forms_Attributes_HtmlAttribute_TabIndex">HtmlAttribute.TabIndex</a>
     </div>
     <div>
+      <a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html#CG_Blazor_Forms_Attributes_FormGeneratorAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__">FormGeneratorAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</a>
+    </div>
+    <div>
       <span class="xref">System.Attribute.Equals(System.Object)</span>
     </div>
     <div>
@@ -252,8 +255,7 @@ the form generator to render the property as a radio group HTML element.</p>
   <h6><strong>Assembly</strong>: CG.Blazor.Forms.dll</h6>
   <h5 id="CG_Blazor_Forms_Attributes_RenderRadioGroupAttribute_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[AttributeUsage(AttributeTargets.Property)]
-public class RenderRadioGroupAttribute : HtmlAttribute</code></pre>
+    <pre><code class="lang-csharp hljs">public class RenderRadioGroupAttribute : HtmlAttribute</code></pre>
   </div>
   <h5 id="CG_Blazor_Forms_Attributes_RenderRadioGroupAttribute_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>
@@ -335,10 +337,8 @@ for the element. The values should be space separated.</p>
   <h3 id="methods">Methods
   </h3>
   <a id="CG_Blazor_Forms_Attributes_RenderRadioGroupAttribute_Generate_" data-uid="CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.Generate*"></a>
-  <h4 id="CG_Blazor_Forms_Attributes_RenderRadioGroupAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__" data-uid="CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})">Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</h4>
-  <div class="markdown level1 summary"><p>This method is called by the form generator to generate content for
-the specified property.</p>
-</div>
+  <h4 id="CG_Blazor_Forms_Attributes_RenderRadioGroupAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__" data-uid="CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})">Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -355,41 +355,34 @@ the specified property.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder</span></td>
+        <td><span class="xref">RenderTreeBuilder</span></td>
         <td><span class="parametername">builder</span></td>
-        <td><p>The builder to use for the operation.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">index</span></td>
-        <td><p>The index to use for the operation.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.IHandleEvent</span></td>
+        <td><span class="xref">IHandleEvent</span></td>
         <td><span class="parametername">eventTarget</span></td>
-        <td><p>The event target to use for the
-operation.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Collections.Generic.Stack</span>&lt;<span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">Stack</span>&lt;<span class="xref">System.Object</span>&gt;</td>
         <td><span class="parametername">path</span></td>
-        <td><p>The path to the current model.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">System.Reflection.PropertyInfo</span></td>
+        <td><span class="xref">PropertyInfo</span></td>
         <td><span class="parametername">prop</span></td>
-        <td><p>The reflection information for the property.</p>
-</td>
+        <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span>&lt;<a class="xref" href="CG.Blazor.Forms.Services.IFormGenerator.html">IFormGenerator</a>&gt;</td>
+        <td><span class="xref">ILogger</span>&lt;<span class="xref">IFormGenerator</span>&gt;</td>
         <td><span class="parametername">logger</span></td>
-        <td><p>The logger to use for the operation.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -404,33 +397,7 @@ operation.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>The index after rendering is complete.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="CG.Blazor.Forms.Attributes.FormGeneratorAttribute.html#CG_Blazor_Forms_Attributes_FormGeneratorAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__">FormGeneratorAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack&lt;Object&gt;, PropertyInfo, ILogger&lt;IFormGenerator&gt;)</a></div>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.ArgumentException</span></td>
-        <td><p>This exception is thrown whenever
-one of more arguments are missing, or invalid.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="CG.Blazor.Forms.Services.FormGenerationException.html">FormGenerationException</a></td>
-        <td><p>This exception is thrown whenever
-the rendering operation fails to complete.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -453,7 +420,7 @@ the rendering operation fails to complete.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
+        <td><span class="xref">IDictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.Object</span>&gt;</td>
         <td><p>A table of named attributes.</p>
 </td>
       </tr>

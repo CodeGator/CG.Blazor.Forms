@@ -209,13 +209,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.RenderCheckBoxAttribute
   nameWithType: RenderCheckBoxAttribute.RenderCheckBoxAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.html#CG_Blazor_Forms_Attributes_RenderCheckBoxAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.html#CG_Blazor_Forms_Attributes_RenderCheckBoxAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderCheckBoxAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderCheckBoxAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderCheckBoxAttribute.Generate*
@@ -270,13 +270,13 @@ references:
   commentId: T:CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute
   fullName: CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute
   nameWithType: RenderDataAnnotationsValidatorAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.html#CG_Blazor_Forms_Attributes_RenderDataAnnotationsValidatorAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.html#CG_Blazor_Forms_Attributes_RenderDataAnnotationsValidatorAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderDataAnnotationsValidatorAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderDataAnnotationsValidatorAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderDataAnnotationsValidatorAttribute.Generate*
@@ -292,13 +292,13 @@ references:
   commentId: T:CG.Blazor.Forms.Attributes.RenderInputColorAttribute
   fullName: CG.Blazor.Forms.Attributes.RenderInputColorAttribute
   nameWithType: RenderInputColorAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderInputColorAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderInputColorAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderInputColorAttribute.html#CG_Blazor_Forms_Attributes_RenderInputColorAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderInputColorAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderInputColorAttribute.html#CG_Blazor_Forms_Attributes_RenderInputColorAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderInputColorAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderInputColorAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputColorAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderInputColorAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputColorAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderInputColorAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderInputColorAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderInputColorAttribute.Generate*
@@ -327,13 +327,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderInputDateAttribute.RenderInputDateAttribute
   nameWithType: RenderInputDateAttribute.RenderInputDateAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderInputDateAttribute.html#CG_Blazor_Forms_Attributes_RenderInputDateAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderInputDateAttribute.html#CG_Blazor_Forms_Attributes_RenderInputDateAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderInputDateAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderInputDateAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderInputDateAttribute.Generate*
@@ -440,13 +440,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.RenderInputEmailAttribute
   nameWithType: RenderInputEmailAttribute.RenderInputEmailAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.html#CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.html#CG_Blazor_Forms_Attributes_RenderInputEmailAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderInputEmailAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderInputEmailAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderInputEmailAttribute.Generate*
@@ -605,13 +605,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.RenderInputMonthAttribute
   nameWithType: RenderInputMonthAttribute.RenderInputMonthAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.html#CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.html#CG_Blazor_Forms_Attributes_RenderInputMonthAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderInputMonthAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderInputMonthAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderInputMonthAttribute.Generate*
@@ -731,13 +731,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.RenderInputNumberAttribute
   nameWithType: RenderInputNumberAttribute.RenderInputNumberAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.html#CG_Blazor_Forms_Attributes_RenderInputNumberAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.html#CG_Blazor_Forms_Attributes_RenderInputNumberAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderInputNumberAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderInputNumberAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderInputNumberAttribute.Generate*
@@ -857,13 +857,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.RenderInputPasswordAttribute
   nameWithType: RenderInputPasswordAttribute.RenderInputPasswordAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.html#CG_Blazor_Forms_Attributes_RenderInputPasswordAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.html#CG_Blazor_Forms_Attributes_RenderInputPasswordAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderInputPasswordAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderInputPasswordAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderInputPasswordAttribute.Generate*
@@ -983,13 +983,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.RenderInputRangeAttribute
   nameWithType: RenderInputRangeAttribute.RenderInputRangeAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.html#CG_Blazor_Forms_Attributes_RenderInputRangeAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.html#CG_Blazor_Forms_Attributes_RenderInputRangeAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderInputRangeAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderInputRangeAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderInputRangeAttribute.Generate*
@@ -1109,13 +1109,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.RenderInputTelephoneAttribute
   nameWithType: RenderInputTelephoneAttribute.RenderInputTelephoneAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.html#CG_Blazor_Forms_Attributes_RenderInputTelephoneAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.html#CG_Blazor_Forms_Attributes_RenderInputTelephoneAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderInputTelephoneAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderInputTelephoneAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderInputTelephoneAttribute.Generate*
@@ -1248,13 +1248,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderInputTextAttribute.RenderInputTextAttribute
   nameWithType: RenderInputTextAttribute.RenderInputTextAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderInputTextAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderInputTextAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderInputTextAttribute.html#CG_Blazor_Forms_Attributes_RenderInputTextAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderInputTextAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderInputTextAttribute.html#CG_Blazor_Forms_Attributes_RenderInputTextAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderInputTextAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderInputTextAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputTextAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderInputTextAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputTextAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderInputTextAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderInputTextAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderInputTextAttribute.Generate*
@@ -1400,13 +1400,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.RenderInputTimeAttribute
   nameWithType: RenderInputTimeAttribute.RenderInputTimeAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.html#CG_Blazor_Forms_Attributes_RenderInputTimeAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.html#CG_Blazor_Forms_Attributes_RenderInputTimeAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderInputTimeAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderInputTimeAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderInputTimeAttribute.Generate*
@@ -1526,13 +1526,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.RenderInputUrlAttribute
   nameWithType: RenderInputUrlAttribute.RenderInputUrlAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.html#CG_Blazor_Forms_Attributes_RenderInputUrlAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.html#CG_Blazor_Forms_Attributes_RenderInputUrlAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderInputUrlAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderInputUrlAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderInputUrlAttribute.Generate*
@@ -1678,13 +1678,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.RenderInputWeekAttribute
   nameWithType: RenderInputWeekAttribute.RenderInputWeekAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.html#CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.html#CG_Blazor_Forms_Attributes_RenderInputWeekAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderInputWeekAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderInputWeekAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderInputWeekAttribute.Generate*
@@ -1778,13 +1778,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderMeterAttribute.RenderMeterAttribute
   nameWithType: RenderMeterAttribute.RenderMeterAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderMeterAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderMeterAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderMeterAttribute.html#CG_Blazor_Forms_Attributes_RenderMeterAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderMeterAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderMeterAttribute.html#CG_Blazor_Forms_Attributes_RenderMeterAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderMeterAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderMeterAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderMeterAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderMeterAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderMeterAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderMeterAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderMeterAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderMeterAttribute.Generate*
@@ -1952,13 +1952,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderProgressAttribute.RenderProgressAttribute
   nameWithType: RenderProgressAttribute.RenderProgressAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderProgressAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderProgressAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderProgressAttribute.html#CG_Blazor_Forms_Attributes_RenderProgressAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderProgressAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderProgressAttribute.html#CG_Blazor_Forms_Attributes_RenderProgressAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderProgressAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderProgressAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderProgressAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderProgressAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderProgressAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderProgressAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderProgressAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderProgressAttribute.Generate*
@@ -2091,13 +2091,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.RenderRadioGroupAttribute
   nameWithType: RenderRadioGroupAttribute.RenderRadioGroupAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.html#CG_Blazor_Forms_Attributes_RenderRadioGroupAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.html#CG_Blazor_Forms_Attributes_RenderRadioGroupAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderRadioGroupAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderRadioGroupAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderRadioGroupAttribute.Generate*
@@ -2178,13 +2178,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderSelectAttribute.Disabled
   nameWithType: RenderSelectAttribute.Disabled
-- uid: CG.Blazor.Forms.Attributes.RenderSelectAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderSelectAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderSelectAttribute.html#CG_Blazor_Forms_Attributes_RenderSelectAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderSelectAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderSelectAttribute.html#CG_Blazor_Forms_Attributes_RenderSelectAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderSelectAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderSelectAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderSelectAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderSelectAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderSelectAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderSelectAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderSelectAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderSelectAttribute.Generate*
@@ -2265,13 +2265,13 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.Disabled
   nameWithType: RenderTextAreaAttribute.Disabled
-- uid: CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.html#CG_Blazor_Forms_Attributes_RenderTextAreaAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.html#CG_Blazor_Forms_Attributes_RenderTextAreaAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderTextAreaAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderTextAreaAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderTextAreaAttribute.Generate*
@@ -2326,13 +2326,13 @@ references:
   commentId: T:CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute
   fullName: CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute
   nameWithType: RenderValidationSummaryAttribute
-- uid: CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+- uid: CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
-  href: api/CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.html#CG_Blazor_Forms_Attributes_RenderValidationSummaryAttribute_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_Microsoft_AspNetCore_Components_IHandleEvent_System_Collections_Generic_Stack_System_Object__System_Reflection_PropertyInfo_Microsoft_Extensions_Logging_ILogger_CG_Blazor_Forms_Services_IFormGenerator__
-  commentId: M:CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,Microsoft.AspNetCore.Components.IHandleEvent,System.Collections.Generic.Stack{System.Object},System.Reflection.PropertyInfo,Microsoft.Extensions.Logging.ILogger{CG.Blazor.Forms.Services.IFormGenerator})
+  href: api/CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.html#CG_Blazor_Forms_Attributes_RenderValidationSummaryAttribute_Generate_RenderTreeBuilder_System_Int32_IHandleEvent_Stack_System_Object__PropertyInfo_ILogger_IFormGenerator__
+  commentId: M:CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.Generate(RenderTreeBuilder,System.Int32,IHandleEvent,Stack{System.Object},PropertyInfo,ILogger{IFormGenerator})
   name.vb: Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
-  fullName: CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack<System.Object>, System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger<CG.Blazor.Forms.Services.IFormGenerator>)
-  fullName.vb: CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, Microsoft.AspNetCore.Components.IHandleEvent, System.Collections.Generic.Stack(Of System.Object), System.Reflection.PropertyInfo, Microsoft.Extensions.Logging.ILogger(Of CG.Blazor.Forms.Services.IFormGenerator))
+  fullName: CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack<System.Object>, PropertyInfo, ILogger<IFormGenerator>)
+  fullName.vb: CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.Generate(RenderTreeBuilder, System.Int32, IHandleEvent, Stack(Of System.Object), PropertyInfo, ILogger(Of IFormGenerator))
   nameWithType: RenderValidationSummaryAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack<Object>, PropertyInfo, ILogger<IFormGenerator>)
   nameWithType.vb: RenderValidationSummaryAttribute.Generate(RenderTreeBuilder, Int32, IHandleEvent, Stack(Of Object), PropertyInfo, ILogger(Of IFormGenerator))
 - uid: CG.Blazor.Forms.Attributes.RenderValidationSummaryAttribute.Generate*
@@ -2645,22 +2645,22 @@ references:
   isSpec: "True"
   fullName: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIComponent
   nameWithType: RenderTreeBuilderExtensions.RenderUIComponent
-- uid: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIComponent``1(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,System.Action{Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder},System.Collections.Generic.IDictionary{System.String,System.Object})
+- uid: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIComponent``1(RenderTreeBuilder,System.Int32,Action{RenderTreeBuilder},IDictionary{System.String,System.Object})
   name: RenderUIComponent<T>(RenderTreeBuilder, Int32, Action<RenderTreeBuilder>, IDictionary<String, Object>)
-  href: api/CG.Blazor.Forms.RenderTreeBuilderExtensions.html#CG_Blazor_Forms_RenderTreeBuilderExtensions_RenderUIComponent__1_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_System_Action_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder__System_Collections_Generic_IDictionary_System_String_System_Object__
-  commentId: M:CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIComponent``1(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,System.Action{Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder},System.Collections.Generic.IDictionary{System.String,System.Object})
+  href: api/CG.Blazor.Forms.RenderTreeBuilderExtensions.html#CG_Blazor_Forms_RenderTreeBuilderExtensions_RenderUIComponent__1_RenderTreeBuilder_System_Int32_Action_RenderTreeBuilder__IDictionary_System_String_System_Object__
+  commentId: M:CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIComponent``1(RenderTreeBuilder,System.Int32,Action{RenderTreeBuilder},IDictionary{System.String,System.Object})
   name.vb: RenderUIComponent(Of T)(RenderTreeBuilder, Int32, Action(Of RenderTreeBuilder), IDictionary(Of String, Object))
-  fullName: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIComponent<T>(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, System.Action<Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder>, System.Collections.Generic.IDictionary<System.String, System.Object>)
-  fullName.vb: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIComponent(Of T)(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, System.Action(Of Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder), System.Collections.Generic.IDictionary(Of System.String, System.Object))
+  fullName: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIComponent<T>(RenderTreeBuilder, System.Int32, Action<RenderTreeBuilder>, IDictionary<System.String, System.Object>)
+  fullName.vb: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIComponent(Of T)(RenderTreeBuilder, System.Int32, Action(Of RenderTreeBuilder), IDictionary(Of System.String, System.Object))
   nameWithType: RenderTreeBuilderExtensions.RenderUIComponent<T>(RenderTreeBuilder, Int32, Action<RenderTreeBuilder>, IDictionary<String, Object>)
   nameWithType.vb: RenderTreeBuilderExtensions.RenderUIComponent(Of T)(RenderTreeBuilder, Int32, Action(Of RenderTreeBuilder), IDictionary(Of String, Object))
-- uid: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIElement(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,System.String,System.Action{Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder},System.Collections.Generic.IDictionary{System.String,System.Object})
+- uid: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIElement(RenderTreeBuilder,System.Int32,System.String,Action{RenderTreeBuilder},IDictionary{System.String,System.Object})
   name: RenderUIElement(RenderTreeBuilder, Int32, String, Action<RenderTreeBuilder>, IDictionary<String, Object>)
-  href: api/CG.Blazor.Forms.RenderTreeBuilderExtensions.html#CG_Blazor_Forms_RenderTreeBuilderExtensions_RenderUIElement_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_System_Int32_System_String_System_Action_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder__System_Collections_Generic_IDictionary_System_String_System_Object__
-  commentId: M:CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIElement(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,System.Int32,System.String,System.Action{Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder},System.Collections.Generic.IDictionary{System.String,System.Object})
+  href: api/CG.Blazor.Forms.RenderTreeBuilderExtensions.html#CG_Blazor_Forms_RenderTreeBuilderExtensions_RenderUIElement_RenderTreeBuilder_System_Int32_System_String_Action_RenderTreeBuilder__IDictionary_System_String_System_Object__
+  commentId: M:CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIElement(RenderTreeBuilder,System.Int32,System.String,Action{RenderTreeBuilder},IDictionary{System.String,System.Object})
   name.vb: RenderUIElement(RenderTreeBuilder, Int32, String, Action(Of RenderTreeBuilder), IDictionary(Of String, Object))
-  fullName: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIElement(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, System.String, System.Action<Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder>, System.Collections.Generic.IDictionary<System.String, System.Object>)
-  fullName.vb: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIElement(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, System.Int32, System.String, System.Action(Of Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder), System.Collections.Generic.IDictionary(Of System.String, System.Object))
+  fullName: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIElement(RenderTreeBuilder, System.Int32, System.String, Action<RenderTreeBuilder>, IDictionary<System.String, System.Object>)
+  fullName.vb: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIElement(RenderTreeBuilder, System.Int32, System.String, Action(Of RenderTreeBuilder), IDictionary(Of System.String, System.Object))
   nameWithType: RenderTreeBuilderExtensions.RenderUIElement(RenderTreeBuilder, Int32, String, Action<RenderTreeBuilder>, IDictionary<String, Object>)
   nameWithType.vb: RenderTreeBuilderExtensions.RenderUIElement(RenderTreeBuilder, Int32, String, Action(Of RenderTreeBuilder), IDictionary(Of String, Object))
 - uid: CG.Blazor.Forms.RenderTreeBuilderExtensions.RenderUIElement*
@@ -2688,11 +2688,11 @@ references:
   commentId: M:CG.Blazor.Forms.Services.FormGenerationException.#ctor
   fullName: CG.Blazor.Forms.Services.FormGenerationException.FormGenerationException()
   nameWithType: FormGenerationException.FormGenerationException()
-- uid: CG.Blazor.Forms.Services.FormGenerationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+- uid: CG.Blazor.Forms.Services.FormGenerationException.#ctor(SerializationInfo,StreamingContext)
   name: FormGenerationException(SerializationInfo, StreamingContext)
-  href: api/CG.Blazor.Forms.Services.FormGenerationException.html#CG_Blazor_Forms_Services_FormGenerationException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
-  commentId: M:CG.Blazor.Forms.Services.FormGenerationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  fullName: CG.Blazor.Forms.Services.FormGenerationException.FormGenerationException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  href: api/CG.Blazor.Forms.Services.FormGenerationException.html#CG_Blazor_Forms_Services_FormGenerationException__ctor_SerializationInfo_StreamingContext_
+  commentId: M:CG.Blazor.Forms.Services.FormGenerationException.#ctor(SerializationInfo,StreamingContext)
+  fullName: CG.Blazor.Forms.Services.FormGenerationException.FormGenerationException(SerializationInfo, StreamingContext)
   nameWithType: FormGenerationException.FormGenerationException(SerializationInfo, StreamingContext)
 - uid: CG.Blazor.Forms.Services.FormGenerationException.#ctor(System.String)
   name: FormGenerationException(String)
@@ -2700,11 +2700,11 @@ references:
   commentId: M:CG.Blazor.Forms.Services.FormGenerationException.#ctor(System.String)
   fullName: CG.Blazor.Forms.Services.FormGenerationException.FormGenerationException(System.String)
   nameWithType: FormGenerationException.FormGenerationException(String)
-- uid: CG.Blazor.Forms.Services.FormGenerationException.#ctor(System.String,System.Exception)
+- uid: CG.Blazor.Forms.Services.FormGenerationException.#ctor(System.String,Exception)
   name: FormGenerationException(String, Exception)
-  href: api/CG.Blazor.Forms.Services.FormGenerationException.html#CG_Blazor_Forms_Services_FormGenerationException__ctor_System_String_System_Exception_
-  commentId: M:CG.Blazor.Forms.Services.FormGenerationException.#ctor(System.String,System.Exception)
-  fullName: CG.Blazor.Forms.Services.FormGenerationException.FormGenerationException(System.String, System.Exception)
+  href: api/CG.Blazor.Forms.Services.FormGenerationException.html#CG_Blazor_Forms_Services_FormGenerationException__ctor_System_String_Exception_
+  commentId: M:CG.Blazor.Forms.Services.FormGenerationException.#ctor(System.String,Exception)
+  fullName: CG.Blazor.Forms.Services.FormGenerationException.FormGenerationException(System.String, Exception)
   nameWithType: FormGenerationException.FormGenerationException(String, Exception)
 - uid: CG.Blazor.Forms.Services.FormGenerationException.#ctor*
   name: FormGenerationException
@@ -2719,11 +2719,11 @@ references:
   commentId: T:CG.Blazor.Forms.Services.IFormGenerator
   fullName: CG.Blazor.Forms.Services.IFormGenerator
   nameWithType: IFormGenerator
-- uid: CG.Blazor.Forms.Services.IFormGenerator.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,Microsoft.AspNetCore.Components.IHandleEvent,System.Object)
+- uid: CG.Blazor.Forms.Services.IFormGenerator.Generate(RenderTreeBuilder,IHandleEvent,System.Object)
   name: Generate(RenderTreeBuilder, IHandleEvent, Object)
-  href: api/CG.Blazor.Forms.Services.IFormGenerator.html#CG_Blazor_Forms_Services_IFormGenerator_Generate_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_Microsoft_AspNetCore_Components_IHandleEvent_System_Object_
-  commentId: M:CG.Blazor.Forms.Services.IFormGenerator.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder,Microsoft.AspNetCore.Components.IHandleEvent,System.Object)
-  fullName: CG.Blazor.Forms.Services.IFormGenerator.Generate(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder, Microsoft.AspNetCore.Components.IHandleEvent, System.Object)
+  href: api/CG.Blazor.Forms.Services.IFormGenerator.html#CG_Blazor_Forms_Services_IFormGenerator_Generate_RenderTreeBuilder_IHandleEvent_System_Object_
+  commentId: M:CG.Blazor.Forms.Services.IFormGenerator.Generate(RenderTreeBuilder,IHandleEvent,System.Object)
+  fullName: CG.Blazor.Forms.Services.IFormGenerator.Generate(RenderTreeBuilder, IHandleEvent, System.Object)
   nameWithType: IFormGenerator.Generate(RenderTreeBuilder, IHandleEvent, Object)
 - uid: CG.Blazor.Forms.Services.IFormGenerator.Generate*
   name: Generate

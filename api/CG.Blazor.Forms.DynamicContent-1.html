@@ -171,7 +171,7 @@ class.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.RenderFragment</span></td>
+        <td><span class="xref">RenderFragment</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -183,8 +183,7 @@ class.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public T Model { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public T Model { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -216,8 +215,7 @@ other POCO references.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public EventCallback&lt;EditContext&gt; OnInvalidSubmit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public EventCallback&lt;EditContext&gt; OnInvalidSubmit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -229,23 +227,11 @@ public EventCallback&lt;EditContext&gt; OnInvalidSubmit { get; set; }</code></pr
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.EventCallback</span>&lt;<span class="xref">Microsoft.AspNetCore.Components.Forms.EditContext</span>&gt;</td>
+        <td><span class="xref">EventCallback</span>&lt;<span class="xref">EditContext</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="CG_Blazor_Forms_DynamicContent_1_OnInvalidSubmit_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>
-This callback is optional. It will be called whenever the form
-is submitted with one or more invalid form values. As such,
-it will only be called if the <see cref="!:DynamicContent&lt;T>.NoForm"></see> 
-property is set to false, and the <a class="xref" href="CG.Blazor.Forms.DynamicContent-1.html#CG_Blazor_Forms_DynamicContent_1_Model">Model</a> 
-property has been set to a valid POCO reference, and the model&apos;s 
-class has been decorated with a <see cref="!:DataAnnotationsValidatorAttribute"></see> 
-attribute (or equivilant), and at least one or more properties 
-on the model have a value (or values) that fail form validation.
-</p>
-</div>
   <a id="CG_Blazor_Forms_DynamicContent_1_OnSubmit_" data-uid="CG.Blazor.Forms.DynamicContent`1.OnSubmit*"></a>
   <h4 id="CG_Blazor_Forms_DynamicContent_1_OnSubmit" data-uid="CG.Blazor.Forms.DynamicContent`1.OnSubmit">OnSubmit</h4>
   <div class="markdown level1 summary"><p>This parameter contains a callback for the OnSubmit event.</p>
@@ -253,8 +239,7 @@ on the model have a value (or values) that fail form validation.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public EventCallback&lt;EditContext&gt; OnSubmit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public EventCallback&lt;EditContext&gt; OnSubmit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -266,21 +251,11 @@ public EventCallback&lt;EditContext&gt; OnSubmit { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.EventCallback</span>&lt;<span class="xref">Microsoft.AspNetCore.Components.Forms.EditContext</span>&gt;</td>
+        <td><span class="xref">EventCallback</span>&lt;<span class="xref">EditContext</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="CG_Blazor_Forms_DynamicContent_1_OnSubmit_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>
-This callback is optional. It will be called whenever the form
-is submitted by the user, whether or not the form&apos;s values would
-otherwise pass validation, or not. As such, it will only be called 
-if the <see cref="!:DynamicContent.NoForm"></see> property is set to false, 
-and the <see cref="!:DynamicContent.Model"></see>  property has been set to a 
-valid POCO reference.
-</p>
-</div>
   <a id="CG_Blazor_Forms_DynamicContent_1_OnValidSubmit_" data-uid="CG.Blazor.Forms.DynamicContent`1.OnValidSubmit*"></a>
   <h4 id="CG_Blazor_Forms_DynamicContent_1_OnValidSubmit" data-uid="CG.Blazor.Forms.DynamicContent`1.OnValidSubmit">OnValidSubmit</h4>
   <div class="markdown level1 summary"><p>This parameter contains a callback for the OnValidSubmit event.</p>
@@ -288,8 +263,7 @@ valid POCO reference.
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public EventCallback&lt;EditContext&gt; OnValidSubmit { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public EventCallback&lt;EditContext&gt; OnValidSubmit { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -301,22 +275,11 @@ public EventCallback&lt;EditContext&gt; OnValidSubmit { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.AspNetCore.Components.EventCallback</span>&lt;<span class="xref">Microsoft.AspNetCore.Components.Forms.EditContext</span>&gt;</td>
+        <td><span class="xref">EventCallback</span>&lt;<span class="xref">EditContext</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h5 id="CG_Blazor_Forms_DynamicContent_1_OnValidSubmit_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>
-This callback is optional. It will be called whenever the form
-is submitted with valid form values. As such, it will only be 
-called if the <see cref="!:DynamicContent.NoForm"></see> property is set to 
-false, and the <see cref="!:DynamicContent.Model"></see>  property has been 
-set to a valid POCO reference, and the model&apos;s  class has been 
-decorated with a <see cref="!:DataAnnotationsValidatorAttribute"></see> 
-attribute (or equivilant).
-</p>
-</div>
   <a id="CG_Blazor_Forms_DynamicContent_1_ShowResetButton_" data-uid="CG.Blazor.Forms.DynamicContent`1.ShowResetButton*"></a>
   <h4 id="CG_Blazor_Forms_DynamicContent_1_ShowResetButton" data-uid="CG.Blazor.Forms.DynamicContent`1.ShowResetButton">ShowResetButton</h4>
   <div class="markdown level1 summary"><p>This parameter indicates whether the form should display a reset
@@ -325,8 +288,7 @@ button, or not. True to show; False otherwise.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Parameter]
-public bool ShowResetButton { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool ShowResetButton { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
